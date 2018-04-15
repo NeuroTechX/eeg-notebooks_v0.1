@@ -44,9 +44,9 @@ Supplying the muse device's IP address doesn't appear to solve it.
 
 In order to acquire data for the psychopy experiments, it is necessary to have three python processes running concurrently:
 
-python muse-lsl.py
-python (stim presentation script)
-python lsl-record.py
+`python muse-lsl.py`  
+`python (stim presentation script)`  
+`python lsl-record.py`  
 
 
 You can't use the linux bash ampersand (&) to chain commands in the windows shell; need to put the commands in a script (as noted above). 
@@ -59,29 +59,26 @@ Here are some minimal script contents to get going:
 Git bash script contents:
 
 
-`start winpty /c/Users/John/Miniconda2/python.exe /c/Users/John/GitBash/muse-lsl/stimulus_presentation/generate_SSVEP.py -d 10
-
-start winpty /c/Users/John/Miniconda2/python.exe /c/Users/John/GitBash/muse-lsl//lsl-record.py -d 10`
+`start winpty /c/Users/John/Miniconda2/python.exe /c/Users/John/GitBash/muse-lsl/stimulus_presentation/generate_SSVEP.py -d 10`  
+`start winpty /c/Users/John/Miniconda2/python.exe /c/Users/John/GitBash/muse-lsl//lsl-record.py -d 10`  
 
 
 Run with:
 
-`bash jg_record_SSVEP.sh`
+`bash jg_record_SSVEP.sh`  
 
 
 
 Anaconda prompt script contents:
 
 
-`start python C:\Users\John\GitBash\muse-lsl\stimulus_presentation\generate_SSVEP.py -d 10`
-
-`start python C:\Users\John\GitBash\muse-lsl\lsl-record.py -d 10`
+`start python C:\Users\John\GitBash\muse-lsl\stimulus_presentation\generate_SSVEP.py -d 10`    
+`start python C:\Users\John\GitBash\muse-lsl\lsl-record.py -d 10`  
 
 
 Run with:
 
-`jg_record_SSVEP.bat`
-
+`jg_record_SSVEP.bat`  
 
 
 
