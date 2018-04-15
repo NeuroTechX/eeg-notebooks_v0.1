@@ -37,9 +37,9 @@ jitter = 0.2
 record_duration = np.float32(options.duration)
 
 # Initialize stimuli
-aud1 = sound.Sound('C', octave=5, sampleRate=44100, secs=0.2, bits=8)
+aud1 = sound.Sound('C', octave=5, sampleRate=44100, secs=0.2)# , bits=8) JG_MOD
 aud1.setVolume(0.8)
-aud2 = sound.Sound('D', octave=6, sampleRate=44100, secs=0.2, bits=8)
+aud2 = sound.Sound('D', octave=6, sampleRate=44100, secs=0.2)# , bits=8) JG_MOD
 aud2.setVolume(0.8)
 auds = [aud1, aud2]
 
