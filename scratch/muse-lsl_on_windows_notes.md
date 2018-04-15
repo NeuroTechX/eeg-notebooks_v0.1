@@ -4,6 +4,11 @@
 Notes on acquiring and analyzing data using muse-lsl on windows.
 
 
+(See also 'getting_muse_data.ipynb' notebook)
+
+
+
+
 ## Environment
 
 The environment setup we are aiming for is minimal possible: anaconda/miniconda windows installation, and then using the windows anaconda prompt. 
