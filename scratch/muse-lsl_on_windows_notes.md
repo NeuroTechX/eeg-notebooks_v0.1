@@ -94,6 +94,48 @@ Run with:
 
 
 
+## Psychopy experiments
+
+
+Current status running the stimulus presentation scripts on my windows laptop:
+
+
+`python stimulus_presentation/generate_SSVEP.py`
+- seems to be working
+
+
+
+`python stimulus_presentation/generate_N170.py`
+- seems to be working
+
+
+`python stimulus_presentation/generate_visual_EP.py`
+- seems to be working
+
+
+
+`python stimulus_presentation/generate_spatial_gratings.py`
+- seems to be working; although gratings are too big (go off the screen?)
+
+
+`python stimulus_presentation/generate_Visual_P300_stripes.py`
+- seems to be working
+
+
+
+`python stimulus_presentation/generate_Visual_P300.py`
+- seems to be working (but wasn't before? what changed??)
+
+
+
+`python stimulus_presentation/generate_Auditory_P300.py
+- not working ('unexpected keyword argument "bits"')
+
+
+`python stimulus_presentation/generate_SSAEP.py`
+- not working. Window problem? Sound problem?
+
+
 
 
 
