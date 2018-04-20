@@ -40,7 +40,7 @@ stim_freq = np.random.binomial(1, 0.5, n_trials)
 trials = DataFrame(dict(stim_freq=stim_freq, timestamp=np.zeros(n_trials)))
 
 # Set up graphics
-mywin = visual.Window([1920, 1080], monitor='testMonitor', units='deg',
+mywin = visual.Window([1600, 900], monitor='testMonitor', units='deg',
                       fullscr=True)
 grating = visual.GratingStim(win=mywin, mask='circle', size=80, sf=0.2)
 grating_neg = visual.GratingStim(win=mywin, mask='circle', size=80, sf=0.2,
@@ -140,8 +140,8 @@ freqs = get_possible_ssvep_freqs(frame_rate, stim_type='reversal')
 stim_patterns = [init_flicker_stim(frame_rate, 2, soa),
                  init_flicker_stim(frame_rate, 3, soa)]
 
-print('Flickering frequencies (Hz): {}\n'.format(
-        [stim_patterns[0]['freq'], stim_patterns[1]['freq']]))
+print(('Flickering frequencies (Hz): {}\n'.format(
+        [stim_patterns[0]['freq'], stim_patterns[1]['freq']])))
 
 for ii, trial in trials.iterrows():
     # Intertrial interval
