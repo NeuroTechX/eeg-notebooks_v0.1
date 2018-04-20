@@ -6,7 +6,7 @@ jupyter notebooks without any local installations, in the cloud, completely free
 
 This process can certainly be streamlined, but currently the following is sufficient and quick:
 
-I (pseudo)-randomly selected [this repository](https://mybinder.org/v2/gh/jvns/pandas-cookbook) to use as the starting point,
+I (pseudo)-randomly selected [this repository](https://mybinder.org/v2/gh/jvns/pandas-cookbook/master) to use as the starting point,
 because it already has pandas and matplotlib installed. Others could be used instead; doesn't really matter.
 
 You need to do the following:
