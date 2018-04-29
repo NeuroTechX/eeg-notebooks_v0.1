@@ -27,11 +27,11 @@ def run_experiment(expt_name,subj_num = '',sess_num = '',muse_lsl_dir = 'muse-ls
 
        cmd = 'start python %s' %lsl_record_call
        print 'running command: \n%s' %cmd
-       subprocess.check_output(cmd, shell=True)
+       subprocess.call(cmd, shell=True)
 
        cmd =  'start python %s' %expt_script_call
        print 'running command: \n%s' %cmd 
-       subprocess.check_output(cmd, shell=True)
+       subprocess.call(cmd, shell=True)
        
 
 
