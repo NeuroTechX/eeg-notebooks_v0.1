@@ -63,7 +63,7 @@ The N170 is an ERP specifically related to the perception of faces. This was val
 ### [SSAEP](https://github.com/NeuroTechX/eeg-notebooks/blob/master/notebooks/SSAEP%20with%20Muse.ipynb)
 The steady state auditory evoked potential is a frequency response produced when hearing modulating tones of certain frequencies. It was validated in Muse by Hubert, who used 45hz and 40hz amplitude modulation applied to 900 and 770h carrier frequencies. A PSD of the produced EEG signal showed clear spikes, correspondingly, at 45 and 40hz in the temporal electrodes. The N100 and P200 complex was also noticed at the beginning of stimulus onset 
 
-## [SSVEP](https://github.com/NeuroTechX/eeg-notebooks/blob/master/notebooks/SSVEP%20with%20Muse.ipynb)
+### [SSVEP](https://github.com/NeuroTechX/eeg-notebooks/blob/master/notebooks/SSVEP%20with%20Muse.ipynb)
 The steady state visual evoked potential is a frequency response produced visual stimulation at specific frequencies. It was validated by Hubert in a 12 minute experiment (6 x 2 minute trials). Stimulation frequencies of 30hz and 20hz were used and an extra electrode at POz was added. Found clear peaks in the PSD at the stimulation frequencies. The peaks were most significant at the extra electrode, which is closest to the primary visual regions, but was detectable at all electrodes and found to have remarkably high accuracy when using a filter bank approach to isolate specific frequencies. 
 
 
