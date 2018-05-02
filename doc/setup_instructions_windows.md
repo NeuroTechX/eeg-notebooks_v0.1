@@ -16,33 +16,33 @@ Tip: you can check your windows operating system type in the Control Panel → S
 Run the installer and follow the steps below
 
 
-![fig](/doc/figs/miniconda_run_install_fig_1.png)
+![fig](figs/miniconda_run_install_fig_1.png)
 
 
 Click Next
 
-![fig](/doc/figs/miniconda_run_install_fig_2.png)
+![fig](figs/miniconda_run_install_fig_2.png)
 
 Click ‘I Agree’ 
 
-![fig](/doc/figs/miniconda_run_install_fig_3.png)
+![fig](figs/miniconda_run_install_fig_3.png)
 
 
 Select ‘Just Me’ and click Next
 
-![fig](/doc/figs/miniconda_run_install_fig_4.png)
+![fig](figs/miniconda_run_install_fig_4.png)
 
 Browse to the location where you want to install, or click Next to keep the default location (Tip: Make sure you have enough space available on your hard-drive for this installation) 
 
-![fig](/doc/figs/miniconda_run_install_fig_5.png)
+![fig](figs/miniconda_run_install_fig_5.png)
 
 Once installation is complete, click Next
 
-![fig](/doc/figs/miniconda_run_install_fig_6.png)
+![fig](figs/miniconda_run_install_fig_6.png)
 
 Click Finish
 
-![fig](/doc/figs/miniconda_run_install_fig_7.png)
+![fig](figs/miniconda_run_install_fig_7.png)
 
 
 
@@ -70,7 +70,7 @@ pyriemann pexpect jupyter pyglet==1.2`
 
 `pip install git+https://github.com/peplin/pygatt`
 
-![fig](/doc/figs/miniconda_run_install_fig_8.png)
+![fig](figs/miniconda_run_install_fig_8.png)
 
 
 
@@ -102,8 +102,8 @@ You have two options, pick one from the following:
 
 `Type git clone --recursive https://github.com/NeuroTechX/eeg-notebooks`
 
-![fig](/doc/figs/install_gitbash.png)
-
+![fig](figs/install_gitbash.png)
+de
 
 2) Without git bash:
 
@@ -126,7 +126,7 @@ Type `jupyter notebook --no-browser`
 Now select the URL with the token and copy it into a web browser 
 Tip: You may need to enable ‘marking’ in your terminal to able to copy the URL
 
-![fig](/doc/figs/mark_conda_terminal.png)
+![fig](figs/mark_conda_terminal.png)
 
 
 OR In a web browser, go to `localhost:8888`.
