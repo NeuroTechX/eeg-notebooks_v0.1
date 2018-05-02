@@ -55,18 +55,18 @@ Click on Anaconda Prompt, which will bring up an anaconda terminal
 Create a conda environment for your neurobrite work:
 
 
-
-conda create -n “neurobrite”  python=2
+`conda create -n “neurobrite”  python=2`
 
 (You need to activate this environment every time you start a new terminal when you want to do work within the neurobrite environment we are about to setup)  
 
 Activate the neurobrite conda environment and install the libraries
 
+`conda activate neurobrite`
 
 `conda install git` 
 
-pip install bitstring pylsl psychopy scikit-learn pandas numpy mne seaborn
-pyriemann pexpect jupyter
+`pip install bitstring pylsl psychopy scikit-learn pandas numpy mne seaborn
+pyriemann pexpect jupyter`
 
 `pip install git+https://github.com/peplin/pygatt`
 
@@ -76,7 +76,7 @@ pyriemann pexpect jupyter
 
 (this may take up to 5 minutes to install)
 
-Next type jupyter notebook password 
+Next type `jupyter notebook password`
 
 Enter a password of your choice
 
@@ -121,7 +121,7 @@ Start an anaconda terminal (follow the steps described earlier)
 
 Type  `cd eeg-notebooks` to go in the folder that you have created
 
-Type jupyter notebook --no-browser
+Type `jupyter notebook --no-browser`
 
 Now select the URL with the token and copy it into a web browser 
 Tip: You may need to enable ‘marking’ in your terminal to able to copy the URL
@@ -131,12 +131,14 @@ Tip: You may need to enable ‘marking’ in your terminal to able to copy the U
 
 OR In a web browser, go to `localhost:8888`.
 
-This should bring up the eeg-notebooks folder structure.
+This should bring up the `eeg-notebooks` folder structure.
 
-Go to the notebooks folder and open up one of the notebooksN170 with Muse.ipynb to try, and working through the cells in this notebook.
+Go to the notebooks folder and open up `N170 with Muse.ipynb` to try, and working through the cells in this notebook.
 
-Tip: Hover over the icons inside the notebook to get more details on their functionality
+*Tip: Hover over the icons inside the notebook to get more details on their functionality*
+
 The top section of the notebook consists of details regarding the Muse experiment.
+
 Select the cells sequentially starting from the top one and click on play button to run.
 
 
