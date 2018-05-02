@@ -32,7 +32,11 @@ Install all requirements
 `pip install requirements.txt`
 
 
-( See [here](https://github.com/NeuroTechX/eeg-notebooks/blob/master/doc/setup_instructions_windows.md) for more detailed setup instructions for windows operating systems)
+
+(See [here](http://eeg-notebooks.readthedocs.io/en/latest/setup_instructions_windows.html)
+
+
+for more detailed setup instructions for windows operating systems)
 
 
 
