@@ -9,7 +9,7 @@ Download the Windows miniconda installer from https://conda.io/miniconda.html (p
 
 Tip: you can check your windows operating system type in the Control Panel → System and Security → System
 
-![fig](/figs/miniconda_install_fig.png)
+![fig](figs/miniconda_install_fig.png)
 
 
 
