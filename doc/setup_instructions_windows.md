@@ -1,7 +1,10 @@
-muse-lsl + eeg-notebooks windows installation + setup instructions
-a) Install miniconda
+# muse-lsl + eeg-notebooks windows installation + setup instructions
+
+
+## 1. Install miniconda
 
 Miniconda is a 'mini' version of the anaconda python distribution.
+
 Download the Windows miniconda installer from https://conda.io/miniconda.html (python 2.7 64-bit version)
 
 Tip: you can check your windows operating system type in the Control Panel → System and Security → System
@@ -46,7 +49,9 @@ Click Finish
 
 After the installation is complete, click on the Windows button and search for ‘Anaconda Prompt’ 
 Tip: pin it to the Windows taskbar for easy access in the future
+
 Click on Anaconda Prompt, which will bring up an anaconda terminal 
+
 Create a conda environment for your neurobrite work:
 
 
@@ -58,12 +63,12 @@ conda create -n “neurobrite”  python=2
 Activate the neurobrite conda environment and install the libraries
 
 
-conda install git 
+`conda install git` 
 
 pip install bitstring pylsl psychopy scikit-learn pandas numpy mne seaborn
 pyriemann pexpect jupyter
 
-pip install git+https://github.com/peplin/pygatt
+`pip install git+https://github.com/peplin/pygatt`
 
 ![fig](/doc/figs/miniconda_run_install_fig_8.png)
 
@@ -72,44 +77,64 @@ pip install git+https://github.com/peplin/pygatt
 (this may take up to 5 minutes to install)
 
 Next type jupyter notebook password 
+
 Enter a password of your choice
+
 Tip: choose a password that you will remember! You will need it every time you want to use jupyter notebook.
-b) (Optional) Download git bash for windows
+
+
+
+## 2. (Optional) Download git bash for windows
+
 Git bash gives you a linux-style terminal, as well as a git installation and a few other useful linuxy things.
+
 You can download git bash from: https://git-scm.com/download/win
+
 Run the installation with default settings
 
-c) Get eeg-notebooks
+
+
+## 3. Get eeg-notebooks
+
 You have two options, pick one from the following:
+
 1) With git bash:
-Type git clone --recursive https://github.com/NeuroTechX/eeg-notebooks
+
+`Type git clone --recursive https://github.com/NeuroTechX/eeg-notebooks`
 
 ![fig](/doc/figs/install_gitbash.png)
 
 
 2) Without git bash:
+
 Navigate to the github repository (or https://github.com/NeuroTechX/eeg-notebooks) directly in a web browser and download eeg-notebooks.
 
 Now, you are ready to use the jupyter notebook.
 
 
 
-
-
+## 4. Get familiar with EEG notebooks
 
 Here are a few  the steps to get you started:
+
 Start an anaconda terminal (follow the steps described earlier)
-Type  cd eeg-notebooks to go in the folder that you have created
+
+Type  `cd eeg-notebooks` to go in the folder that you have created
+
 Type jupyter notebook --no-browser
+
 Now select the URL with the token and copy it into a web browser 
 Tip: You may need to enable ‘marking’ in your terminal to able to copy the URL
 
 ![fig](/doc/figs/mark_conda_terminal.png)
 
 
-OR In a web browser, go to localhost:8888.
- This should bring up the eeg-notebooks folder structure.
-Go to the notebooks folder and open up one of the notebooksN170 with Muse.ipynb to try,  and wworking through the cells in this notebook.
+OR In a web browser, go to `localhost:8888`.
+
+This should bring up the eeg-notebooks folder structure.
+
+Go to the notebooks folder and open up one of the notebooksN170 with Muse.ipynb to try, and working through the cells in this notebook.
+
 Tip: Hover over the icons inside the notebook to get more details on their functionality
 The top section of the notebook consists of details regarding the Muse experiment.
 Select the cells sequentially starting from the top one and click on play button to run.
