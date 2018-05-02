@@ -8,8 +8,21 @@ Currently, all experiments are implemented for the Muse EEG device and based on 
 
 You will need a Muse 2016 and Python installed on your computer. With the exception of some of the stimulus presentation scripts, all code will work with Python 3.
 
-The muse-lsl library that manages connecting to Muse and recording data is incorporated into this repo as a submodule. In order to get it up and runninguse the following commands:
+The muse-lsl library that manages connecting to Muse and recording data is incorporated into this repo as a submodule. In order to get it up and running use the following commands:
+
+
+Either: 
+
 ```
+git clone --recursive https://github.com/neurotechx/eeg-notebooks
+```
+
+
+Or: 
+
+```
+git clone https://github.com/neurotechx/eeg-notebooks
+cd eeg-notebooks
 git submodule init
 git submodule update
 ```
