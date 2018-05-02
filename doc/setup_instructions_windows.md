@@ -66,7 +66,7 @@ Activate the neurobrite conda environment and install the libraries
 `conda install git` 
 
 `pip install bitstring pylsl psychopy scikit-learn pandas numpy mne seaborn
-pyriemann pexpect jupyter`
+pyriemann pexpect jupyter pyglet==1.2`
 
 `pip install git+https://github.com/peplin/pygatt`
 
