@@ -1,0 +1,4 @@
+matplotlib
+sphinx>=1.4
+ipykernel
+nbsphinx
