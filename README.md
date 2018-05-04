@@ -3,6 +3,7 @@ A collection of classic EEG experiments implemented in Python and Jupyter notebo
 
 Currently, all experiments are implemented for the Muse EEG device and based on work done by Alexandre Barachant and Hubert Banville for the [muse-lsl](https://github.com/alexandrebarachant/muse-lsl) library
 
+
 ## Available Notebooks
 
 ### [Visual P300 with Oddball paradigm](https://github.com/NeuroTechX/eeg-notebooks/blob/master/notebooks/P300%20with%20Muse.ipynb)
