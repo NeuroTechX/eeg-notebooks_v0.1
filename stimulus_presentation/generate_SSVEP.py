@@ -135,13 +135,13 @@ def init_flicker_stim(frame_rate, cycle, soa):
 # Set up stimuli
 frame_rate = np.round(mywin.getActualFrameRate())  # Frame rate, in Hz
 freqs = get_possible_ssvep_freqs(frame_rate, stim_type='reversal')
-#print(freqs)
+# print(freqs)
 
 stim_patterns = [init_flicker_stim(frame_rate, 2, soa),
                  init_flicker_stim(frame_rate, 3, soa)]
 
 print(('Flickering frequencies (Hz): {}\n'.format(
-        [stim_patterns[0]['freq'], stim_patterns[1]['freq']])))
+    [stim_patterns[0]['freq'], stim_patterns[1]['freq']])))
 
 for ii, trial in trials.iterrows():
     # Intertrial interval
@@ -155,9 +155,9 @@ for ii, trial in trials.iterrows():
     outlet.push_sample([markernames[ind]], timestamp)
 
     # Present flickering stimulus
-    for _ in range(stim_patterns[ind]['n_cycles']):
+    for _ in range(int(stim_patterns[ind]['n_cycles'])):
         grating.setAutoDraw(True)
-        for _ in range(stim_patterns[ind]['cycle'][0]):
+        for _ in range(int(stim_patterns[ind]['cycle'][0])):
             mywin.flip()
         grating.setAutoDraw(False)
         grating_neg.setAutoDraw(True)

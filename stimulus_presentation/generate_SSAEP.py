@@ -12,6 +12,8 @@ from optparse import OptionParser
 
 import numpy as np
 from pandas import DataFrame
+from psychopy import prefs
+prefs.general['audioLib'] = ['pygame']
 from psychopy import visual, core, event, sound
 from pylsl import StreamInfo, StreamOutlet, local_clock
 from scipy import stats

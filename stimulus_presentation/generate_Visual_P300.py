@@ -44,8 +44,10 @@ def loadImage(filename):
 
 mywin = visual.Window([1920, 1080], monitor="testMonitor", units="deg",
                       fullscr=True)
-targets = list(map(loadImage, glob('stimulus_presentation/stim/cats_dogs/target-*.jpg')))
-nontargets = list(map(loadImage, glob('stimulus_presentation/stim/cats_dogs/nontarget-*.jpg')))
+targets = list(
+    map(loadImage, glob('stimulus_presentation/stim/cats_dogs/target-*.jpg')))
+nontargets = list(
+    map(loadImage, glob('stimulus_presentation/stim/cats_dogs/nontarget-*.jpg')))
 
 for ii, trial in trials.iterrows():
     # inter trial interval
@@ -67,4 +69,3 @@ for ii, trial in trials.iterrows():
     event.clearEvents()
 # Cleanup
 mywin.close()
-
