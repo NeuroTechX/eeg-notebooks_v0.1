@@ -10,25 +10,16 @@ The code is hosted on github: https://github.com/NeuroTechX/eeg-notebooks/
     :caption:  Background
     :glob:
 
-    available_notebooks.md
-
-    setup_instructions_windows.md
-
+    available_notebooks.md  
+    setup_instructions_windows.md  
     using_lsl-viewer.md  
-
-    making_simple_muse_recordings.md
-
-    running_experiments.md
-
-    psychopy_experiments.md
-
-
+    making_simple_muse_recordings.md  
+    running_experiments.md  
+    psychopy_experiments.md  
 
 
 .. toctree::
-   :maxdepth: 2
    :caption: Notebooks
-   :glob:
 
     test_link.nblink
 
