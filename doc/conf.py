@@ -55,6 +55,9 @@ source_suffix = ['.rst', '.md']
 
 
 # This is processed by Jinja2 and inserted before each notebook
+
+#:raw-html:`<a href="https://mybinder.org/v2/gh/neurotechx/eeg-notebooks/{{ env.config.release }}?filepath={{ docname }}"><img alt="Binder badge" src="https://mybinder.org/badge.svg" style="vertical-align:text-bottom"></a>`
+
 nbsphinx_prolog = r"""
 {% set docname = env.doc2path(env.docname, base='doc') %}
 
@@ -67,7 +70,7 @@ nbsphinx_prolog = r"""
 
         This page was generated from `{{ docname }}`__.
         Interactive online version:
-        :raw-html:`<a href="https://mybinder.org/v2/gh/neurotechx/eeg-notebooks/{{ env.config.release }}?filepath={{ docname }}"><img alt="Binder badge" src="https://mybinder.org/badge.svg" style="vertical-align:text-bottom"></a>`
+        :raw-html:`<a href="https://mybinder.org/v2/gh/neurotechx/eeg-notebooks/{{ env.config.release }}"><img alt="Binder badge" src="https://mybinder.org/badge.svg" style="vertical-align:text-bottom"></a>`
 
     __ https://github.com/neurotechx/eeg-notebooks/blob/
         {{ env.config.release }}/{{ docname }}
@@ -81,6 +84,8 @@ nbsphinx_prolog = r"""
     \noindent\rule{\textwidth}{0.4pt}}
     \vspace{-2\baselineskip}
 """
+
+
 
 # This is processed by Jinja2 and inserted after each notebook
 nbsphinx_epilog = r"""
