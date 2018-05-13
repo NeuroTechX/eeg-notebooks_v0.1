@@ -6,10 +6,10 @@ The code is hosted on github: https://github.com/NeuroTechX/eeg-notebooks/
 
 
 .. toctree::
-    :maxdepth: 3
+    :maxdepth: 2
+    :caption:  Background
     :glob:
 
- 
     available_notebooks.md
 
     setup_instructions_windows.md
@@ -23,10 +23,25 @@ The code is hosted on github: https://github.com/NeuroTechX/eeg-notebooks/
     psychopy_experiments.md
 
 
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Notebooks
+   :glob:
+
     test_link.nblink
-    
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Additional stuff
+   :glob:
+
     running_with_binder.md
 
     troubleshooting.md
+
+
 
 
