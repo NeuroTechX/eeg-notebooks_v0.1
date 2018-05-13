@@ -1,2 +1,0 @@
-# Using lsl-viewer
-
