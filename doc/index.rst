@@ -16,7 +16,7 @@
     psychopy_experiments.md
 
 
-    '../notebooks/N170 with Muse.ipynb'
+    ../notebooks/N170\ with\ Muse.ipynb
 
 
     running_with_binder.md
