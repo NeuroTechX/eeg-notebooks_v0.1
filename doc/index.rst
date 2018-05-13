@@ -9,7 +9,6 @@ The code is hosted on github: https://github.com/NeuroTechX/eeg-notebooks/
     :caption:  Background  
     :maxdepth: 2
     
-    available_notebooks.md  
     setup_instructions_windows.md  
     using_lsl-viewer.md  
     making_simple_muse_recordings.md  
@@ -21,6 +20,7 @@ The code is hosted on github: https://github.com/NeuroTechX/eeg-notebooks/
     :caption: Notebooks  
     :maxdepth: 1
 
+    Summary of available notebooks <available_notebooks.md>  
     Auditory P300 with Muse <auditory_p300_with_muse.nblink>
     Cross-subject Classification <cross_subject_classification.nblink>
     Go-No-Go Task <go_no_go_with_muse.nblink>
