@@ -16,7 +16,7 @@
     psychopy_experiments.md
 
 
-    ../scratch/jg_SSVEP_with_Muse.ipynb
+    test_link.nblink
     
     running_with_binder.md
 
