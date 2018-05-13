@@ -55,10 +55,8 @@ source_suffix = ['.rst', '.md']
 
 
 # This is processed by Jinja2 and inserted before each notebook
-# {% set docname = env.doc2path(env.docname, base='doc') %}
-
 nbsphinx_prolog = r"""
-{% set docname = env.doc2path(include_file, base='doc') %}
+{% set docname = env.doc2path(env.docname, base='doc') %}
 
 .. only:: html
 
