@@ -1,3 +1,10 @@
+
+Welcome to the EEG-Notebooks Documentation pages!
+==================================================
+
+The code is hosted on github: https://github.com/NeuroTechX/eeg-notebooks/
+
+
 .. toctree::
     :maxdepth: 3
     :glob:
