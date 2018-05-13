@@ -8,6 +8,7 @@
 extensions = [
     'nbsphinx',
     'sphinx.ext.mathjax',
+    'nbsphinx-link'
 ]
 
 # Exclude build directory and Jupyter backup files:
