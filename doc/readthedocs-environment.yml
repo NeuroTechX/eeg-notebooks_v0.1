@@ -9,3 +9,4 @@ dependencies:
   - ipykernel
   - pip:
     - sphinx_rtd_theme
+    - nbsphinx-link
