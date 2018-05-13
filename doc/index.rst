@@ -21,7 +21,7 @@ The code is hosted on github: https://github.com/NeuroTechX/eeg-notebooks/
     :caption: Notebooks  
     :maxdepth: 3
 
-    test_link.nblink  
+    A section heading <test_link.nblink>
 
 
 .. toctree::
