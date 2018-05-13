@@ -23,6 +23,8 @@ The code is hosted on github: https://github.com/NeuroTechX/eeg-notebooks/
 
     A section heading <test_link.nblink>
 
+    P300 with Muse <p300_with_muse.nblink> 
+    
 
 .. toctree::
     :caption: Additional stuff  
