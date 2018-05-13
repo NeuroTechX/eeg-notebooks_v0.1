@@ -7,7 +7,7 @@ The code is hosted on github: https://github.com/NeuroTechX/eeg-notebooks/
 
 .. toctree::
     :caption:  Background  
-    :maxdepth: 3
+    :maxdepth: 2
     
     available_notebooks.md  
     setup_instructions_windows.md  
@@ -19,7 +19,7 @@ The code is hosted on github: https://github.com/NeuroTechX/eeg-notebooks/
 
 .. toctree::
     :caption: Notebooks  
-    :maxdepth: 3
+    :maxdepth: 1
 
     Auditory P300 with Muse <auditory_p300_with_muse.nblink>
     Cross-subject Classification <cross_subject_classification.nblink>
