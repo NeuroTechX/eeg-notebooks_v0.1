@@ -21,10 +21,18 @@ The code is hosted on github: https://github.com/NeuroTechX/eeg-notebooks/
     :caption: Notebooks  
     :maxdepth: 3
 
-    A section heading <test_link.nblink>
+    Auditory P300 with Muse <auditory_p300_with_muse.nblink>
+    Cross-subject Classification <cross_subject_classification.nblink>
+    Go-No-Go Task <go_no_go_with_muse.nblink>
+    Left-Right visual field <left_right_visual_field_with_muse.nblink>
+    N170 with muse <n170_with_muse.nblink>
+    P300 with extra electrode <p300_with_extra_electrode.nblink>
+    P300 with Muse <p300_with_muse.nblink>
+    Spatial frequency task with MUSE <spatial_frequency_task_with_muse.nblink>
+    SSAEP with MUSE <ssaep_with_muse.nblink>
+    SSVEP with MUSE <ssvep_with_muse.nblink>
 
-    P300 with Muse <p300_with_muse.nblink> 
-    
+
 
 .. toctree::
     :caption: Additional stuff  
