@@ -9,5 +9,5 @@
     available_notebooks.md
 
 
-    '../notebooks/N170 with Muse.ipynb'
+    ../notebooks/N170\ with\ Muse.ipynb
 
