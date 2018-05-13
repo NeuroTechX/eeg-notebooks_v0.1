@@ -7,6 +7,8 @@ The code is hosted on github: https://github.com/NeuroTechX/eeg-notebooks/
 
 .. toctree::
     :caption:  Background  
+    :maxdepth: 3
+    
     available_notebooks.md  
     setup_instructions_windows.md  
     using_lsl-viewer.md  
@@ -16,12 +18,16 @@ The code is hosted on github: https://github.com/NeuroTechX/eeg-notebooks/
 
 
 .. toctree::
-   :caption: Notebooks  
+    :caption: Notebooks  
+    :maxdepth: 3
+
     test_link.nblink  
 
 
 .. toctree::
-   :caption: Additional stuff  
+    :caption: Additional stuff  
+    :maxdepth: 3
+    
     running_with_binder.md  
     troubleshooting.md  
     
