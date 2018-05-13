@@ -7,13 +7,13 @@ The code is hosted on github: https://github.com/NeuroTechX/eeg-notebooks/
 
 .. toctree::
     :caption:  Background  
-    :maxdepth: 2
+    :maxdepth: 1
     
-    setup_instructions_windows.md  
-    using_lsl-viewer.md  
-    making_simple_muse_recordings.md  
-    running_experiments.md  
-    psychopy_experiments.md  
+    Setup Instructions for Windows <setup_instructions_windows.md>
+    Live-stream viewing MUSE data <using_lsl-viewer.md>
+    Making simple muse recordings <making_simple_muse_recordings.md>
+    Running the eeg-notebooks experiments <running_experiments.md>
+    About the psychopy experiments <psychopy_experiments.md>
 
 
 .. toctree::
@@ -35,11 +35,11 @@ The code is hosted on github: https://github.com/NeuroTechX/eeg-notebooks/
 
 
 .. toctree::
-    :caption: Additional stuff  
-    :maxdepth: 3
+    :caption: Misc additional stuff  
+    :maxdepth: 1
     
-    running_with_binder.md  
-    troubleshooting.md  
+    Running EEG-notebooks analyses in the cloud with binder <running_with_binder.md>
+    Troubleshooting FAQs <troubleshooting.md>
     
     
 
