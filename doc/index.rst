@@ -16,9 +16,8 @@
     psychopy_experiments.md
 
 
-    ../notebooks/N170\ with\ Muse.ipynb
-
-
+    ../scratch/jg_SSVEP_with_Muse.ipynb
+    
     running_with_binder.md
 
     troubleshooting.md
