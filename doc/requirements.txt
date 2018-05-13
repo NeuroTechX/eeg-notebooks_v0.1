@@ -1,4 +1,4 @@
-matplotlib
-sphinx>=1.4
-ipykernel
+sphinx>=1.5.1
 nbsphinx
+ipykernel
+sphinx_rtd_theme
