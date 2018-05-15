@@ -37,12 +37,12 @@ The code is hosted on github: https://github.com/NeuroTechX/eeg-notebooks/
 .. toctree::
     :caption: Misc additional stuff  
     :maxdepth: 1
-    
+
+    Using an extra electrode with the MUSE <using_an_extra_electrode_muse.md>
     Running EEG-notebooks analyses in the cloud with binder <running_with_binder.md>
     Troubleshooting FAQs <troubleshooting.md>
     
     
-
 
 
 
