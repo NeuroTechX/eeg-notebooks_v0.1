@@ -19,21 +19,7 @@ The N170 is an ERP specifically related to the perception of faces. This was val
 The steady state auditory evoked potential is a frequency response produced when hearing modulating tones of certain frequencies. It was validated in Muse by Hubert, who used 45hz and 40hz amplitude modulation applied to 900 and 770h carrier frequencies. A PSD of the produced EEG signal showed clear spikes, correspondingly, at 45 and 40hz in the temporal electrodes. The N100 and P200 complex was also noticed at the beginning of stimulus onset 
 
 ### [SSVEP](https://github.com/NeuroTechX/eeg-notebooks/blob/master/notebooks/SSVEP%20with%20Muse.ipynb)
-The steady state visual evoked potential is a frequency response produced visual stimulation at specific frequencies. It was validated by Hubert in a 12 minute experiment (6 x 2 minute trials). Stimulation frequencies of 30hz and 20hz were used and an extra electrode at POz was added. Found clear peaks in the PSD at the stimulation frequencies. The peaks were most significant at the extra electrode, which is closest to the primary visual regions, but was detectable at all electrodes and found to have remarkably high accuracy when using a filter bank approach to isolate specific frequencies. 
+The steady state visual evoked potential is a frequency response produced visual stimulation at specific frequencies. It was validated by Hubert in a 12 minute experiment (6 x 2 minute trials). Stimulation frequencies of 30hz and 20hz were used and an extra electrode at POz was added. Found clear peaks in the PSD at the stimulation frequencies. The peaks were most significant at the extra electrode, which is closest to the primary visual regions, but was detectable at all electrodes and found to have remarkably high accuracy when using a filter bank approach to isolate specific frequencies.
 
-
-## Unvalidated Experiments and other phenomena
-
-### N100 - P200
-The combination of a negative evoked potential around 100ms after any unpredictable stimulus and a positive potential 200ms after. These were noticed in Hubert's SSAEP experiment, but not independently classified or tested.
-
-### On-task Beta
-Noticed in Hubert's visual grating test, but difficult to extract.
-
-### Alpha reset
-A noticeable increase in alpha activity after stimulus presentation ends. Noticed in Hubert's visual grating test.
-
-## Details related to Muse ERP analysis
-
-- Latency and jitter related from the Muse is [40ms +-20ms](https://www.frontiersin.org/articles/10.3389/fnins.2017.00109/full)  
-- In Krigolson lab's resampling analysis, a sample size of 10 was found to be needed for high statistical accuracy for N200 and reward positivity, which is similar to traditional EEG, but greater numbers of subjects were needed for P300
+### [Go/No-Go](https://github.com/NeuroTechX/eeg-notebooks/blob/master/notebooks/Go%20No%20Go%20with%20Muse.ipynb)
+An experiment designed to investigate the event-related potentials that can be detected during a Go-No-Go Task, which measures executive, inhibitory control and sustained attention. The subject is rapidly presented with a sequence of circles and squares and is asked to indicate, by pressing the spacebar, whether a shape is a circle.
