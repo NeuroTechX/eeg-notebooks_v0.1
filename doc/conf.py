@@ -67,8 +67,7 @@ nbsphinx_prolog = r"""
         :format: html
 
     .. nbinfo::
-
-        This page was generated from `{{ docname }}`__.
+        This page was generated from {{ env.metadata[env.docname]['nbsphinx-link-target'] }}`__.
         Interactive online version:
         :raw-html:`<a href="https://mybinder.org/v2/gh/neurotechx/eeg-notebooks/{{ env.config.release }}"><img alt="Binder badge" src="https://mybinder.org/badge.svg" style="vertical-align:text-bottom"></a>`
 
