@@ -121,6 +121,45 @@ The code is hosted on github: https://github.com/NeuroTechX/eeg-notebooks/
 
 
 .. toctree::
+   :caption: Experiments
+   :maxdepth: 4
+
+Task 1
+------
+
+.. toctree::
+   :maxdepth: 4
+
+    About the experiment <about_the_task.md>
+    Running the experiment <running_the_task.md>
+    Data analysis notebook <ssvep_with_muse.nblink>
+
+Task 2
+------
+
+.. toctree::
+   :maxdepth: 4
+
+    About the experiment <about_the_task.md>
+    Running the experiment <running_the_task.md>
+    Data analysis notebook <ssvep_with_muse.nblink>
+
+
+Task 3
+------
+
+.. toctree::
+   :maxdepth: 4
+
+    About the experiment <about_the_task.md>
+    Running the experiment <running_the_task.md>
+    Data analysis notebook <ssvep_with_muse.nblink>
+
+
+
+
+
+.. toctree::
     :caption: Misc.  
     :maxdepth: 1
 
