@@ -1,6 +1,6 @@
 
 Welcome to the EEG-Notebooks Documentation pages!
-==================================================
+**************************************************
 
 The code is hosted on github: https://github.com/NeuroTechX/eeg-notebooks/
 
@@ -18,24 +18,26 @@ The code is hosted on github: https://github.com/NeuroTechX/eeg-notebooks/
 
 .. toctree::
     :caption: Experiments
-    :maxdepth: 1
+    :maxdepth: 2
 
-    Overview
-    ---------
+Overview
+------------------------------------------------------------------------------
+
+
 
     Summary of available notebooks <available_notebooks.md>  
 
 
 
-    Auditory P300
-    -------------
+Auditory P300
+------------------------------------------------------------------------------
  
     Data analysis notebook <auditory_p300_with_muse.nblink>
 
 
 
-    Cross-subject classification 
-    -----------------------------
+Cross-subject classification 
+------------------------------------------------------------------------------
  
     Data analysis notebook  <cross_subject_classification.nblink>
     
