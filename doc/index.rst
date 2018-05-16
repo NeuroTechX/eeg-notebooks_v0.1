@@ -31,8 +31,8 @@ The code is hosted on github: https://github.com/NeuroTechX/eeg-notebooks/
     :caption: Auditory P300
     :maxdepth: 1
 
-    About the experiment
-    Running the experiment
+    About the experiment <about_the_task.md>
+    Running the experiment <running_the_task.md>
     Data analysis notebook <auditory_p300_with_muse.nblink>
 
 
@@ -40,8 +40,8 @@ The code is hosted on github: https://github.com/NeuroTechX/eeg-notebooks/
     :caption: Cross-subject classification 
     :maxdepth: 1
 
-    About the experiment
-    Running the experiment
+    About the experiment <about_the_task.md>
+    Running the experiment <running_the_task.md>
     Data analysis notebook  <cross_subject_classification.nblink>
     
     
@@ -50,8 +50,8 @@ The code is hosted on github: https://github.com/NeuroTechX/eeg-notebooks/
    :caption: Go-No-Go Task
    :maxdepth: 1
     
-    About the experiment
-    Running the experiment
+    About the experiment <about_the_task.md>
+    Running the experiment <running_the_task.md>
     Data analysis notebook <go_no_go_with_muse.nblink>
     
     
@@ -61,8 +61,8 @@ The code is hosted on github: https://github.com/NeuroTechX/eeg-notebooks/
    :caption: Left-Right visual field
    :maxdepth: 1
 
-    About the experiment
-    Running the experiment
+    About the experiment <about_the_task.md>
+    Running the experiment <running_the_task.md>
     Data analysis notebook <left_right_visual_field_with_muse.nblink>
     
     
@@ -71,8 +71,8 @@ The code is hosted on github: https://github.com/NeuroTechX/eeg-notebooks/
    :caption: N170
    :maxdepth: 1
     
-    About the experiment
-    Running the experiment
+    About the experiment <about_the_task.md>
+    Running the experiment <running_the_task.md>
     Data analysis notebook <n170_with_muse.nblink>
     
     
@@ -82,8 +82,8 @@ The code is hosted on github: https://github.com/NeuroTechX/eeg-notebooks/
    :caption: P300
    :maxdepth: 1
 
-    About the experiment
-    Running the experiment
+    About the experiment <about_the_task.md>
+    Running the experiment <running_the_task.md>
     Data analysis notebook <p300_with_muse.nblink>
     P300 with extra electrode <p300_with_extra_electrode.nblink>
     
@@ -93,8 +93,8 @@ The code is hosted on github: https://github.com/NeuroTechX/eeg-notebooks/
    :caption: Spatial Frequency Task
    :maxdepth: 1
     
-    About the experiment
-    Running the experiment
+    About the experiment <about_the_task.md>
+    Running the experiment <running_the_task.md>
     Data analysis notebook <spatial_frequency_task_with_muse.nblink>
     
     
@@ -104,8 +104,8 @@ The code is hosted on github: https://github.com/NeuroTechX/eeg-notebooks/
    :caption: SSAEP
    :maxdepth: 1
    
-    About the experiment
-    Running the experiment
+    About the experiment <about_the_task.md>
+    Running the experiment <running_the_task.md>
     Data analysis notebook <ssaep_with_muse.nblink>
 
 
@@ -114,8 +114,8 @@ The code is hosted on github: https://github.com/NeuroTechX/eeg-notebooks/
    :caption: SSVEP
    :maxdepth: 1
     
-    About the experiment
-    Running the experiment
+    About the experiment <about_the_task.md>
+    Running the experiment <running_the_task.md>
     Data analysis notebook <ssvep_with_muse.nblink>
 
 
