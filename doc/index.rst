@@ -16,13 +16,35 @@ The code is hosted on github: https://github.com/NeuroTechX/eeg-notebooks/
     About the psychopy experiments <psychopy_experiments.md>
 
 
+
+Experiments
+-----------
+
 .. toctree::
-    :caption: Notebooks  
+    :caption: Experiments
     :maxdepth: 1
 
     Summary of available notebooks <available_notebooks.md>  
-    Auditory P300 with Muse <auditory_p300_with_muse.nblink>
-    Cross-subject Classification <cross_subject_classification.nblink>
+    
+Auditory P300
+==============
+ 
+.. toctree::
+   :maxdepth: 1
+
+    Data analysis notebook <auditory_p300_with_muse.nblink>
+
+
+Cross-subject classification 
+=============================
+ 
+.. toctree::
+   :maxdepth: 1
+    
+    Data analysis notebook  <cross_subject_classification.nblink>
+    
+    
+    
     Go-No-Go Task <go_no_go_with_muse.nblink>
     Left-Right visual field <left_right_visual_field_with_muse.nblink>
     N170 with muse <n170_with_muse.nblink>
