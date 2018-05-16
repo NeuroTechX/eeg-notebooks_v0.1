@@ -22,6 +22,13 @@ Experiments
 
 
 .. toctree::
+    :caption: Experiments
+    :maxdepth: 2
+
+    A test toctree <p300_toctree_test.rst> 
+
+
+.. toctree::
     :caption: Overview
     :maxdepth: 1
     
@@ -35,13 +42,6 @@ Experiments
     About the experiment
     Running the experiment
     Data analysis notebook <auditory_p300_with_muse.nblink>
-
-
-.. toctree::
-    :caption: Auditory P300 test 2
-    :maxdepth: 1
-
-    A test toctree <p300_toctree_test.rst> 
 
 
 .. toctree::
