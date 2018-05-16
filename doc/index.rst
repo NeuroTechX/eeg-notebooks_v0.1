@@ -16,18 +16,19 @@ The code is hosted on github: https://github.com/NeuroTechX/eeg-notebooks/
     About the psychopy experiments <psychopy_experiments.md>
 
 
-
-Experiments
------------
-
 .. toctree::
     :caption: Experiments
     :maxdepth: 1
 
+Overview
+---------
+
     Summary of available notebooks <available_notebooks.md>  
-    
+
+
+
 Auditory P300
-==============
+-------------
  
 .. toctree::
    :maxdepth: 1
@@ -36,7 +37,7 @@ Auditory P300
 
 
 Cross-subject classification 
-=============================
+-----------------------------
  
 .. toctree::
    :maxdepth: 1
@@ -44,15 +45,76 @@ Cross-subject classification
     Data analysis notebook  <cross_subject_classification.nblink>
     
     
+Go-No-Go Task
+-----------------------------
+ 
+.. toctree::
+   :maxdepth: 1
     
-    Go-No-Go Task <go_no_go_with_muse.nblink>
-    Left-Right visual field <left_right_visual_field_with_muse.nblink>
-    N170 with muse <n170_with_muse.nblink>
+    Data analysis notebook <go_no_go_with_muse.nblink>
+    
+    
+    
+Left-Right visual field
+-----------------------------
+ 
+.. toctree::
+   :maxdepth: 1
+    
+    Data analysis notebook <left_right_visual_field_with_muse.nblink>
+    
+    
+    
+ N170 
+ ----------------------------
+ 
+.. toctree::
+   :maxdepth: 1
+    
+    Data analysis notebook <n170_with_muse.nblink>
+    
+    
+    
+P300
+-----------------------------
+ 
+.. toctree::
+   :maxdepth: 1
+
+
+    Data analysis notebook <p300_with_muse.nblink>
+
     P300 with extra electrode <p300_with_extra_electrode.nblink>
-    P300 with Muse <p300_with_muse.nblink>
-    Spatial frequency task with MUSE <spatial_frequency_task_with_muse.nblink>
-    SSAEP with MUSE <ssaep_with_muse.nblink>
-    SSVEP with MUSE <ssvep_with_muse.nblink>
+    
+    
+    
+Spatial frequency task
+-----------------------------
+ 
+.. toctree::
+   :maxdepth: 1
+    
+    Data analysis notebook <spatial_frequency_task_with_muse.nblink>
+    
+    
+    
+SSAEP
+-----------------------------
+ 
+.. toctree::
+   :maxdepth: 1
+    
+    Data analysis notebook <ssaep_with_muse.nblink>
+
+
+
+SSVEP
+-----------------------------
+ 
+.. toctree::
+   :maxdepth: 1
+    
+    Data analysis notebook <ssvep_with_muse.nblink>
 
 
 
