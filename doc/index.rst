@@ -38,6 +38,13 @@ Experiments
 
 
 .. toctree::
+    :caption: Auditory P300 test 2
+    :maxdepth: 1
+
+    A test toctree <p300_toctree_test.rst> 
+
+
+.. toctree::
     :caption: Cross-subject classification 
     :maxdepth: 1
 
