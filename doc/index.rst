@@ -20,36 +20,6 @@ The code is hosted on github: https://github.com/NeuroTechX/eeg-notebooks/
     :caption: Experiments
     :maxdepth: 2
 
-
-
-Experiment name 1
------------------------------------------------------------------------------
-
-Data analysis notebook <auditory_p300_with_muse.nblink>
-Data analysis notebook <auditory_p300_with_muse.nblink>
-
-
-Experiment name 2
------------------------------------------------------------------------------
-
-Summary of available notebooks <available_notebooks.md>  
-Data analysis notebook <auditory_p300_with_muse.nblink>
-Data analysis notebook <auditory_p300_with_muse.nblink>
-
-
-Experiment name 3
------------------------------------------------------------------------------
-
-Summary of available notebooks <available_notebooks.md>  
-Data analysis notebook <auditory_p300_with_muse.nblink>
-Data analysis notebook <auditory_p300_with_muse.nblink>
-
-
-
-
-Experiments
-===========================================================================
-
 .. toctree::
     :caption: Overview
     :maxdepth: 1
