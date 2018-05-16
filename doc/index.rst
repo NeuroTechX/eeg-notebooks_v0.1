@@ -23,30 +23,36 @@ Experiments
 
 .. toctree::
     :caption: Overview
-    :maxdepth: 2
+    :maxdepth: 1
     
     Summary of available notebooks <available_notebooks.md>  
 
 
 .. toctree::
     :caption: Auditory P300
-    :maxdepth: 2
+    :maxdepth: 1
 
+    About the experiment
+    Running the experiment
     Data analysis notebook <auditory_p300_with_muse.nblink>
 
 
 .. toctree::
     :caption: Cross-subject classification 
-    :maxdepth: 2
+    :maxdepth: 1
 
+    About the experiment
+    Running the experiment
     Data analysis notebook  <cross_subject_classification.nblink>
     
     
  
 .. toctree::
    :caption: Go-No-Go Task
-   :maxdepth: 2
+   :maxdepth: 1
     
+    About the experiment
+    Running the experiment
     Data analysis notebook <go_no_go_with_muse.nblink>
     
     
@@ -55,60 +61,62 @@ Experiments
 .. toctree::
    :caption: Left-Right visual field
    :maxdepth: 1
-    
+
+    About the experiment
+    Running the experiment
     Data analysis notebook <left_right_visual_field_with_muse.nblink>
     
     
-    
- N170 
- ----------------------------
  
 .. toctree::
+   :caption: N170
    :maxdepth: 1
     
+    About the experiment
+    Running the experiment
     Data analysis notebook <n170_with_muse.nblink>
     
     
     
-P300
------------------------------
  
 .. toctree::
+   :caption: P300
    :maxdepth: 1
 
-
+    About the experiment
+    Running the experiment
     Data analysis notebook <p300_with_muse.nblink>
-
     P300 with extra electrode <p300_with_extra_electrode.nblink>
     
     
-    
-Spatial frequency task
------------------------------
  
 .. toctree::
+   :caption: Spatial Frequency Task
    :maxdepth: 1
     
+    About the experiment
+    Running the experiment
     Data analysis notebook <spatial_frequency_task_with_muse.nblink>
     
     
     
-SSAEP
------------------------------
  
 .. toctree::
+   :caption: SSAEP
    :maxdepth: 1
-    
+   
+    About the experiment
+    Running the experiment
     Data analysis notebook <ssaep_with_muse.nblink>
 
 
-
-SSVEP
------------------------------
  
 .. toctree::
+   :caption: SSVEP
    :maxdepth: 1
     
+    About the experiment
+    Running the experiment
     Data analysis notebook <ssvep_with_muse.nblink>
 
 
