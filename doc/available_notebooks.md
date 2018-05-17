@@ -23,3 +23,15 @@ The steady state visual evoked potential is a frequency response produced visual
 
 ### [Go/No-Go](https://github.com/NeuroTechX/eeg-notebooks/blob/master/notebooks/Go%20No%20Go%20with%20Muse.ipynb)
 An experiment designed to investigate the event-related potentials that can be detected during a Go-No-Go Task, which measures executive, inhibitory control and sustained attention. The subject is rapidly presented with a sequence of circles and squares and is asked to indicate, by pressing the spacebar, whether a shape is a circle.
+
+
+## Unvalidated Experiments and other phenomena
+
+### N100 - P200
+The combination of a negative evoked potential around 100ms after any unpredictable stimulus and a positive potential 200ms after. These were noticed in Hubert's SSAEP experiment, but not independently classified or tested.
+
+### On-task Beta
+Noticed in Hubert's visual grating test, but difficult to extract.
+
+### Alpha reset
+A noticeable increase in alpha activity after stimulus presentation ends. Noticed in Hubert's visual grating test.
