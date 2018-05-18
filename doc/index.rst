@@ -2,7 +2,11 @@
 Welcome to the EEG-Notebooks Documentation pages!
 **************************************************
 
+EEG notebooks is a collection of classic EEG experiments, implemented in Python and Jupyter notebooks. The experimental protocols and analyses are quite generic, but are primarily taylored for low-budget / consumer EEG hardware such as the MUSE. The goal is to make  cognitive neuroscience and neurotechnology more *accessible*, *affordable*, and *scalable*. 
+
 The code is hosted on github: https://github.com/NeuroTechX/eeg-notebooks/
+
+
 
 
 .. toctree::
