@@ -18,7 +18,6 @@ The code is hosted on github: https://github.com/NeuroTechX/eeg-notebooks/
     Live-stream viewing MUSE data <using_lsl-viewer.md>
     Making simple muse recordings <making_simple_muse_recordings.md>
     Running the eeg-notebooks experiments <running_experiments.md>
-    About the psychopy experiments <psychopy_experiments.md>
 
 
 .. toctree::
@@ -133,6 +132,7 @@ The code is hosted on github: https://github.com/NeuroTechX/eeg-notebooks/
     Using an extra electrode with the MUSE <using_an_extra_electrode_muse.md>
     Running EEG-notebooks analyses in the cloud with binder <running_with_binder.md>
     Technical information about the MUSE <muse_info.md>
+    About the psychopy experiments <psychopy_experiments.md>
     Troubleshooting FAQs <troubleshooting.md>
     
 
