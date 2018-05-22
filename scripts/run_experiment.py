@@ -41,7 +41,7 @@ if __name__ == '__main__':
     """
     Usage:
 
-    python run_eeg_nb_experiment.py EXPT_NAME SUBJECT_NUM SESS_NUM 
+    python run_eeg_experiment.py EXPT_NAME SUBJECT_NUM SESS_NUM 
 
 
     Experiment names:
