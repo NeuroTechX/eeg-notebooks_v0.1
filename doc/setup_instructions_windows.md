@@ -147,11 +147,7 @@ Select the cells sequentially starting from the top one and click on play button
 
 [BlueMuse](https://github.com/kowalej/BlueMuse) is a windows 10 program that allows communication between a `muse` headset and a computer's native bluetooth drivers using the `lsl` communication protocol. It can be used as an alternative to the `BLED112` dongle. 
 
-To install `BlueMuse`, go the the website:
-
-https://github.com/kowalej/BlueMuse
-
-click `download`, unzip the file, and follow the [installation instructions](https://github.com/kowalej/BlueMuse#installation) in the `README.md` file. It is easiest to simple read these through github in a web browser. 
+To install, go the the [ `BlueMUSE` github website](https://github.com/kowalej/BlueMuse). Click `download` (green button, right hand corner). Once downloaded, unzip the download file. Navigate to `Dist` folder and unzip the latest distribution number (e.g. `BlueMuse_1.0.5.0.zip`. Once unzipped, go into this folder, and follow the [installation instructions](https://github.com/kowalej/BlueMuse#installation) in the website's `README.md` file. It is easiest to simple read these through github in a web browser. 
 
 
 
