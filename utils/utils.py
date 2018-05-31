@@ -102,7 +102,7 @@ def load_data(data_dir, subject_nb=1, session_nb=1, sfreq=256.,
 
     data_path = os.path.join(
             '../data', data_dir,
-            'subject{}/session{}/data_*.csv'.format(subject_nb, session_nb))
+            'subject{}/session{}/*.csv'.format(subject_nb, session_nb))
     fnames = glob(data_path)
 
     return load_muse_csv_as_raw(fnames, sfreq=sfreq, ch_ind=ch_ind,

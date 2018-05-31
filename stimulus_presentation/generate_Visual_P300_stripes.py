@@ -12,55 +12,73 @@ parser.add_option("-d", "--duration",
 
 (options, args) = parser.parse_args()
 
-# create
-info = StreamInfo('Markers', 'Markers', 1, 0, 'int32', 'myuidw43536')
 
-# next make an outlet
-outlet = StreamOutlet(info)
+def generate_Visual_P300_Stripes(duration=120):
 
-markernames = [1, 2]
+    # create
+    info = StreamInfo('Markers', 'Markers', 1, 0, 'int32', 'myuidw43536')
 
-start = time()
+    # next make an outlet
+    outlet = StreamOutlet(info)
 
-n_trials = 2010
-iti = .3
-soa = 0.2
-jitter = 0.2
-record_duration = np.float32(options.duration)
+    markernames = [1, 2]
 
-# Setup log
-position = np.random.binomial(1, 0.15, n_trials)
+    start = time()
 
-trials = DataFrame(dict(position=position,
-                        timestamp=np.zeros(n_trials)))
+    n_trials = 2010
+    iti = .3
+    soa = 0.2
+    jitter = 0.2
+    record_duration = np.float32(duration)
 
-# graphics
-mywin = visual.Window([1920, 1080], monitor="testMonitor", units="deg",
-                      fullscr=True)
-grating = visual.GratingStim(win=mywin, mask='circle', size=20, sf=2)
-fixation = visual.GratingStim(win=mywin, size=0.2, pos=[0, 0], sf=0,
-                              rgb=[1, 0, 0])
+    # Setup log
+    position = np.random.binomial(1, 0.15, n_trials)
 
-for ii, trial in trials.iterrows():
-    # inter trial interval
-    core.wait(iti + np.random.rand() * jitter)
+    trials = DataFrame(dict(position=position,
+                            timestamp=np.zeros(n_trials)))
 
-    # onset
-    grating.phase += np.random.rand()
-    pos = trials['position'].iloc[ii]
-    grating.ori = 90 * pos
-    grating.draw()
-    fixation.draw()
-    timestamp = local_clock()
-    outlet.push_sample([markernames[pos]], timestamp)
-    mywin.flip()
+    # graphics
+    mywin = visual.Window([1920, 1080], monitor="testMonitor", units="deg",
+                          fullscr=True)
+    grating = visual.GratingStim(win=mywin, mask='circle', size=20, sf=2)
+    fixation = visual.GratingStim(win=mywin, size=0.2, pos=[0, 0], sf=0,
+                                  rgb=[1, 0, 0])
 
-    # offset
-    core.wait(soa)
-    fixation.draw()
-    mywin.flip()
-    if len(event.getKeys()) > 0 or (time() - start) > record_duration:
-        break
-    event.clearEvents()
-# Cleanup
-mywin.close()
+    for ii, trial in trials.iterrows():
+        # inter trial interval
+        core.wait(iti + np.random.rand() * jitter)
+
+        # onset
+        grating.phase += np.random.rand()
+        pos = trials['position'].iloc[ii]
+        grating.ori = 90 * pos
+        grating.draw()
+        fixation.draw()
+        timestamp = local_clock()
+        outlet.push_sample([markernames[pos]], timestamp)
+        mywin.flip()
+
+        # offset
+        core.wait(soa)
+        fixation.draw()
+        mywin.flip()
+        if len(event.getKeys()) > 0 or (time() - start) > record_duration:
+            break
+        event.clearEvents()
+    # Cleanup
+    mywin.close()
+
+
+def main():
+    parser = OptionParser()
+
+    parser.add_option("-d", "--duration",
+                      dest="duration", type='int', default=120,
+                      help="duration of the recording in seconds.")
+
+    (options, args) = parser.parse_args()
+    generate_Visual_P300_Stripes(options.duration)
+
+
+if __name__ == '__main__':
+    main()
