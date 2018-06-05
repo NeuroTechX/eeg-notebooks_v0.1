@@ -6,7 +6,7 @@ All of the original `muse-lsl` and new `neurobrite` cognitive experiments can be
 As explained in the `run_experiment.py' docstring, calls to this function are done with the following:
 
 ```python
-python scripts/run_experiment.py EXPT_NAME SUBJECT_NUM SESS_NUM 
+python scripts/run_experiment.py -e EXPT_NAME -c BMW_FLAG
 ```
 
 *Experiment names:*
@@ -23,15 +23,18 @@ python scripts/run_experiment.py EXPT_NAME SUBJECT_NUM SESS_NUM
 
 
 The muse-lsl experiments run the muse-lsl scripts with default parameters
+
 Add the '_test' to run a quick (20s) version
+
+`BMW_FLAG` indicates whether you are using BlueMuse on windows for the EEG bluetooth connection. If so, this needs to be `-c 1`. Otherwise, `-c 0` (or omit; as this is the default). 
 
 
 *Examples:*
 
 ```python
-python scripts/run_experiment.py mlsl_N170_test 
+python scripts/run_experiment.py -e mlsl_N170_test -c 1 
  
-python scripts/run_experiment.py mlsl_SSVEP
+python scripts/run_experiment.py -e mlsl_SSVEP
 ```
 
 
