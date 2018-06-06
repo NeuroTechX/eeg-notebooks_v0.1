@@ -28,7 +28,7 @@ def present(duration=120):
 
     # Set up trial parameters
     n_trials = 2010
-    iti = 0.3
+    iti = 0.8
     soa = 0.2
     jitter = 0.2
     record_duration = np.float32(duration)
