@@ -3,7 +3,7 @@ from pandas import DataFrame
 from psychopy import visual, core, event
 from time import time, strftime, gmtime
 from optparse import OptionParser
-from pylsl import StreamInfo, StreamOutlet, local_clock
+from pylsl import StreamInfo, StreamOutlet
 
 parser = OptionParser()
 parser.add_option("-d", "--duration",
@@ -54,7 +54,7 @@ def present(duration=120):
         grating.ori = 90 * pos
         grating.draw()
         fixation.draw()
-        timestamp = local_clock()
+        timestamp = time()
         outlet.push_sample([markernames[pos]], timestamp)
         mywin.flip()
 

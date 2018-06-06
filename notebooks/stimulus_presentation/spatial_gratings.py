@@ -19,7 +19,7 @@ from optparse import OptionParser
 import numpy as np
 import pandas as pd
 from psychopy import visual, core, event
-from pylsl import StreamInfo, StreamOutlet, local_clock
+from pylsl import StreamInfo, StreamOutlet
 
 
 def present(duration=120):
@@ -76,13 +76,13 @@ def present(duration=120):
         fixation.draw()
 
         # Send marker
-        outlet.push_sample([fre + 1, contrast, ori], local_clock())
+        outlet.push_sample([fre + 1, contrast, ori], time())
         mywin.flip()
 
         # offset
         core.wait(soa)
         fixation.draw()
-        outlet.push_sample([fre + 3, contrast, ori], local_clock())
+        outlet.push_sample([fre + 3, contrast, ori], time())
         mywin.flip()
 
         if len(event.getKeys()) > 0 or (time() - start) > record_duration:

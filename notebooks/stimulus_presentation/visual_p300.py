@@ -3,7 +3,7 @@ from pandas import DataFrame
 from psychopy import visual, core, event
 from time import time, strftime, gmtime
 from optparse import OptionParser
-from pylsl import StreamInfo, StreamOutlet, local_clock
+from pylsl import StreamInfo, StreamOutlet
 from glob import glob
 from random import choice
 
@@ -52,7 +52,7 @@ def present(duration=120):
         pos = trials['position'].iloc[ii]
         image = choice(targets if pos == 1 else nontargets)
         image.draw()
-        timestamp = local_clock()
+        timestamp = time()
         outlet.push_sample([markernames[pos]], timestamp)
         mywin.flip()
 

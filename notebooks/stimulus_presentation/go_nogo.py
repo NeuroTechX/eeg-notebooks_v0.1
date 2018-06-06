@@ -3,7 +3,7 @@ from pandas import DataFrame
 from psychopy import visual, core, event, logging
 from time import time, strftime, gmtime
 from optparse import OptionParser
-from pylsl import StreamInfo, StreamOutlet, local_clock
+from pylsl import StreamInfo, StreamOutlet
 from glob import glob
 from random import choice
 import random
@@ -147,13 +147,13 @@ def present(subject, session, duration=120):
             stims[params['goStim']].draw()
             win.logOnFlip(level=logging.EXP, msg='Display go stim (%s)' %
                           params['goStim'])
-            timestamp = local_clock()
+            timestamp = time()
             outlet.push_sample([markernames[0]], timestamp)
         else:
             stims[params['noGoStim']].draw()
             win.logOnFlip(level=logging.EXP,
                           msg='Display no-go stim (%s)' % params['noGoStim'])
-            timestamp = local_clock()
+            timestamp = time()
             outlet.push_sample([markernames[1]], timestamp)
         # Wait until it's time to display
         while (globalClock.getTime() < tNextFlip[0]):

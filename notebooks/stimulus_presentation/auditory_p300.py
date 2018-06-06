@@ -11,7 +11,7 @@ from optparse import OptionParser
 import numpy as np
 from pandas import DataFrame
 from psychopy import visual, core, event, sound
-from pylsl import StreamInfo, StreamOutlet, local_clock
+from pylsl import StreamInfo, StreamOutlet
 
 def present(duration=120):
     
@@ -58,7 +58,7 @@ def present(duration=120):
         auds[ind].play()
 
         # Send marker
-        timestamp = local_clock()
+        timestamp = time()
         outlet.push_sample([markernames[ind]], timestamp)
 
         # offset

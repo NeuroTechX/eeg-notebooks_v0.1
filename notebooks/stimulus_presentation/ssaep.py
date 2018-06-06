@@ -15,7 +15,7 @@ from pandas import DataFrame
 from psychopy import prefs
 prefs.general['audioLib'] = ['pygame']
 from psychopy import visual, core, event, sound
-from pylsl import StreamInfo, StreamOutlet, local_clock
+from pylsl import StreamInfo, StreamOutlet
 from scipy import stats
 
 
@@ -118,7 +118,7 @@ def present(duration=120):
         auds[ind].play()
 
         # Send start marker
-        timestamp = local_clock()
+        timestamp = time()
         outlet.push_sample([markernames[ind]], timestamp)
 
         # offset
