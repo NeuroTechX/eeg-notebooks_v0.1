@@ -57,42 +57,13 @@ Create a conda environment for your neurobrite work:
 
 `conda create -n “neurobrite”  python=2`
 
-(You need to activate this environment every time you start a new terminal when you want to do work within the neurobrite environment we are about to setup)  
+## 2. Download git for windows
 
-Activate the neurobrite conda environment and install the libraries
+Git is a version control system that will allow you to download and track changes to eeg notebooks. On Windows, it also gives you Git Bash, which is a useful linux-style terminal.
 
-`conda activate neurobrite`
-
-`conda install git` 
-
-`pip install bitstring pylsl psychopy scikit-learn pandas numpy mne seaborn
-pyriemann pexpect jupyter pyglet==1.2`
-
-`pip install git+https://github.com/peplin/pygatt`
-
-![fig](figs/miniconda_run_install_fig_8.png)
-
-
-
-(this may take up to 5 minutes to install)
-
-Next type `jupyter notebook password`
-
-Enter a password of your choice
-
-Tip: choose a password that you will remember! You will need it every time you want to use jupyter notebook.
-
-
-
-## 2. (Optional) Download git bash for windows
-
-Git bash gives you a linux-style terminal, as well as a git installation and a few other useful linuxy things.
-
-You can download git bash from: https://git-scm.com/download/win
+You can download git from: https://git-scm.com/download/win
 
 Run the installation with default settings
-
-
 
 ## 3. Get eeg-notebooks
 
@@ -100,7 +71,7 @@ You have two options, pick one from the following:
 
 1) With git bash:
 
-`Type git clone --recursive https://github.com/NeuroTechX/eeg-notebooks`
+`git clone --recursive https://github.com/NeuroTechX/eeg-notebooks`
 
 ![fig](figs/install_gitbash.png)
 de
@@ -111,51 +82,30 @@ Navigate to the github repository (or https://github.com/NeuroTechX/eeg-notebook
 
 Now, you are ready to use the jupyter notebook.
 
+## 4. Install python dependencies
 
+Go back to your open Anaconda Prompt (or open a new one) and navigate to the location where you installed eeg-notebooks. You can use the `cd` command to change directories (i.e. `cd eeg-notebooks`)
 
-## 4. Get familiar with EEG notebooks
+Activate the neurobrite conda environment. Note: you will need to activate this environment every time you start a new terminal when you want to do work within the neurobrite environment we are about to setup
 
-Here are a few  the steps to get you started:
+`conda activate neurobrite`
 
-Start an anaconda terminal (follow the steps described earlier)
+Now, install the dependencies identified in the requirements.txt file. Note: this may take a long time, up to 15 minutes
 
-Type  `cd eeg-notebooks` to go in the folder that you have created
+`pip install -r requirements.txt`
 
-Type `jupyter notebook --no-browser`
+## 5. (Optional ) Install BlueMuse
 
-Now select the URL with the token and copy it into a web browser 
-Tip: You may need to enable ‘marking’ in your terminal to able to copy the URL
+[BlueMuse](https://github.com/kowalej/BlueMuse) is a Windows 10 program that allows communication between a Muse headband and a computer's native bluetooth drivers using the LSL communication protocol. It can be used as an alternative to an external BLED112 dongle. 
 
-![fig](figs/mark_conda_terminal.png)
+To install, go the the [ `BlueMUSE` github website](https://github.com/kowalej/BlueMuse) and follow the installation instructions.
 
+## 6. Start a jupyter notebook session
 
-OR In a web browser, go to `localhost:8888`.
+Finally, start a jupyter notebook session from your Anaconda Promt in the eeg-notebooks directory
 
-This should bring up the `eeg-notebooks` folder structure.
+`jupyter notebook`
 
-Go to the notebooks folder and open up `N170 with Muse.ipynb` to try, and working through the cells in this notebook.
+A browser should automatically open. If it doesn't, visit `localhost:8888`.
 
-*Tip: Hover over the icons inside the notebook to get more details on their functionality*
-
-The top section of the notebook consists of details regarding the Muse experiment.
-
-Select the cells sequentially starting from the top one and click on play button to run.
-
-
-  
-## 5. (Optional) Install BlueMuse
-
-[BlueMuse](https://github.com/kowalej/BlueMuse) is a windows 10 program that allows communication between a `muse` headset and a computer's native bluetooth drivers using the `lsl` communication protocol. It can be used as an alternative to the `BLED112` dongle. 
-
-To install, go the the [ `BlueMUSE` github website](https://github.com/kowalej/BlueMuse). Click `download` (green button, right hand corner). Once downloaded, unzip the download file. Navigate to `Dist` folder and unzip the latest distribution number (e.g. `BlueMuse_1.0.5.0.zip`. Once unzipped, go into this folder, and follow the [installation instructions](https://github.com/kowalej/BlueMuse#installation) in the website's `README.md` file. It is easiest to simple read these through github in a web browser. 
-
-
-
-
-
-
-
-
-
-
-
+This should bring up the `eeg-notebooks` folder structure. You will find the list of available experiments in the `notebooks` folder.

@@ -7,4 +7,9 @@ pandas
 numpy
 mne
 seaborn
+pyriemann
 pexpect
+jupyter
+vispy
+pyglet==1.2
+git+https://github.com/peplin/pygatt
