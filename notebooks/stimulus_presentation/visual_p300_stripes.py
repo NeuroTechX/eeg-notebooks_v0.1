@@ -5,13 +5,6 @@ from time import time, strftime, gmtime
 from optparse import OptionParser
 from pylsl import StreamInfo, StreamOutlet
 
-parser = OptionParser()
-parser.add_option("-d", "--duration",
-                  dest="duration", type='int', default=400,
-                  help="duration of the recording in seconds.")
-
-(options, args) = parser.parse_args()
-
 
 def present(duration=120):
 
@@ -26,8 +19,8 @@ def present(duration=120):
     start = time()
 
     n_trials = 2010
-    iti = .3
-    soa = 0.2
+    iti = .4
+    soa = 0.3
     jitter = 0.2
     record_duration = np.float32(duration)
 
