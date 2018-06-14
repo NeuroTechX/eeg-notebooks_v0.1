@@ -13,3 +13,4 @@ jupyter
 vispy
 pyglet==1.2
 git+https://github.com/peplin/pygatt
+muselsl
