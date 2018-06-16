@@ -24,7 +24,7 @@ The code is hosted on github: https://github.com/NeuroTechX/eeg-notebooks/
 
     Summary of available notebooks <available_notebooks.md>  
     N170 Faces & Houses <n170.nblink>
-    Visual Oddball P300 <p300.nblink>
+    Visual Oddball P300 <visual_p300.nblink>
     SSVEP data analysis notebook <ssvep.nblink>
 
 .. toctree::
