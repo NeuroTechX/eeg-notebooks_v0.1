@@ -1,5 +1,5 @@
 bitstring==3.1.5
-pylsl==1.10.15
+pylsl==1.10.5
 pygatt==3.2.0 
 scikit-learn==0.19.1 
 pandas==0.23.1 
