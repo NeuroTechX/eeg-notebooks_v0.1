@@ -10,6 +10,8 @@ Please see the [documentation](http://eeg-notebooks.readthedocs.io/) for advance
 
 Follow installation instructions [here](http://eeg-notebooks.readthedocs.io/en/latest/setup_instructions_windows.html)
 
+If you are a Mac user, follow the instructions [here](https://github.com/amandakeasson/eeg-notebooks/blob/master/mac_instructions.pdf)
+
 ## Running Experiments
 
 Open the experiment you are interested in running in notebooks folder. Notebooks can be opened either with the Jupyter Notebook browser environment (run `jupyter notebook`) or in the [nteract](https://nteract.io/desktop) desktop application.
