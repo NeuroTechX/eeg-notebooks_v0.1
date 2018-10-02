@@ -16,7 +16,7 @@ You will need a Muse 2016 and Python installed on your computer. Psychopy, the s
 
 Install all requirements.
 
-`pip install requirements.txt`
+`pip install -r requirements.txt`
 
 See [here](http://eeg-notebooks.readthedocs.io/en/latest/setup_instructions_windows.html)
 for more detailed setup instructions for windows operating systems.
