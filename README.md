@@ -1,7 +1,9 @@
 # EEG Notebooks
 
 ### NOTE:
-This is a fork of [https://github.com/neurotechx/eeg-notebooks](https://github.com/neurotechx/eeg-notebooks), with several modifications and additional scripts to allow Mac users to run the experiments. 
+This is a fork of https://github.com/amandakeasson/eeg-notebooks to add a new cueing task, minor adjustments to mac experiment run script to name files with subject number and session.
+
+amandakeasson/ version is a fork of [https://github.com/neurotechx/eeg-notebooks](https://github.com/neurotechx/eeg-notebooks), with several modifications and additional scripts to allow Mac users to run the experiments. 
 
 A collection of classic EEG experiments implemented in Python and Jupyter notebooks. This repo is a work in progress with the goal of making it easy to perform classical EEG experiments and automatically analyze data.
 
@@ -27,4 +29,5 @@ Currently available experiments:
 - N170 (Faces & Houses)
 - SSVEP
 - Visual P300
+- Cueing (Kyle Mathewson)
 
