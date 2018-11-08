@@ -23,8 +23,8 @@ def present(duration,subject,session):
     resp_markernames = [31,32]
 
     n_trials = 2010
-    instruct = 0
-    practicing = 0
+    instruct = 1
+    practicing = 1
 
     #seconds
     iti = 1
