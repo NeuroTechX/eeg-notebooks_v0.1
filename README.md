@@ -15,7 +15,7 @@ Please see the [documentation](http://eeg-notebooks.readthedocs.io/) for advance
 
 Follow installation instructions [here](http://eeg-notebooks.readthedocs.io/en/latest/setup_instructions_windows.html)
 
-If you are a Mac user, follow the installation instructions [here](https://github.com/kylemath/eeg-notebooks/blob/master/mac_instructions_cueing.docx)
+If you are a Mac user, follow the installation instructions [here](https://github.com/kylemath/eeg-notebooks/raw/master/mac_instructions_cueing.docx)
 
 ## Running Experiments
 
