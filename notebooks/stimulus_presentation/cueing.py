@@ -37,7 +37,7 @@ def present(duration,subject,session):
     record_duration = np.float32(duration)
 
     target_positions = [-10,10]
-    target_size = [.5]
+    target_size = [1]
 
     # Setup log
     tilt = np.random.binomial(1, 0.5, n_trials)
