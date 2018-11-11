@@ -52,8 +52,10 @@ def present(duration,subject,session):
         practice()
 
     # graphics
-    mywin = visual.Window([1280, 800], monitor="testMonitor", units="deg",
+    mywin = visual.Window([1440, 900], monitor="testMonitor", units="deg",
                           fullscr=True)
+
+    mywin.mouseVisible = False
 
     grating = visual.GratingStim(win=mywin, mask='gauss', size=target_size, sf=5)
     fixation = visual.GratingStim(win=mywin, size=0.2, pos=[0, 0], sf=0)                            
@@ -71,7 +73,7 @@ def present(duration,subject,session):
     text.draw()
     fixation.draw()
     mywin.flip()
-    core.wait(2)
+    core.wait(3)
    
 
     #create a clock for rt's
@@ -199,10 +201,6 @@ def present(duration,subject,session):
     output = np.array(responses)
     scipy.io.savemat(outname, {'output': output, 'column_labels':column_labels})
    
-
-    print(np.shape(output))
-    print(output)
-    
     #Overall Accuracy
     print("Overall Mean Accuracy = " + str(round(100*np.mean(output[:,6]))))
     #Overall Mean, Median RT
@@ -224,6 +222,8 @@ def present(duration,subject,session):
     text.draw()
     mywin.flip()
     event.waitKeys(keyList="space")
+
+    mywin.mouseVisible = True
 
     # Cleanup
     mywin.close()
@@ -256,10 +256,13 @@ def practice():
     trials = DataFrame(dict(tilt=tilt, cues=cues))
 
     # graphics
-    mywin = visual.Window([1280, 800], monitor="testMonitor", units="deg", fullscr=True)
+    mywin = visual.Window([1440, 900], monitor="testMonitor", units="deg", fullscr=True)
     grating = visual.GratingStim(win=mywin, mask='gauss', size=2, sf=4)
     fixation = visual.GratingStim(win=mywin, size=0.2, pos=[0, 0], sf=0)                            
     cuewin = visual.GratingStim(win=mywin, mask='circle', size=0.5, pos=[0, 1], sf=0)
+
+
+    mywin.mouseVisible = False
 
    #Get ready screen
     text = visual.TextStim(
@@ -379,6 +382,8 @@ def practice():
     mywin.flip()
     event.waitKeys(keyList="space")
 
+    mywin.mouseVisible = True
+
     # Cleanup
     mywin.close()
 
@@ -386,11 +391,14 @@ def practice():
 def instructions():
 
     # graphics
-    mywin = visual.Window([1280, 800], monitor="testMonitor", units="deg",
+    mywin = visual.Window([1440, 900], monitor="testMonitor", units="deg",
                           fullscr=True)
     grating = visual.GratingStim(win=mywin, mask='gauss', size=2, sf=4)
     fixation = visual.GratingStim(win=mywin, size=0.2, pos=[0, 0], sf=0)                            
     cuewin = visual.GratingStim(win=mywin, mask='circle', size=0.5, pos=[0, 1], sf=0)
+
+
+    mywin.mouseVisible = False
 
     #Instructions
     text = visual.TextStim(
@@ -519,6 +527,9 @@ def instructions():
     sys.stdout.flush()
 
     event.waitKeys(keyList="space")
+
+    mywin.mouseVisible = True
+
     mywin.close()
 
 
