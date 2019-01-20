@@ -64,7 +64,7 @@ def load_muse_csv_as_raw(filename, sfreq=256., ch_ind=[0, 1, 2, 3],
 
         # create MNE object
         info = create_info(ch_names=ch_names, ch_types=ch_types,
-                           sfreq=sfreq, montage=montage)
+                           sfreq=sfreq, montage=montage, verbose=False)
         raw.append(RawArray(data=data, info=info))
 
     # concatenate all raw objects
