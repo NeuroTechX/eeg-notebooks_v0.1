@@ -30,4 +30,4 @@ Currently available experiments:
 - SSVEP
 - Visual P300
 - Cueing (Kyle Mathewson)
-
+- Baseline (Kyle, Eye's Open vs. Closed, needs notebook made)
