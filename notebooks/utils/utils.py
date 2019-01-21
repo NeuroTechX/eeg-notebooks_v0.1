@@ -18,7 +18,7 @@ sns.set_style('white')
 
 
 def load_muse_csv_as_raw(filename, sfreq=256., ch_ind=[0, 1, 2, 3],
-                         stim_ind=5, replace_ch_names=None):
+                         stim_ind=5, replace_ch_names=None, verbose=1):
     """Load CSV files into a Raw object.
 
     Args:
@@ -64,17 +64,17 @@ def load_muse_csv_as_raw(filename, sfreq=256., ch_ind=[0, 1, 2, 3],
 
         # create MNE object
         info = create_info(ch_names=ch_names, ch_types=ch_types,
-                           sfreq=sfreq, montage=montage, verbose='INFO')
-        raw.append(RawArray(data=data, info=info, verbose='INFO'))
+                           sfreq=sfreq, montage=montage, verbose=verbose)
+        raw.append(RawArray(data=data, info=info, verbose=verbose))
 
     # concatenate all raw objects
-    raws = concatenate_raws(raw, verbose='INFO')
+    raws = concatenate_raws(raw, verbose=verbose)
 
     return raws
 
 
 def load_data(data_dir, subject_nb=1, session_nb=1, sfreq=256.,
-              ch_ind=[0, 1, 2, 3], stim_ind=5, replace_ch_names=None):
+              ch_ind=[0, 1, 2, 3], stim_ind=5, replace_ch_names=None, verbose=1):
     """Load CSV files from the /data directory into a Raw object.
 
     Args:
@@ -107,7 +107,7 @@ def load_data(data_dir, subject_nb=1, session_nb=1, sfreq=256.,
 
     return load_muse_csv_as_raw(fnames, sfreq=sfreq, ch_ind=ch_ind,
                                 stim_ind=stim_ind,
-                                replace_ch_names=replace_ch_names)
+                                replace_ch_names=replace_ch_names, verbose=verbose)
 
 
 def plot_conditions(epochs, conditions=OrderedDict(), ci=97.5, n_boot=1000,
