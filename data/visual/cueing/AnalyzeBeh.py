@@ -58,13 +58,6 @@ for isub, sub in enumerate(subs):
 		rt = output[:,7]
 		validity = output[:,3]
 
-		# count each type of trial
-		count_rt[isub,sesh,:] 	= [len( rt[(validity == 1) & 
-										(rt >= rt_toofast) &
-										(rt <= rt_tooslow)]), 
-								   len( rt[(validity == 0) &
-										(rt >= rt_toofast) &
-										(rt <= rt_tooslow)]) ]
 		# median rt on each condition	
 		median_rt[isub,sesh,:] 	= [ np.nanmedian ( rt [ (validity == 1) &
 													 	(rt >= rt_toofast) &
@@ -85,11 +78,9 @@ for isub, sub in enumerate(subs):
 	
 
 # Summary states and collapse sessions
-Out_count = np.squeeze(np.sum(count_rt,axis=1))
 Out_median_RT = np.squeeze(np.nanmean(median_rt,axis=1))
 Out_prop_accu = np.squeeze(np.nanmean(prop_accu,axis=1))
 
-print(Out_count)
 print(Out_median_RT)
 print(Out_prop_accu)
 
