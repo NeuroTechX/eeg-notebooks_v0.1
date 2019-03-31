@@ -2,17 +2,21 @@ import scipy.io as sio
 import os
 import numpy as np 
 import matplotlib.pyplot as plt 
+import pandas as pd 
 
 subs = [101, 102]
+
 #fall 2018
 subs = [101, 102, 103, 104, 105, 106, 108, 109, 110, 111, 112,
         202, 203, 204, 205, 207, 208, 209, 210, 211, 
         301, 302, 303, 304, 305, 306, 307, 308, 309]
+
 #winter 2019
 subs = [1101, 1102, 1103, 1104, 1105, 1106, 1108, 1109, 1110,
         1202, 1203, 1205, 1206, 1209, 1210, 1211, 1215,
         1301, 1302, 1313, 
         1401, 1402, 1403, 1404, 1405,  1408, 1410, 1411, 1412, 1413, 1413, 1414, 1415, 1416]
+
 #both
 subs = [101, 102, 103, 104, 105, 106, 108, 109, 110, 111, 112,
         202, 203, 204, 205, 207, 208, 209, 210, 211, 
@@ -20,7 +24,7 @@ subs = [101, 102, 103, 104, 105, 106, 108, 109, 110, 111, 112,
         1101, 1102, 1103, 1104, 1105, 1106, 1108, 1109, 1110,
         1202, 1203, 1205, 1206, 1209, 1210, 1211, 1215,
         1301, 1302, 1313, 
-        1401, 1402, 1403, 1404, 1405,  1408, 1410, 1411, 1412, 1413, 1413, 1414, 1415, 1416]
+        1401, 1402, 1403, 1404, 1405, 1408, 1410, 1411, 1412, 1413, 1413, 1414, 1415, 1416]
 
 n_subs = len(subs)
 n_sesh = 2
@@ -89,10 +93,6 @@ print(Out_count)
 print(Out_median_RT)
 print(Out_prop_accu)
 
-
-
-# T-test 
-
 # bar plot results
 plt.figure()
 # Accuracy
@@ -114,4 +114,19 @@ ax.set_xticks([0,1])
 ax.set_xticklabels(conditions)
 plt.show()
 
-print('Done')
+## CSV output
+column_dict = { 'Participant':subs,
+				'AccValid':Out_prop_accu[:,0],
+				'AccInvalid':Out_prop_accu[:,1],
+				'RTValid':Out_median_RT[:,0],
+				'RTInvalid':Out_median_RT[:,1] }
+df = pd.DataFrame(column_dict)
+print(df)
+df.to_csv('375CueingBehPy.csv',index=False)
+
+
+
+
+
+
+
