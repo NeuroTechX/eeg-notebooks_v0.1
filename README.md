@@ -1,3 +1,4 @@
+[![Binder](https://conp7.calculquebec.cloud/badge_logo.svg)](https://conp7.calculquebec.cloud/v2/gh/NeuroTechX/eeg-notebooks/master?urlpath=lab)
 # EEG Notebooks
 
 A collection of classic EEG experiments implemented in Python and Jupyter notebooks. This repo is a work in progress with the goal of making it easy to perform classical EEG experiments and automatically analyze data.
