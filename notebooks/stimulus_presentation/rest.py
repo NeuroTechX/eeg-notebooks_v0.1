@@ -33,7 +33,7 @@ def present(duration=300):
         fixation.draw()
         #outlet.push_sample([markernames[0]], time())
         win.flip()
-        #if (time() - start) > 10.0:
+        #if (time() - start) > duration:
             #break
         event.clearEvents()
     print(time()-start)
