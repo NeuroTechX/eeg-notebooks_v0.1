@@ -1,14 +1,7 @@
-import numpy as np
-from pandas import DataFrame
 from psychopy import visual, core, event, logging
-from time import time, strftime, gmtime
+from time import time
 from optparse import OptionParser
 from pylsl import StreamInfo, StreamOutlet
-from glob import glob
-from random import choice
-import random
-import os
-import scipy.io
 
 def present(duration=300):
     nsamples = int(60*duration)
