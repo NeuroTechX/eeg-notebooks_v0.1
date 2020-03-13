@@ -5,11 +5,17 @@ from optparse import OptionParser
 
 import numpy as np
 from pandas import DataFrame
-from psychopy import sound
+from psychopy import visual, core, event, sound
+from pylsl import StreamInfo, StreamOutlet
 
 
 def present(duration=120, n_trials=10, iti=0.3, soa=0.2, jitter=0.2, 
             secs=0.2, volume=0.8, random_state=None):
+    
+
+    # Create markers stream outlet
+    info = StreamInfo('Markers', 'Markers', 1, 0, 'int32', 'myuidw43536')
+    outlet = StreamOutlet(info)    
 
     np.random.seed(random_state)
     markernames = [1, 2]
@@ -39,14 +45,30 @@ def present(duration=120, n_trials=10, iti=0.3, soa=0.2, jitter=0.2,
 
         # Select and play sound
         ind = int(trial['sound_ind'])
+        auds[ind].stop()        
         auds[ind].play()
 
+        # Send marker
+        timestamp = time.time()
+        outlet.push_sample([markernames[ind]], timestamp)
+        
         # Offset
-        time.sleep(soa)
-        if (time.time() - start) > record_duration:
-            break
-        auds[ind].stop()
+        #time.sleep(soa)
+        #if (time.time() - start) > record_duration:
+        #    break
 
+        # offset
+        core.wait(soa)
+        if len(event.getKeys()) > 0 or (time.time() - start) > record_duration:
+            break
+        event.clearEvents()
+        
+        #if len(event.getKeys()) > 0 or (time() - start) > record_duration:
+        #    break
+        #event.clearEvents()
+        
+        
+        
     return trials
 
 
