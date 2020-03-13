@@ -55,6 +55,7 @@ def present(duration=120):
 
         # Select and play sound
         ind = trials['sound_ind'].iloc[ii]
+        auds[ind].stop()
         auds[ind].play()
 
         # Send marker
