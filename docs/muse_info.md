@@ -1,8 +1,5 @@
 # Technical Information about the MUSE
 
-
-
-
 ## MUSE setup and usage 
 
 There is a lot of excellent information on MUSE setup and usage on the [website of the Krigolson lab website](http://www.krigolsonlab.com/muse-help.html) at the University of Victoria, BC. 

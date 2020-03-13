@@ -1,61 +1,35 @@
 # Getting Started
 
-You will need a Muse 2016 and Python installed on your computer. With the exception of some of the stimulus presentation scripts, all code will work with Python 3.
+## Installation
 
-The muse-lsl library that manages connecting to Muse and recording data is incorporated into this repo as a submodule. In order to get it up and running use the following commands:
+You will need a Muse 2016 and Python installed on your computer. Psychopy, the stimulus presentation library that underlies most of the experiments, officially only supports Python 2. However, some users, especially those on Linux, have been able to work entirely in Python 3 without any issues.
 
+`git clone https://github.com/neurotechx/eeg-notebooks`
 
-Either: 
-
-```
-git clone --recursive https://github.com/neurotechx/eeg-notebooks
-```
-
-
-Or: 
-
-```
-git clone https://github.com/neurotechx/eeg-notebooks
-cd eeg-notebooks
-git submodule init
-git submodule update
-```
-
-Install all requirements
+Install all requirements.
 
 `pip install requirements.txt`
 
+See [here](http://eeg-notebooks.readthedocs.io/en/latest/setup_instructions_windows.html)
+for more detailed setup instructions for windows operating systems.
 
+## Running Experiments
 
-(See [here](http://eeg-notebooks.readthedocs.io/en/latest/setup_instructions_windows.html)
+Open the experiment you are interested in running in notebooks folder. Notebooks can be opened either with the Jupyter Notebook browser environment (run `jupyter notebook`) or in the [nteract](https://nteract.io/desktop) desktop application.
 
+All experiments should be able to performed entirely within the notebook environment. On Windows 10, you will want to skip the bluetooth connection step and start an EEG data stream through the [BlueMuse](https://github.com/kowalej/BlueMuse) GUI.
 
-for more detailed setup instructions for windows operating systems)
+*Note: if errors are encountered during viewing of the eeg data, try starting the viewer directly from the command line (`muselsl view`). Version 2 of the viewer may work better on Windows computers (`muselsl view -v 2`)
 
+The basic steps of each experiment are as follows:
+1. Open an LSL stream of EEG data.
+2. Ensure that EEG signal quality is excellent and that there is very little noise. The standard deviation of the signal (displayed next to the raw traces) should ideally be below 10 for all channels of interest.
+3. Define subject and session ID, as well as trial duration. *Note: sessions are analyzed independently. Each session can contain multiple trials or 'run-throughs' of the experiments.*
+4. Simultaneously run stimulus presentation and recording processes to create a data file with both EEG and event marker data.
+5. Repeat step 4 to collect as many trials as needed (4-6 trials of two minutes each are recommended in order to see the clearest results)
+6. Load experimental data into an MNE Raw object.
+7. Apply a band-pass filter to remove noise
+8. Epoch the data, removing epochs where amplitude of the signal exceeded a given threshold (removes eye blinks)
+9. Generate averaged waveforms from all channels for each type of stimulus presented
 
-
-To connect to your Muse and begin streaming data
-
-`python muse-lsl/muse-lsl.py --name MUSE_YOURDEVICEID`
-
-IMPORTANT: Leave this terminal running while you are recording data performing experiments
-
-To visualize streaming data 
-
-`python muse-lsl/lsl-viewer.py`
-
-IMPORTANT: If you intend to collect data for an experiment, ensure that your signal quality is "excellent" and that there is very little noise before proceeding.
-
-### Running an experiment
-
-With the muse-lsl.py script running, open another terminal and run
-
-`python stimulus_presentation/PARADIGM.py -d 120 & python muse-lsl/lsl-record.py -d 12`
-
-where `PARADIGM.py` is one of the stimulus presentation scripts described above (e.g., `generate_Visual_P300.py`).
-
-This will launch the selected paradigm and record data for 2 minutes. Consider repeating this 6 - 10 times in order to gather enough data.
-
-After collecting data, move your recorded data CSVs to the data folder. Currently, notebook analysis scripts work with a `experiment/type/subjectNumber/sessionNumber` directory structure.
-
-Open the Jupyter notebook relevant to the experiment your performed (e.g. `P300 with Muse.ipynb`) to analyze your data
+Notebooks in the `old_notebooks` folder only contain the data analysis steps (6-9). They can be used by using the `run_experiments.py` script (e.g `python run_eeg_experiment.py Auditory_P300 15 1`)
