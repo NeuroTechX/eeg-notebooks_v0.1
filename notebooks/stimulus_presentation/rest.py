@@ -34,7 +34,8 @@ def present(duration=300):
         #outlet.push_sample([markernames[0]], time())
         win.flip()
         #if (time() - start) > 10.0:
-            #break
+        #if (time() - start) > duration:
+        #break
         event.clearEvents()
     print(time()-start)
     win.close()
