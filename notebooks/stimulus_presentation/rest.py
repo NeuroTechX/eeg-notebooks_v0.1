@@ -1,7 +1,14 @@
+import numpy as np
+from pandas import DataFrame
 from psychopy import visual, core, event, logging
-from time import time
+from time import time, strftime, gmtime
 from optparse import OptionParser
 from pylsl import StreamInfo, StreamOutlet
+from glob import glob
+from random import choice
+import random
+import os
+import scipy.io
 
 def present(duration=300):
     nsamples = int(60*duration)
@@ -26,8 +33,9 @@ def present(duration=300):
         fixation.draw()
         #outlet.push_sample([markernames[0]], time())
         win.flip()
+        #if (time() - start) > 10.0:
         #if (time() - start) > duration:
-            #break
+        #break
         event.clearEvents()
     print(time()-start)
     win.close()
