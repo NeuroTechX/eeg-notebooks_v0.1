@@ -1,2 +1,0 @@
-# Psychopy experiments
-

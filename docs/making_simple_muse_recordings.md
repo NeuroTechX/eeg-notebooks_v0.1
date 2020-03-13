@@ -1,2 +1,0 @@
-
-# Making simple MUSE recordings
