@@ -6,7 +6,7 @@ from optparse import OptionParser
 from pylsl import StreamInfo, StreamOutlet
 
 
-def present(duration=120):
+def present(duration,subject,run):
 
     # create
     info = StreamInfo('Markers', 'Markers', 1, 0, 'int32', 'myuidw43536')
@@ -33,7 +33,7 @@ def present(duration=120):
     # graphics
     mywin = visual.Window([1920, 1080], monitor="testMonitor", units="deg",
                           fullscr=True)
-    grating = visual.GratingStim(win=mywin, mask='circle', size=20, sf=2)
+    grating = visual.GratingStim(win=mywin, mask='gauss', size=40, sf=2)
     fixation = visual.GratingStim(win=mywin, size=0.2, pos=[0, 0], sf=0,
                                   rgb=[1, 0, 0])
 
@@ -68,9 +68,17 @@ def main():
     parser.add_option("-d", "--duration",
                       dest="duration", type='int', default=120,
                       help="duration of the recording in seconds.")
+    parser.add_option("-s", "--subject",
+                  dest="subject", type='int', default=1,
+                  help="subject number: must be an integer")
+    parser.add_option("-r", "--run",
+                  dest="run", type='int', default=1,
+                  help="run (session) number: must be an integer")
 
     (options, args) = parser.parse_args()
     present(options.duration)
+    present(options.subject)
+    present(options.n)
 
 
 if __name__ == '__main__':

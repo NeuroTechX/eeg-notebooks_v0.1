@@ -11,7 +11,7 @@ pexpect==4.6.0
 jupyter==1.0.0
 vispy==0.5.3
 pyglet==1.2.0
-muselsl==1.0.1
+muselsl==2.0.2
 PsychoPy==1.90.2
 git+https://github.com/peplin/pygatt
 matplotlib==2.2.2

@@ -1,5 +1,6 @@
 # EEG Notebooks
 
+
 A collection of classic EEG experiments implemented in Python and Jupyter notebooks. This repo is a work in progress with the goal of making it easy to perform classical EEG experiments and automatically analyze data.
 
 Currently, all experiments are implemented for the Muse EEG device and based on work done by Alexandre Barachant and Hubert Banville for the [muse-lsl](https://github.com/alexandrebarachant/muse-lsl) library. 
@@ -12,8 +13,7 @@ Please see the [documentation](http://eeg-notebooks.readthedocs.io/) for advance
 
 ### Installation
 
-If you are a Mac user, follow the installation instructions [here](https://github.com/amandakeasson/eeg-notebooks/blob/master/mac_instructions_neurobrite.docx)
-
+If you are a Mac user, follow the installation instructions [here](https://github.com/kylemath/eeg-notebooks/raw/master/mac_instructions_cueing.docx)
 
 You will need a Muse 2016 and Python installed on your computer. Psychopy, the stimulus presentation library that underlies most of the experiments, officially only supports Python 2. However, some users, especially those on Linux, have been able to work entirely in Python 3 without any issues.
 
@@ -47,3 +47,10 @@ The basic steps of each experiment are as follows:
 9. Generate averaged waveforms from all channels for each type of stimulus presented
 
 Notebooks in the `old_notebooks` folder only contain the data analysis steps (6-9). They can be used by using the `run_experiments.py` script (e.g `python run_eeg_experiment.py Auditory_P300 15 1`)
+
+Currently available experiments: 
+- N170 (Faces & Houses)
+- SSVEP
+- Visual P300
+- Cueing (Kyle Mathewson)
+- Baseline (Kyle, Eye's Open vs. Closed, needs notebook made)
