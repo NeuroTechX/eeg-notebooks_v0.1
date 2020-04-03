@@ -46,5 +46,5 @@ cd ~/eeg-notebooks/notebooks
 jupyter notebook
 ```
 
-* Open name.ipynb in the browser
-* The rest of the instructions for running experiments and analyzing data are in the name.ipynb notebook
+* Open mac_notebook.ipynb or cueing.ipynb in the browser
+* The rest of the instructions for running experiments and analyzing data are in the mac_notebook.ipynb or cueing.ipynb notebook
