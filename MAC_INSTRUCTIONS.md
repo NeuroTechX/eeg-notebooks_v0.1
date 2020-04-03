@@ -1,5 +1,6 @@
 # How to get started with eeg-notebooks: # 	
 
+* Run the following commands in the Terminal:
 ```bash
 cd ~
 source ~/.bash_profile
