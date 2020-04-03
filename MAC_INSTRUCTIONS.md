@@ -12,6 +12,10 @@ git clone https://www.github.com/neurotechX/eeg-notebooks
 cd ~/eeg-notebooks
 pip install -r requirements_mac.txt
 ```
+* fix pygatt code by replacing with patched version with bug commented out on lines 168-170:
+```bash
+cp ~/eeg-notebooks/bgapi.py ~/miniconda3/envs/nbmac/lib/python3.6/site-packages/pygatt/backends/bgapi/
+```
 
 * For the “conda create” command, you will be asked to type “y” to confirm that yes, you wish to install the required packages
 * The above packages may take ~5-10 minutes to install
