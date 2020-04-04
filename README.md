@@ -13,7 +13,7 @@ Please see the [documentation](http://eeg-notebooks.readthedocs.io/) for advance
 
 ### Installation
 
-If you are a Mac user, follow the installation instructions [here](https://github.com/kylemath/eeg-notebooks/raw/master/mac_instructions_cueing.docx)
+If you are a Mac user, follow the installation instructions [here](MAC_INSTRUCTIONS.md)
 
 You will need a Muse 2016 and Python installed on your computer. Psychopy, the stimulus presentation library that underlies most of the experiments, officially only supports Python 2. However, some users, especially those on Linux, have been able to work entirely in Python 3 without any issues.
 
