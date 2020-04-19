@@ -8,6 +8,7 @@ Face vs. house paradigm stimulus presentation for evoking present.
 
 from time import time
 from optparse import OptionParser
+import os
 from glob import glob
 from random import choice
 
@@ -16,6 +17,11 @@ from pandas import DataFrame
 from psychopy import visual, core, event
 from pylsl import StreamInfo, StreamOutlet
 
+from eegnb import stimuli
+
+stim_dir = os.path.split(stimuli.__file__)[0]
+faces_dir = os.path.join(stim_dir, 'visual', 'face_house', 'faces')
+houses_dir = os.path.join(stim_dir, 'visual', 'face_house', 'houses')
 
 def present(duration=120):
 
@@ -45,10 +51,12 @@ def present(duration=120):
 
     mywin = visual.Window([1600, 900], monitor='testMonitor', units='deg', winType='pygame',
                           fullscr=True)
-    faces = list(map(load_image, glob(
-        'stimulus_presentation/stim/face_house/faces/*_3.jpg')))
-    houses = list(map(load_image, glob(
-        'stimulus_presentation/stim/face_house/houses/*.3.jpg')))
+    #faces = list(map(load_image, glob(
+    #    'stimulus_presentation/stim/face_house/faces/*_3.jpg')))
+    faces = list(map(load_image, glob(faces_dir + '/*_3.jpg')))
+    #houses = list(map(load_image, glob(
+    #    'stimulus_presentation/stim/face_house/houses/*.3.jpg'))) 
+    houses = list(map(load_image, glob(houses_dir + '/*.3.jpg')))
 
     for ii, trial in trials.iterrows():
         # Intertrial interval
