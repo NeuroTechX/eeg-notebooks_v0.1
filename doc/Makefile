@@ -45,7 +45,7 @@ install:
 	#   --depth 1 is a speed optimization since we don't need the history prior to the last commit
 	#   -b gh-pages fetches only the branch for the gh-pages
 	#git clone -b gh-pages --single-branch --no-checkout --depth 1 https://github.com/fooof-tools/fooof _build/gh_pages
-	git clone -b gh-pages --single-branch --no-checkout --depth 1 git@github.com:JohnGriffiths/eeg_notebooks_doc _build/gh_pages
+	git clone -b gh-pages --single-branch --no-checkout --depth 1 git@github.com:NeuroTechX/eeg-notebooks _build/gh_pages
 	# A .nojekyll file tells Github pages to bypass Jekyll processing
 	touch _build/gh_pages/.nojekyll
 	# A .nojekyll file tells Github pages to bypass Jekyll processing
