@@ -73,7 +73,7 @@ def load_muse_csv_as_raw(filename, sfreq=256., ch_ind=[0, 1, 2, 3],
     return raws
 
 
-def load_data(data_dir, subject_nb=1, session_nb=1, sfreq=256.,
+def load_data(data_dir=None, subject_nb=1, session_nb=1, sfreq=256.,
               ch_ind=[0, 1, 2, 3], stim_ind=5, replace_ch_names=None, verbose=1):
     """Load CSV files from the /data directory into a Raw object.
 
@@ -100,9 +100,8 @@ def load_data(data_dir, subject_nb=1, session_nb=1, sfreq=256.,
     if session_nb == 'all':
         session_nb = '*'
 
-    data_path = os.path.join(
-            '../data', data_dir,
-            'subject{}/session{}/*.csv'.format(subject_nb, session_nb))
+    data_path = os.path.join(data_dir,
+                             'subject{}/session{}/*.csv'.format(subject_nb, session_nb))
     fnames = glob(data_path)
 
     return load_muse_csv_as_raw(fnames, sfreq=sfreq, ch_ind=ch_ind,
