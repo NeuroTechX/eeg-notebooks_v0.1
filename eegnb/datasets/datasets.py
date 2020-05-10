@@ -44,12 +44,16 @@ def fetch_dataset(data_dir=None, experiment=None, site='eegnb_examples',
                         'visual-N170': '1oStfxzEqf36R5d-2Auyw4DLnPj9E_FAH',
                         'visual-leftright': '1f8A4Vbz0xjfgGIYFldMZ7ZL02x7T0jSt',
                         'visual-nogono': '1C8WKg9TXyp8A3QJ6T8zbGnk6jFcMutad',
+                        'visual-cueing': '1ABOVJ9S0BeJOsqdGFnexaTFZ-ZcsIXfQ',
                         'auditory-SSAEP': '1fd0OAyNGWWOHD8e1FnEOLeQMeEoxqEpO',
                         'auditory-P300': '1OEtrRfMOkzDssGv-2Lj56FsArmPnQ2vD'}
         
-        wget_str_tpl = "wget --no-check-certificate 'https://drive.google.com/uc?export=download&id=%s' -O %s"
+        wget_str_tpl = r"wget --no-check-certificate 'https://drive.google.com/uc?export=download&id=FILEID' -O OUTFILE"
 
+        # Large files need a modified download commant
+        large_downloads = ['visual-cueing']
 
+        wget_str_tpl_ld = r"""wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=FILEID' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=FILEID" -O OUTFILE && rm -rf /tmp/cookies.txt"""
 
         if experiment not in experiments_list: raise ValueError('experiment not in database')
 
@@ -63,7 +67,11 @@ def fetch_dataset(data_dir=None, experiment=None, site='eegnb_examples',
             cwd = os.getcwd()
             code = gdrive_locs[experiment]
             outfile = '%s/%s' %(data_dir, experiment + '.zip')
-            wget_str = wget_str_tpl %(code,outfile)
+
+            if experiment in large_downloads:
+              wget_str = wget_str_tpl_ld.replace('FILEID', code).replace('OUTFILE', outfile)
+            else:
+              wget_str = wget_str_tpl.replace('FILEID', code).replace('OUTFILE', outfile)
             
             print('downloading zip file: for %s' %experiment)
             print(wget_str)
