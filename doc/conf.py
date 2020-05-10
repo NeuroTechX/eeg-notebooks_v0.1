@@ -160,9 +160,10 @@ sphinx_gallery_conf = {
 """;
 
 sphinx_gallery_conf = {
-    'examples_dirs': ['../examples'],
-    'gallery_dirs': ['auto_examples'],
-    'subsection_order' : ExplicitOrder(['../examples/analyze_data',
+        'filename_pattern': '.py',
+        'examples_dirs': ['../examples'],
+        'gallery_dirs': ['auto_examples'],
+        'subsection_order' : ExplicitOrder(['../examples/analyze_data',
                                         '../examples/equipment_and_setup',
                                         '../examples/making_recordings',
                                         '../examples/stimulus_presentation',
@@ -171,8 +172,8 @@ sphinx_gallery_conf = {
     'within_subsection_order': FileNameSortKey,
     'default_thumb_file': 'img/eeg-notebooks_logo.png',
     'backreferences_dir': 'generated',   # Where to drop linking files between examples & API
-    'doc_module': ('fooof',),
-    'reference_url': {'fooof': None},
+    'doc_module': ('eeg-notebooks',),
+    'reference_url': {'eeg-notebooksS': None},
     'remove_conffig_comments': True,
 }
 
