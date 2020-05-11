@@ -94,10 +94,10 @@
       
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
-<p>Click <a class="reference internal" href="#sphx-glr-download-auto-examples-analyze-data-n170-analysis-only-py"><span class="std std-ref">here</span></a>     to download the full example code</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-auto-examples-analyze-data-n170-analysis-py"><span class="std std-ref">here</span></a>     to download the full example code</p>
 </div>
 <div class="sphx-glr-example-title section" id="n170-analysis-only">
-<span id="sphx-glr-auto-examples-analyze-data-n170-analysis-only-py"></span><h1>N170 Analysis Only<a class="headerlink" href="#n170-analysis-only" title="Permalink to this headline">¶</a></h1>
+<span id="sphx-glr-auto-examples-analyze-data-n170-analysis-py"></span><h1>N170 Analysis Only<a class="headerlink" href="#n170-analysis-only" title="Permalink to this headline">¶</a></h1>
 <p>This notebook runs only the data analysis part of N170 notebook.</p>
 <p>Look at the notes to see how this can be run on the web with binder or google collab.</p>
 <p>All of the additional notes are removed; only the code cells are kept.</p>
@@ -108,8 +108,9 @@
 <span class="kn">from</span> <span class="nn">time</span> <span class="k">import</span> <span class="n">time</span><span class="p">,</span> <span class="n">strftime</span><span class="p">,</span> <span class="n">gmtime</span>
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="c1">#from stimulus_presentation import n170</span>
-<span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s1">&#39;../&#39;</span><span class="p">)</span>
-<span class="kn">from</span> <span class="nn">utils</span> <span class="k">import</span> <span class="n">utils</span>
+<span class="c1">#from eegnb.experiments.visual_n170 import n170</span>
+<span class="kn">from</span> <span class="nn">eegnb.datasets</span> <span class="k">import</span> <span class="n">datasets</span>
+<span class="kn">from</span> <span class="nn">eegnb.analysis</span> <span class="k">import</span> <span class="n">utils</span>
 <span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">OrderedDict</span>
 <span class="kn">import</span> <span class="nn">warnings</span>
 <span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
@@ -128,13 +129,40 @@ which is a combined MEG/EEG recording with an audiovisual task.</p>
 and extract the EEG data that we will use for this example.</p>
 <p>Note that if you are running this locally, the following cell will download
 the example dataset, if you do not already have it.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">subject</span> <span class="o">=</span> <span class="mi">1</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">eegnb_data_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s1">&#39;~/&#39;</span><span class="p">),</span><span class="s1">&#39;.eegnb&#39;</span><span class="p">,</span> <span class="s1">&#39;data&#39;</span><span class="p">)</span>
+<span class="n">n170_data_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">eegnb_data_path</span><span class="p">,</span> <span class="s1">&#39;visual-N170&#39;</span><span class="p">,</span> <span class="s1">&#39;eegnb_examples&#39;</span><span class="p">)</span>
+
+<span class="c1"># If dataset hasn&#39;t been downloaded yet, download it</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">n170_data_path</span><span class="p">):</span>
+  <span class="n">datasets</span><span class="o">.</span><span class="n">fetch_dataset</span><span class="p">(</span><span class="n">data_dir</span><span class="o">=</span><span class="n">eegnb_data_path</span><span class="p">,</span> <span class="n">experiment</span><span class="o">=</span><span class="s1">&#39;visual-N170&#39;</span><span class="p">,</span> <span class="n">site</span><span class="o">=</span><span class="s1">&#39;eegnb_examples&#39;</span><span class="p">)</span>
+
+
+<span class="n">subject</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">session</span> <span class="o">=</span> <span class="mi">1</span>
 
-<span class="c1">#raw = utils.load_data(&#39;visual/N170&#39;, sfreq=256.,</span>
-<span class="n">eegnb_data_path</span> <span class="o">=</span> <span class="s1">&#39;/c/Ubuntu_WSL/Code/libraries_of_mine/github/eeg-notebooks_old/data&#39;</span>
-<span class="n">raw</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">load_data</span><span class="p">(</span><span class="n">eegnb_data_path</span> <span class="o">+</span> <span class="s1">&#39;/visual/N170&#39;</span><span class="p">,</span> <span class="n">sfreq</span><span class="o">=</span><span class="mf">256.</span><span class="p">,</span>
+<span class="n">raw</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">load_data</span><span class="p">(</span><span class="n">n170_data_path</span><span class="p">,</span> <span class="n">sfreq</span><span class="o">=</span><span class="mf">256.</span><span class="p">,</span>
                               <span class="n">subject_nb</span><span class="o">=</span><span class="n">subject</span><span class="p">,</span> <span class="n">session_nb</span><span class="o">=</span><span class="n">session</span><span class="p">)</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Creating RawArray with float64 data, n_channels=5, n_times=30732
+    Range : 0 ... 30731 =      0.000 ...   120.043 secs
+Ready.
+Creating RawArray with float64 data, n_channels=5, n_times=30732
+    Range : 0 ... 30731 =      0.000 ...   120.043 secs
+Ready.
+Creating RawArray with float64 data, n_channels=5, n_times=30732
+    Range : 0 ... 30731 =      0.000 ...   120.043 secs
+Ready.
+Creating RawArray with float64 data, n_channels=5, n_times=30732
+    Range : 0 ... 30731 =      0.000 ...   120.043 secs
+Ready.
+Creating RawArray with float64 data, n_channels=5, n_times=30720
+    Range : 0 ... 30719 =      0.000 ...   119.996 secs
+Ready.
+Creating RawArray with float64 data, n_channels=5, n_times=30732
+    Range : 0 ... 30731 =      0.000 ...   120.043 secs
+Ready.
 </pre></div>
 </div>
 </div>
@@ -144,11 +172,35 @@ the example dataset, if you do not already have it.</p>
 <span class="n">raw</span><span class="o">.</span><span class="n">plot_psd</span><span class="p">()</span>
 </pre></div>
 </div>
+<img alt="../../_images/sphx_glr_n170_analysis_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_n170_analysis_001.png" />
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Effective window size : 8.000 (s)
+
+&lt;Figure size 640x480 with 2 Axes&gt;
+</pre></div>
+</div>
 </div>
 <div class="section" id="filteriing">
 <h2>Filteriing<a class="headerlink" href="#filteriing" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">raw</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;iir&#39;</span><span class="p">)</span>
 <span class="n">raw</span><span class="o">.</span><span class="n">plot_psd</span><span class="p">(</span><span class="n">fmin</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">fmax</span><span class="o">=</span><span class="mi">30</span><span class="p">);</span>
+</pre></div>
+</div>
+<img alt="../../_images/sphx_glr_n170_analysis_002.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_n170_analysis_002.png" />
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Filtering raw data in 6 contiguous segments
+Setting up band-pass filter from 1 - 30 Hz
+Using filter length: 30732
+
+IIR filter parameters
+---------------------
+Butterworth bandpass zero-phase (two-pass forward and reverse) non-causal filter:
+- Filter order 16 (effective, after forward-backward)
+- Cutoffs at 1.00, 30.00 Hz: -6.02, -6.02 dB
+
+Effective window size : 8.000 (s)
+
+&lt;Figure size 640x480 with 2 Axes&gt;
 </pre></div>
 </div>
 </div>
@@ -167,6 +219,16 @@ the example dataset, if you do not already have it.</p>
 <span class="n">epochs</span>
 </pre></div>
 </div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>1174 events found
+Event IDs: [1 2]
+sample drop %:  4.003407155025551
+
+&lt;Epochs  |   1127 events (all good), -0.101562 - 0.800781 sec, baseline off, ~8.0 MB, data loaded,
+ &#39;Face&#39;: 562
+ &#39;House&#39;: 565&gt;
+</pre></div>
+</div>
 </div>
 <div class="section" id="epoch-average">
 <h2>Epoch average<a class="headerlink" href="#epoch-average" title="Permalink to this headline">¶</a></h2>
@@ -180,13 +242,20 @@ the example dataset, if you do not already have it.</p>
                                                                         <span class="n">diff_waveform</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.000 seconds)</p>
-<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-analyze-data-n170-analysis-only-py">
+<img alt="../../_images/sphx_glr_n170_analysis_003.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_n170_analysis_003.png" />
+</div>
+<div class="section" id="conclusions">
+<h2>Conclusions<a class="headerlink" href="#conclusions" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Blah</span>
+</pre></div>
+</div>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  14.364 seconds)</p>
+<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-analyze-data-n170-analysis-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/4625e2df4ed6cd1763102e54d6491469/n170_analysis_only.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">n170_analysis_only.py</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/77b476dadf51c9320d9015f1fc403509/n170_analysis.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">n170_analysis.py</span></code></a></p>
 </div>
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/40b759a0378743e2148a1d9ee829293b/n170_analysis_only.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">n170_analysis_only.ipynb</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/f90d21181f714c9bfa28c5d052547218/n170_analysis.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">n170_analysis.ipynb</span></code></a></p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
