@@ -12,6 +12,7 @@ python3 -m virtualenv venv
 source venv/bin/activae
 pip3 install -r requirements.txt
 pip3 install pygatt==3.1.1
+pip3 install bluepy
 pip3 install pygame #not sure why this isn't needed/included in the other requirement.txt?
 sudo apt-get install libpcap-dev #for muselsl
 ```
