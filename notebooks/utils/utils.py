@@ -6,7 +6,7 @@ from collections import OrderedDict
 
 from mne import create_info, concatenate_raws
 from mne.io import RawArray
-from mne.channels import read_montage
+from mne.channels import make_standard_montage
 import pandas as pd
 import numpy as np
 import seaborn as sns
@@ -41,7 +41,9 @@ def load_muse_csv_as_raw(filename, sfreq=256., ch_ind=[0, 1, 2, 3],
     n_channel = len(ch_ind)
 
     raw = []
+    print(filename)
     for fname in filename:
+        print(fname)
         # read the file
         data = pd.read_csv(fname, index_col=0)
 
@@ -54,7 +56,7 @@ def load_muse_csv_as_raw(filename, sfreq=256., ch_ind=[0, 1, 2, 3],
 
         # type of each channels
         ch_types = ['eeg'] * n_channel + ['stim']
-        montage = read_montage('standard_1005')
+        montage = make_standard_montage('standard_1005')
 
         # get data and exclude Aux channel
         data = data.values[:, ch_ind + [stim_ind]].T
@@ -68,6 +70,8 @@ def load_muse_csv_as_raw(filename, sfreq=256., ch_ind=[0, 1, 2, 3],
         raw.append(RawArray(data=data, info=info, verbose=verbose))
 
     # concatenate all raw objects
+    print('raw is')
+    print(raw)
     raws = concatenate_raws(raw, verbose=verbose)
 
     return raws
