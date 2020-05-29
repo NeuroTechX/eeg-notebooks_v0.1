@@ -26,7 +26,6 @@ from eegnb.datasets import datasets
 
 ###################################################################################################
 # Download the data
-# -----------------------------
 
 eegnb_data_path = os.path.join(os.path.expanduser('~/'),'.eegnb', 'data')
 cueing_data_path = os.path.join(eegnb_data_path, 'visual-cueing', 'kylemathlab_dev')
@@ -40,7 +39,7 @@ if not os.path.isdir(cueing_data_path):
 ###################################################################################################
 # Analyze .mat behavioural data for Accuracy and RT
 # -----------------------------
-
+#
 # Load in subjects
 
 # # Fall 2018
@@ -75,8 +74,7 @@ subs = [101, 102, 103, 104, 106, 108, 109, 110, 111, 112,
 #         1301, 1302, 1313, 
 #         1401, 1402, 1403, 1404, 1405,  1408, 1410, 1411, 1412, 1413, 1413, 1414, 1415, 1416]
 
-
-
+###################################################################################################
 # Set some settings
 
 
@@ -96,7 +94,7 @@ median_rt = np.zeros((n_subs, n_sesh, n_cond))
 prop_accu = np.zeros((n_subs, n_sesh, n_cond))
 
 
-
+###################################################################################################
 # Single Subject example
 
 #select single subject
@@ -139,10 +137,9 @@ InvalidRT =  np.nanmedian(rt[ (validity == 0) &
 print('Invalid RT = ' + str(InvalidRT) + ' ms')
 
 
-
+###################################################################################################
 # Loop through subjects
 
-# loop through subjects
 for isub, sub in enumerate(subs):
     print('Subject - ' + str(sub))
     for sesh in range(n_sesh):
@@ -170,6 +167,7 @@ for isub, sub in enumerate(subs):
                                    np.sum((validity == 0) & (rt >= rt_toofast) & (rt <= rt_tooslow)) ]
 
     
+###################################################################################################
 # Average over sessions and print data
 
 # Summary stats and collapse sessions
@@ -182,7 +180,7 @@ print('Proportion Accurate')
 print(Out_prop_accu)
 
 
-
+###################################################################################################
 # Plot barplot of results
 
 # bar plot results
@@ -206,7 +204,7 @@ ax.set_xticks([0,1])
 ax.set_xticklabels(conditions)
 plt.show()
 
-
+###################################################################################################
 # Output spreadsheet
 
 ## CSV output
