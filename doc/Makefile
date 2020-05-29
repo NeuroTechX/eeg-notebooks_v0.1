@@ -1,5 +1,11 @@
 # Minimal makefile for Sphinx documentation
 
+# Note: when working on & tweaking one example, easiest + quickest to do single-file build with something like
+#
+# sphinx-build -D sphinx_gallery_conf.filename_pattern=cueing_behavioural_analysis_winter2019.py -b html -d _build/doctrees . _build/html
+#
+
+
 # You can set these variables from the command line.
 SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
