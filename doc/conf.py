@@ -114,8 +114,8 @@ html_theme_options = {
     'navbar_sidebarrel': False,
     'navbar_links': [
         ("About", "about"),        
-        ("User guide", "user_guide/index"),
         ("Examples", "auto_examples/index"),
+        ("User guide", "user_guide/index"),
         ("FAQ", "faq"),
         ("GitHub", "https://github.com/neurotechx/eeg-notebooks", True),
     ],
