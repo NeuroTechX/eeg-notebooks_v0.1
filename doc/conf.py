@@ -29,8 +29,8 @@ author = 'John Griffiths'
 #from fooof import __version__
 #version = __version__
 #release = version
-version = '0.0'
-release = '0.0'
+version = '0.1'
+release = '0.1'
 
 # -- General configuration ---------------------------------------------------
 
@@ -46,6 +46,7 @@ extensions = [
     'sphinx_gallery.gen_gallery',
     'sphinx_copybutton',
     'numpydoc',
+    'recommonmark', # JG_ADD
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -71,6 +72,8 @@ autosummary_generate = True
 
 # The suffix(es) of source filenames. Can be str or list of string
 source_suffix = '.rst' # ['.rst', '.md']
+source_suffix = ['.rst', '.md']
+
 
 # The master toctree document.
 master_doc = 'index'
@@ -111,8 +114,9 @@ html_theme_options = {
     'navbar_sidebarrel': False,
     'navbar_links': [
         ("About", "about"),        
-        ("FAQ", "faq"),
+        ("User guide", "user_guide/index"),
         ("Examples", "auto_examples/index"),
+        ("FAQ", "faq"),
         ("GitHub", "https://github.com/neurotechx/eeg-notebooks", True),
     ],
 
@@ -161,7 +165,7 @@ sphinx_gallery_conf = {
 
 sphinx_gallery_conf = {
         'filename_pattern': '.py',
-        'examples_dirs': ['../examples'],
+        'examples_dirs': ['../examples','../background'],
         'gallery_dirs': ['auto_examples'],
         'subsection_order' : ExplicitOrder(['../examples/analyze_data',
                                         '../examples/equipment_and_setup',

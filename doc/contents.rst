@@ -6,6 +6,7 @@ Table of Contents
 
    api.rst
    faq.rst
+   backgound/index.rst
    glossary.rst
    reference.rst
    changelog.rst
