@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Advanced setup of MNE-Python &#8212; eeg-notebooks 0.1 documentation</title>
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-dataframe.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <link rel="author" title="About these documents" href="../../about.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html">
+          eeg-notebooks</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="../../about.html">About</a></li>
+                <li><a href="../../user_guide/index.html">User guide</a></li>
+                <li><a href="../../auto_examples/index.html">Examples</a></li>
+                <li><a href="../../faq.html">FAQ</a></li>
+                <li><a href="https://github.com/neurotechx/eeg-notebooks">GitHub</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"></ul>
+</li>
+              
+            
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="advanced-setup-of-mne-python">
+<span id="advanced-setup"></span><h1>Advanced setup of MNE-Python<a class="headerlink" href="#advanced-setup-of-mne-python" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#using-mne-python-with-ipython-jupyter-notebooks" id="id3">Using MNE-Python with IPython / Jupyter notebooks</a></p></li>
+<li><p><a class="reference internal" href="#using-the-development-version-of-mne-python-latest-master" id="id4">Using the development version of MNE-Python (latest master)</a></p></li>
+<li><p><a class="reference internal" href="#using-mne-python-with-other-python-distributions" id="id5">Using MNE-Python with other Python distributions</a></p></li>
+<li><p><a class="reference internal" href="#using-mne-python-with-cuda-nvidia-gpu-acceleration" id="id6">Using MNE-Python with CUDA (NVIDIA GPU acceleration)</a></p></li>
+<li><p><a class="reference internal" href="#off-screen-rendering-in-mne-python-on-linux-with-mesa" id="id7">Off-screen rendering in MNE-Python on Linux with MESA</a></p></li>
+<li><p><a class="reference internal" href="#troubleshooting-3d-plots-in-mne-python" id="id8">Troubleshooting 3D plots in MNE-Python</a></p>
+<ul>
+<li><p><a class="reference internal" href="#d-plotting-trouble-after-version-0-20-upgrade-on-macos" id="id9">3D plotting trouble after version 0.20 upgrade on macOS</a></p></li>
+<li><p><a class="reference internal" href="#d-plotting-trouble-using-mayavi-3d-backend" id="id10">3D plotting trouble using mayavi 3D backend</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="using-mne-python-with-ipython-jupyter-notebooks">
+<h2><a class="toc-backref" href="#id3">Using MNE-Python with IPython / Jupyter notebooks</a><a class="headerlink" href="#using-mne-python-with-ipython-jupyter-notebooks" title="Permalink to this headline">¶</a></h2>
+<p>When using MNE-Python within IPython or a Jupyter notebook, we strongly
+recommend using the Qt matplotlib backend for fast and correct rendering. On
+Linux, for example, Qt is the only matplotlib backend for which 3D rendering
+will work correctly. On macOS, certain matplotlib functions might not work as
+expected on backends other than Qt. Enabling Qt can be accomplished when
+starting IPython from a terminal:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> ipython --matplotlib<span class="o">=</span>qt
+</pre></div>
+</div>
+<p>or in a Jupyter Notebook, you can use the “magic” command:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="o">%</span><span class="k">matplotlib</span> qt
+</pre></div>
+</div>
+<p>This will create separate pop-up windows for each figure, and has the advantage
+that the 3D plots will retain rich interactivity (so, for example, you can
+click-and-drag to rotate cortical surface activation maps).</p>
+<p>If you are creating a static notebook or simply prefer Jupyter’s inline plot
+display, MNE-Python will work with the standard “inline” magic:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="o">%</span><span class="k">matplotlib</span> inline
+</pre></div>
+</div>
+<p>but some functionality will be lost. For example, mayavi scenes will still
+pop-up a separate window, but only one window at a time is possible, and
+interactivity within the scene is limited in non-blocking plot calls.</p>
+<div class="note admonition">
+<p class="admonition-title"><a href="#id1"><span class="problematic" id="id2">|windows|</span></a> Windows</p>
+<p>If you are using MNE-Python on Windows through IPython or Jupyter, you might
+also have to use the IPython magic command <code class="docutils literal notranslate"><span class="pre">%gui</span> <span class="pre">qt</span></code> after importing
+MNE-Python, Mayavi or PySurfer (see <a class="reference external" href="https://github.com/ipython/ipython/issues/10384">here</a>). For example:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="kn">from</span> <span class="nn">mayavi</span> <span class="kn">import</span> <span class="n">mlab</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="o">%</span><span class="k">gui</span> qt
+</pre></div>
+</div>
+</div>
+<p>If you use another Python setup and you encounter some difficulties please
+report them on the <a href="#id11"><span class="problematic" id="id12">`MNE mailing list`_</span></a> or on the <a href="#id13"><span class="problematic" id="id14">`GitHub issues page`_</span></a> to get
+assistance.</p>
+</div>
+<div class="section" id="using-the-development-version-of-mne-python-latest-master">
+<span id="installing-master"></span><h2><a class="toc-backref" href="#id4">Using the development version of MNE-Python (latest master)</a><a class="headerlink" href="#using-the-development-version-of-mne-python-latest-master" title="Permalink to this headline">¶</a></h2>
+<p>If you want access to the latest features and bugfixes, you can easily switch
+from the stable version of MNE-Python to the current development version.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>In between releases, function and class APIs can change without
+warning.</p>
+</div>
+<p>For a one-time update to latest master, make sure you’re in the conda
+environment where MNE-Python is installed (if you followed the default install
+instructions, this will be <code class="docutils literal notranslate"><span class="pre">base</span></code>), and use <code class="docutils literal notranslate"><span class="pre">pip</span></code> to upgrade:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> conda activate name_of_my_mne_environment
+<span class="gp">$</span> pip install --upgrade --no-deps https://github.com/mne-tools/mne-python/archive/master.zip
+</pre></div>
+</div>
+<p>If you plan to contribute to MNE-Python, or just prefer to use git rather than
+pip to make frequent updates, check out the <a class="reference internal" href="contributing.html#contributing"><span class="std std-ref">contributing guide</span></a>.</p>
+</div>
+<div class="section" id="using-mne-python-with-other-python-distributions">
+<span id="other-py-distros"></span><h2><a class="toc-backref" href="#id5">Using MNE-Python with other Python distributions</a><a class="headerlink" href="#using-mne-python-with-other-python-distributions" title="Permalink to this headline">¶</a></h2>
+<p>While the <a href="#id15"><span class="problematic" id="id16">`Anaconda`_</span></a> Python distribution provides many conveniences, other
+distributions of Python should also work with MNE-Python.  In particular,
+<a href="#id17"><span class="problematic" id="id18">`Miniconda`_</span></a> is a lightweight alternative to Anaconda that is fully compatible;
+like Anaconda, Miniconda includes the <code class="docutils literal notranslate"><span class="pre">conda</span></code> command line tool for
+installing new packages and managing environments; unlike Anaconda, Miniconda
+starts off with a minimal set of around 30 packages instead of Anaconda’s
+hundreds. See the <a href="#id19"><span class="problematic" id="id20">`installation instructions for Miniconda`_</span></a> for more info.</p>
+<p>It is also possible to use a system-level installation of Python (version 3.5
+or higher) and use <code class="docutils literal notranslate"><span class="pre">pip</span></code> to install MNE-Python and its dependencies, using
+the provided <a href="#id21"><span class="problematic" id="id22">`requirements file`_</span></a>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">curl --remote-name https://raw.githubusercontent.com/mne-tools/mne-python/master/requirements.txt</span>
+<span class="go">pip install --user requirements.txt</span>
+</pre></div>
+</div>
+<p>Other configurations will probably also work, but we may be unable to offer
+support if you encounter difficulties related to your particular Python
+installation choices.</p>
+</div>
+<div class="section" id="using-mne-python-with-cuda-nvidia-gpu-acceleration">
+<span id="cuda"></span><h2><a class="toc-backref" href="#id6">Using MNE-Python with CUDA (NVIDIA GPU acceleration)</a><a class="headerlink" href="#using-mne-python-with-cuda-nvidia-gpu-acceleration" title="Permalink to this headline">¶</a></h2>
+<p>Some operations in MNE-Python can utilize <a href="#id23"><span class="problematic" id="id24">`NVIDIA CUDA GPU processing`_</span></a> to
+speed up some operations (e.g. FIR filtering) by roughly an order of magnitude.
+To use CUDA, first  ensure that you are running the <a href="#id25"><span class="problematic" id="id26">`NVIDIA proprietary
+drivers`_</span></a> on your operating system, and then do:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> conda install cupy
+<span class="gp">$</span> <span class="nv">MNE_USE_CUDA</span><span class="o">=</span><span class="nb">true</span> python -c <span class="s2">&quot;import mne; mne.cuda.init_cuda(verbose=True)&quot;</span>
+<span class="go">Enabling CUDA with 1.55 GB available memory</span>
+</pre></div>
+</div>
+<p>If you receive a message reporting the GPU’s available memory, <a href="#id27"><span class="problematic" id="id28">CuPy_</span></a>
+is working properly. To permanently enable CUDA in MNE, you can do:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mne</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">set_config</span><span class="p">(</span><span class="s1">&#39;MNE_USE_CUDA&#39;</span><span class="p">,</span> <span class="s1">&#39;true&#39;</span><span class="p">)</span>  
+</pre></div>
+</div>
+<p>You can then test MNE CUDA support by running the associated test:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> pytest mne/tests/test_filter.py -k cuda
+</pre></div>
+</div>
+<p>If the tests pass, then CUDA should work in MNE. You can use CUDA in methods
+that state that they allow passing <code class="docutils literal notranslate"><span class="pre">n_jobs='cuda'</span></code>, such as
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">mne.io.Raw.filter()</span></code> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">mne.io.Raw.resample()</span></code>,
+and they should run faster than the CPU-based multithreading such as
+<code class="docutils literal notranslate"><span class="pre">n_jobs=8</span></code>.</p>
+</div>
+<div class="section" id="off-screen-rendering-in-mne-python-on-linux-with-mesa">
+<h2><a class="toc-backref" href="#id7">Off-screen rendering in MNE-Python on Linux with MESA</a><a class="headerlink" href="#off-screen-rendering-in-mne-python-on-linux-with-mesa" title="Permalink to this headline">¶</a></h2>
+<p>On remote systems, it might be possible to use MESA software rendering
+(such as <code class="docutils literal notranslate"><span class="pre">llvmpipe</span></code> or <code class="docutils literal notranslate"><span class="pre">swr</span></code>) for 3D visualization (with some tweaks).
+For example, on CentOS 7.5 you might be able to use an environment variable
+to force MESA to use modern OpenGL by using this before executing
+<code class="docutils literal notranslate"><span class="pre">spyder</span></code> or <code class="docutils literal notranslate"><span class="pre">python</span></code>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">export</span> <span class="nv">MESA_GL_VERSION_OVERRIDE</span><span class="o">=</span><span class="m">3</span>.3
+</pre></div>
+</div>
+<p>Also, it’s possible that different software rending backends might perform
+better than others, such as using the <code class="docutils literal notranslate"><span class="pre">llvmpipe</span></code> backend rather than <code class="docutils literal notranslate"><span class="pre">swr</span></code>.</p>
+</div>
+<div class="section" id="troubleshooting-3d-plots-in-mne-python">
+<span id="troubleshoot-3d"></span><h2><a class="toc-backref" href="#id8">Troubleshooting 3D plots in MNE-Python</a><a class="headerlink" href="#troubleshooting-3d-plots-in-mne-python" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="d-plotting-trouble-after-version-0-20-upgrade-on-macos">
+<h3><a class="toc-backref" href="#id9">3D plotting trouble after version 0.20 upgrade on macOS</a><a class="headerlink" href="#d-plotting-trouble-after-version-0-20-upgrade-on-macos" title="Permalink to this headline">¶</a></h3>
+<p>When upgrading MNE-Python to version 0.20, some macOS users may end up with
+conflicting versions of some of the 3D plotting dependencies. If you plot using
+the pyvista 3D backend and find that you can click-drag to rotate the brain,
+but cannot adjust any of the settings sliders, it is likely that your versions
+of VTK and/or QT are incompatible. This series of commands should fix it:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> conda uninstall vtk
+<span class="gp">$</span> pip uninstall -y pyvista
+<span class="gp">$</span> conda install vtk
+<span class="gp">$</span> pip install --no-cache pyvista
+</pre></div>
+</div>
+<p>If you installed VTK using <code class="docutils literal notranslate"><span class="pre">pip</span></code> rather than <code class="docutils literal notranslate"><span class="pre">conda</span></code>, substitute the first
+line for <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">uninstall</span> <span class="pre">-y</span> <span class="pre">vtk</span></code>.</p>
+</div>
+<div class="section" id="d-plotting-trouble-using-mayavi-3d-backend">
+<h3><a class="toc-backref" href="#id10">3D plotting trouble using mayavi 3D backend</a><a class="headerlink" href="#d-plotting-trouble-using-mayavi-3d-backend" title="Permalink to this headline">¶</a></h3>
+<p>If you run into trouble when visualizing source estimates (or anything else)
+using mayavi, you can try setting a couple of environment variables at the
+beginning of your script, session, or notebook:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">os</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;ETS_TOOLKIT&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;qt4&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;QT_API&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;pyqt5&#39;</span>
+</pre></div>
+</div>
+<p>This will tell mayavi to use Qt backend with PyQt bindings, instead of the
+default PySide. For more information, see
+<a class="reference external" href="http://docs.enthought.com/mayavi/mayavi/building_applications.html#integrating-in-a-qt-application">http://docs.enthought.com/mayavi/mayavi/building_applications.html#integrating-in-a-qt-application</a>.</p>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020-2020, NeuroTechX.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.4.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

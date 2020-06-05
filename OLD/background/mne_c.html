@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Installing MNE-C &#8212; eeg-notebooks 0.1 documentation</title>
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-dataframe.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <link rel="author" title="About these documents" href="../../about.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html">
+          eeg-notebooks</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="../../about.html">About</a></li>
+                <li><a href="../../user_guide/index.html">User guide</a></li>
+                <li><a href="../../auto_examples/index.html">Examples</a></li>
+                <li><a href="../../faq.html">FAQ</a></li>
+                <li><a href="https://github.com/neurotechx/eeg-notebooks">GitHub</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"></ul>
+</li>
+              
+            
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="installing-mne-c">
+<span id="install-mne-c"></span><h1>Installing MNE-C<a class="headerlink" href="#installing-mne-c" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#system-requirements" id="id3">System requirements</a></p></li>
+<li><p><a class="reference internal" href="#downloading-and-installing-mne-c" id="id4">Downloading and Installing MNE-C</a></p></li>
+<li><p><a class="reference internal" href="#configuring-mne-c" id="id5">Configuring MNE-C</a></p></li>
+<li><p><a class="reference internal" href="#testing-mne-c-installation" id="id6">Testing MNE-C installation</a></p></li>
+<li><p><a class="reference internal" href="#troubleshooting-mne-c-installation" id="id7">Troubleshooting MNE-C installation</a></p></li>
+</ul>
+</div>
+<div class="section" id="system-requirements">
+<h2><a class="toc-backref" href="#id3">System requirements</a><a class="headerlink" href="#system-requirements" title="Permalink to this headline">¶</a></h2>
+<p>MNE-C runs on macOS (version 10.5 “Leopard” or later) and Linux (kernel 2.6.9
+or later). Both 32- and 64-bit operating systems are supported; a PowerPC
+version for macOS can be provided upon request. At least 2 GB of memory is
+required, 4 GB or more is recommended. The software requires at least 80 MB of
+disk space. MATLAB is an optional dependency; the free <a class="reference external" href="https://www.mathworks.com/products/compiler/matlab-runtime.html">MATLAB runtime</a> is
+sufficient. If MATLAB is not present, the utilities <code class="docutils literal notranslate"><span class="pre">mne_convert_mne_data</span></code>,
+<code class="docutils literal notranslate"><span class="pre">mne_epochs2mat</span></code>, <code class="docutils literal notranslate"><span class="pre">mne_raw2mat</span></code>, and <code class="docutils literal notranslate"><span class="pre">mne_simu</span></code> will not work.</p>
+<p>For boundary-element model (BEM) mesh generation, and for accessing the <code class="docutils literal notranslate"><span class="pre">tkmedit</span></code>
+program from <code class="docutils literal notranslate"><span class="pre">mne_analyze</span></code>, MNE-C needs access to a
+working installation of <a class="reference internal" href="freesurfer.html"><span class="doc">FreeSurfer</span></a>, including the
+environment variables <code class="docutils literal notranslate"><span class="pre">FREESURFER_HOME</span></code>, <code class="docutils literal notranslate"><span class="pre">SUBJECTS_DIR</span></code>, and <code class="docutils literal notranslate"><span class="pre">SUBJECT</span></code>.</p>
+<div class="note admonition">
+<p class="admonition-title"><a href="#id1"><span class="problematic" id="id2">|apple|</span></a> macOS</p>
+<p>For installation on macOS, you also need:</p>
+<ul>
+<li><p>the <a class="reference external" href="http://appstore.com/mac/apple/xcode">XCode developer tools</a>.</p></li>
+<li><p>an X Window System such as <a class="reference external" href="https://www.xquartz.org/">XQuartz</a>. Version 2.7.9 of XQuartz should work
+out of the box; the most current version (2.7.11, as of May 2019) may
+require these additional steps to work:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> /opt/X11/lib
+<span class="gp">$</span> sudo cp libXt.6.dylib libXt.6.dylib.bak
+<span class="gp">$</span> <span class="nb">cd</span> flat_namespace/
+<span class="gp">$</span> sudo cp libXt.6.dylib ../.
+</pre></div>
+</div>
+</li>
+<li><p>the <a class="reference external" href="http://netpbm.sourceforge.net/">netpbm</a> library. The recommended way to get netpbm is to install
+<a class="reference external" href="https://brew.sh/">Homebrew</a>, and run <code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">install</span> <span class="pre">netpbm</span></code> in the Terminal app.
+Alternatively, if you prefer to use <a class="reference external" href="https://www.macports.org/">MacPorts</a>, you can run
+<code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">port</span> <span class="pre">install</span> <span class="pre">netpbm</span></code> in the Terminal app.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="downloading-and-installing-mne-c">
+<h2><a class="toc-backref" href="#id4">Downloading and Installing MNE-C</a><a class="headerlink" href="#downloading-and-installing-mne-c" title="Permalink to this headline">¶</a></h2>
+<p>MNE-C is distributed as either a compressed tar archive (.tar.gz) or a macOS
+disk image (.dmg). The <a class="reference external" href="http://www.nmr.mgh.harvard.edu/martinos/userInfo/data/MNE_register/index.php">MNE-C download page</a> requires registration with a
+valid email address.  The current stable version is 2.7.3; “nightly” builds of
+the development version are also available on the download page.</p>
+<p>To install from the compressed tar archive, change directory to the desired
+install location, and unpack the software using <code class="docutils literal notranslate"><span class="pre">tar</span></code>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> &lt;path_to_desired_install_location&gt;
+<span class="gp">$</span> tar zxvf &lt;path_to_archive_file&gt;
+</pre></div>
+</div>
+<p>To install from the macOS disk image, double-click the downloaded .dmg file. In
+the window that opens, double-click the installer package file (.pkg) to launch
+the installer, and follow its instructions. In newer versions of macOS, if you
+see an error that the app is from an untrusted developer, you can override this
+warning by opening it anyway from the Security &amp; Privacy pane within the
+computer’s System Preferences.</p>
+</div>
+<div class="section" id="configuring-mne-c">
+<span id="user-environment"></span><h2><a class="toc-backref" href="#id5">Configuring MNE-C</a><a class="headerlink" href="#configuring-mne-c" title="Permalink to this headline">¶</a></h2>
+<p>MNE-C requires two environment variables to be defined manually:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">MNE_ROOT</span></code> should give the path to the folder where MNE-C is installed</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MATLAB_ROOT</span></code> should give the path to your MATLAB binary (e.g.,
+<code class="docutils literal notranslate"><span class="pre">/opt/MATLAB/R2018b</span></code> or similar).  If you do not have MATLAB or the MATLAB
+runtime, leave <code class="docutils literal notranslate"><span class="pre">MATLAB_ROOT</span></code> undefined.</p></li>
+</ul>
+<p>Other environment variables are defined by setup scripts provided with MNE-C.
+You may either run the setup script each time you use MNE-C, or (recommended)
+configure your shell to run it automatically each time you open a terminal. For
+bash compatible shells, e.g., sh/bash/zsh, the script to source is
+<code class="docutils literal notranslate"><span class="pre">$MNE_ROOT/bin/mne_setup_sh</span></code>.  For C shells, e.g., csh/tcsh, the script to
+source is <code class="docutils literal notranslate"><span class="pre">$MNE_ROOT/bin/mne_setup</span></code>.  If you don’t know what shell you are
+using, you can run the following command to find out:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">echo</span> <span class="nv">$SHELL</span>
+</pre></div>
+</div>
+<p>To configure MNE-C automatically for <code class="docutils literal notranslate"><span class="pre">bash</span></code> or <code class="docutils literal notranslate"><span class="pre">sh</span></code> shells, add this to
+your <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code>:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">MNE_ROOT</span><span class="o">=</span>&lt;path_to_MNE&gt;
+<span class="nb">export</span> <span class="nv">MATLAB_ROOT</span><span class="o">=</span>&lt;path_to_MATLAB&gt;
+<span class="nb">source</span> <span class="nv">$MNE_ROOT</span>/bin/mne_setup_sh
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">&lt;path_to_MNE&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">&lt;path_to_MATLAB&gt;</span></code> are replaced by the absolute
+paths to MNE-C and MATLAB, respectively. If you don’t have MATLAB, you should
+still include the <code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">MATLAB_ROOT=</span></code> statement, but leave
+<code class="docutils literal notranslate"><span class="pre">&lt;path_to_MATLAB&gt;</span></code> blank.</p>
+<p>To configure MNE-C automatically for <code class="docutils literal notranslate"><span class="pre">zsh</span></code>, use the built-in <code class="docutils literal notranslate"><span class="pre">emulate</span></code>
+command in your <code class="docutils literal notranslate"><span class="pre">.zshrc</span></code> file:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">MNE_ROOT</span><span class="o">=</span>&lt;path_to_MNE&gt;
+<span class="nb">export</span> <span class="nv">MATLAB_ROOT</span><span class="o">=</span>&lt;path_to_MATLAB&gt;
+emulate sh -c <span class="s1">&#39;source $MNE_ROOT/bin/mne_setup_sh&#39;</span>
+</pre></div>
+</div>
+<p>To configure MNE-C automatically for <code class="docutils literal notranslate"><span class="pre">csh</span></code> or <code class="docutils literal notranslate"><span class="pre">tcsh</span></code> shells, the
+corresponding commands in the <code class="docutils literal notranslate"><span class="pre">.cshrc</span></code> / <code class="docutils literal notranslate"><span class="pre">.tcshrc</span></code> file are:</p>
+<div class="highlight-tcsh notranslate"><div class="highlight"><pre><span></span><span class="nb">setenv </span>MNE_ROOT &lt;path_to_MNE&gt;
+<span class="nb">setenv </span>MATLAB_ROOT &lt;path_to_MATLAB&gt;
+<span class="nb">source</span> <span class="nv">$MNE_ROOT</span>/bin/mne_setup
+</pre></div>
+</div>
+<p>If you have done this correctly, the command <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">$MNE_ROOT/bin/mne_setup_sh</span></code>
+should succeed when run in a new terminal.</p>
+</div>
+<div class="section" id="testing-mne-c-installation">
+<h2><a class="toc-backref" href="#id6">Testing MNE-C installation</a><a class="headerlink" href="#testing-mne-c-installation" title="Permalink to this headline">¶</a></h2>
+<p>An easy way to verify whether your installation of MNE-C is working is to test
+the OpenGL graphics performance:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nv">$MNE_ROOT</span>/bin/mne_opengl_test
+</pre></div>
+</div>
+<p>This will render an inflated brain surface repeatedly, rotating it by 5 degrees
+around the z-axis between redraws. The time spent for each full revolution is
+printed to the terminal window where <code class="docutils literal notranslate"><span class="pre">mne_opengl_test</span></code> was invoked.  Switch
+focus to that terminal window and use the interrupt key (usually control-c) to
+halt the test.</p>
+<p>The best graphics performance occurs when MNE-C renders to a local display on a
+computer with hardware acceleration enabled. The <code class="docutils literal notranslate"><span class="pre">mne_analyze</span></code> GUI has a menu
+item “On GLX…” in the Help menu; if the GLX dialog says “Direct rendering
+context” then hardware acceleration is in use. If you are rendering to a local
+display and see “Nondirect rendering context”, it is recommended that you
+enable hardware acceleration (consult a search engine or your local IT support
+staff for assistance). If you are rendering to a remote display or using a VNC
+connection, “Nondirect rendering context” is normal.</p>
+<p>On the fastest graphics cards, the time per revolution in the
+<code class="docutils literal notranslate"><span class="pre">mne_opengl_test</span></code> is well below 1 second. If your time per revolution is
+longer than 10 seconds, either the graphics hardware acceleration is not in
+effect or you need a faster graphics adapter.</p>
+</div>
+<div class="section" id="troubleshooting-mne-c-installation">
+<h2><a class="toc-backref" href="#id7">Troubleshooting MNE-C installation</a><a class="headerlink" href="#troubleshooting-mne-c-installation" title="Permalink to this headline">¶</a></h2>
+<p>If MNE-C can’t find <code class="docutils literal notranslate"><span class="pre">libxp.so.6</span></code>, download libxp6 from <a class="reference external" href="https://packages.debian.org/jessie/amd64/libxp6/download">debian</a> or <a class="reference external" href="https://pkgs.org/download/libxp6">pkgs.org</a>
+and install with <code class="docutils literal notranslate"><span class="pre">dpkg</span></code> or similar:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> sudo dpkg -i libxp6_1.0.2-1ubuntu1_amd64.deb
+</pre></div>
+</div>
+<p>If MNE-C can’t find <code class="docutils literal notranslate"><span class="pre">libgfortran.so.1</span></code>, you can probably safely link that
+filename to the current version of libfortran that came with your system. On
+a typical 64-bit Ubuntu-like system this would be accomplished by:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">cd</span> /usr/lib/x86_64-linux-gnu
+<span class="gp">$</span> sudo ln -s libgfortran.so.1 <span class="k">$(</span>find . -maxdepth <span class="m">1</span> -type f -name libgfortran.so*<span class="k">)</span>
+</pre></div>
+</div>
+<p>If you encounter other errors installing MNE-C, please send a message to the
+<a href="#id8"><span class="problematic" id="id9">`MNE mailing list`_</span></a>.</p>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020-2020, NeuroTechX.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.4.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

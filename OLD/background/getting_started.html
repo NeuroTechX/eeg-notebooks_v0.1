@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Getting Started &#8212; eeg-notebooks 0.1 documentation</title>
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-dataframe.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <link rel="author" title="About these documents" href="../../about.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html">
+          eeg-notebooks</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="../../about.html">About</a></li>
+                <li><a href="../../user_guide/index.html">User guide</a></li>
+                <li><a href="../../auto_examples/index.html">Examples</a></li>
+                <li><a href="../../faq.html">FAQ</a></li>
+                <li><a href="https://github.com/neurotechx/eeg-notebooks">GitHub</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"></ul>
+</li>
+              
+            
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="getting-started">
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>You will need a Muse 2016 and Python installed on your computer. Psychopy, the stimulus presentation library that underlies most of the experiments, officially only supports Python 2. However, some users, especially those on Linux, have been able to work entirely in Python 3 without any issues.</p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/neurotechx/eeg-notebooks</span></code></p>
+<p>Install all requirements.</p>
+<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">requirements.txt</span></code></p>
+<p>See <a class="reference external" href="http://eeg-notebooks.readthedocs.io/en/latest/setup_instructions_windows.html">here</a>
+for more detailed setup instructions for windows operating systems.</p>
+</div>
+<div class="section" id="running-experiments">
+<h2>Running Experiments<a class="headerlink" href="#running-experiments" title="Permalink to this headline">¶</a></h2>
+<p>Open the experiment you are interested in running in notebooks folder. Notebooks can be opened either with the Jupyter Notebook browser environment (run <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span></code>) or in the <a class="reference external" href="https://nteract.io/desktop">nteract</a> desktop application.</p>
+<p>All experiments should be able to performed entirely within the notebook environment. On Windows 10, you will want to skip the bluetooth connection step and start an EEG data stream through the <a class="reference external" href="https://github.com/kowalej/BlueMuse">BlueMuse</a> GUI.</p>
+<p>*Note: if errors are encountered during viewing of the eeg data, try starting the viewer directly from the command line (<code class="docutils literal notranslate"><span class="pre">muselsl</span> <span class="pre">view</span></code>). Version 2 of the viewer may work better on Windows computers (<code class="docutils literal notranslate"><span class="pre">muselsl</span> <span class="pre">view</span> <span class="pre">-v</span> <span class="pre">2</span></code>)</p>
+<p>The basic steps of each experiment are as follows:</p>
+<ol class="simple">
+<li><p>Open an LSL stream of EEG data.</p></li>
+<li><p>Ensure that EEG signal quality is excellent and that there is very little noise. The standard deviation of the signal (displayed next to the raw traces) should ideally be below 10 for all channels of interest.</p></li>
+<li><p>Define subject and session ID, as well as trial duration. <em>Note: sessions are analyzed independently. Each session can contain multiple trials or ‘run-throughs’ of the experiments.</em></p></li>
+<li><p>Simultaneously run stimulus presentation and recording processes to create a data file with both EEG and event marker data.</p></li>
+<li><p>Repeat step 4 to collect as many trials as needed (4-6 trials of two minutes each are recommended in order to see the clearest results)</p></li>
+<li><p>Load experimental data into an MNE Raw object.</p></li>
+<li><p>Apply a band-pass filter to remove noise</p></li>
+<li><p>Epoch the data, removing epochs where amplitude of the signal exceeded a given threshold (removes eye blinks)</p></li>
+<li><p>Generate averaged waveforms from all channels for each type of stimulus presented</p></li>
+</ol>
+<p>Notebooks in the <code class="docutils literal notranslate"><span class="pre">old_notebooks</span></code> folder only contain the data analysis steps (6-9). They can be used by using the <code class="docutils literal notranslate"><span class="pre">run_experiments.py</span></code> script (e.g <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">run_eeg_experiment.py</span> <span class="pre">Auditory_P300</span> <span class="pre">15</span> <span class="pre">1</span></code>)</p>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020-2020, NeuroTechX.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.4.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
