@@ -26,6 +26,7 @@ EEG_CHANNELS = {
 BRAINFLOW_CHANNELS = {
     'cyton': EEG_CHANNELS['cyton'] + ['accel_0', 'accel_1', 'accel_2'],
     'cyton_daisy': EEG_CHANNELS['cyton_daisy'] + ['accel_0', 'accel_1', 'accel_2'],
+    'synthetic': EEG_CHANNELS['synthetic'],
 }
 
 CHANNEL_INDICES = {
