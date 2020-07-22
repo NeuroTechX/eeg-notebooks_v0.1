@@ -71,7 +71,7 @@ autodoc_default_options = {
 autosummary_generate = True
 
 # The suffix(es) of source filenames. Can be str or list of string
-source_suffix = '.rst' # ['.rst', '.md']
+#source_suffix = '.rst' # ['.rst', '.md']
 source_suffix = ['.rst', '.md']
 
 
@@ -163,16 +163,22 @@ sphinx_gallery_conf = {
 }
 """;
 
+
+#        'filename_pattern': '.py',
+
 sphinx_gallery_conf = {
-        'filename_pattern': '.py',
+        'filename_pattern': '.py', 
         'examples_dirs': ['../examples','../background'],
         'gallery_dirs': ['auto_examples'],
-        'subsection_order' : ExplicitOrder(['../examples/analyze_data',
-                                        '../examples/equipment_and_setup',
-                                        '../examples/making_recordings',
-                                        '../examples/stimulus_presentation',
-                                        '../examples/analyzing_experimental_results',
-                                        '../examples/complete_examples']),
+        'subsection_order': ExplicitOrder([ '../examples/visual_n170',
+                                            '../examples/visual_p300', 
+                                            '../examples/visual_cueing',
+                                            '../examples/visual_ssvep',
+                                            '../examples/equipment_and_setup',
+                                            '../examples/making_recordings',
+                                            '../examples/stimulus_presentation',
+                                            '../examples/analyzing_experimental_results',
+                                            '../examples/complete_examples']),
     'within_subsection_order': FileNameSortKey,
     'default_thumb_file': 'img/eeg-notebooks_logo.png',
     'backreferences_dir': 'generated',   # Where to drop linking files between examples & API
