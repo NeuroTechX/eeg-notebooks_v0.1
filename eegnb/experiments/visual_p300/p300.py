@@ -1,59 +1,66 @@
-import numpy as np
-from pandas import DataFrame
-from psychopy import visual, core, event
-from time import time, strftime, gmtime
-from optparse import OptionParser
-from pylsl import StreamInfo, StreamOutlet
+import os
+from time import time
 from glob import glob
 from random import choice
 
+import numpy as np
+from pandas import DataFrame
+from psychopy import visual, core, event
 
-def present(duration=120):
+from eegnb import generate_save_fn
+from eegnb.stimuli import CAT_DOG
 
-    # create
-    info = StreamInfo('Markers', 'Markers', 1, 0, 'int32', 'myuidw43536')
 
-    # next make an outlet
-    outlet = StreamOutlet(info)
-
-    markernames = [1, 2]
-
-    start = time()
-
+def present(duration=120, eeg=None, save_fn=None):
     n_trials = 2010
-    iti = .3
-    soa = 0.2
+    iti = 0.4
+    soa = 0.3
     jitter = 0.2
     record_duration = np.float32(duration)
+    markernames = [1, 2]
 
-    # Setup log
-    position = np.random.binomial(1, 0.15, n_trials)
+    # Setup trial list
+    image_type = np.random.binomial(1, 0.5, n_trials)
+    trials = DataFrame(dict(image_type=image_type, timestamp=np.zeros(n_trials)))
 
-    trials = DataFrame(dict(position=position,
-                            timestamp=np.zeros(n_trials)))
+    def load_image(fn):
+        return visual.ImageStim(win=mywin, image=fn)
 
-    # graphics
+    # Setup graphics
+    mywin = visual.Window([1600, 900], monitor='testMonitor', units="deg", fullscr=True)
 
-    def loadImage(filename):
-        return visual.ImageStim(win=mywin, image=filename)
+    targets = list(map(load_image, glob(os.path.join(CAT_DOG, 'target-*.jpg'))))
+    nontargets = list(map(load_image, glob(os.path.join(CAT_DOG, 'nontarget-*.jpg'))))
+    stim = [nontargets, targets]
 
-    mywin = visual.Window([1920, 1080], monitor="testMonitor", units="deg",
-                          fullscr=True)
-    targets = list(
-        map(loadImage, glob('stimulus_presentation/stim/cats_dogs/target-*.jpg')))
-    nontargets = list(
-        map(loadImage, glob('stimulus_presentation/stim/cats_dogs/nontarget-*.jpg')))
+    # start the EEG stream, will delay 5 seconds to let signal settle
+    if eeg:
+        if save_fn is None:  # If no save_fn passed, generate a new unnamed save file
+            save_fn = generate_save_fn(eeg.device_name, 'visual_p300', 'unnamed')
+            print(f'No path for a save file was passed to the experiment. Saving data to {save_fn}')
+        eeg.start(save_fn, duration=record_duration)
 
+    # Iterate through the events
+    start = time()
     for ii, trial in trials.iterrows():
-        # inter trial interval
+        # Inter trial interval
         core.wait(iti + np.random.rand() * jitter)
 
-        # onset
-        pos = trials['position'].iloc[ii]
-        image = choice(targets if pos == 1 else nontargets)
+        # Select and display image
+        label = trials['image_type'].iloc[ii]
+        image = choice(targets if label == 1 else nontargets)
         image.draw()
-        timestamp = time()
-        outlet.push_sample([markernames[pos]], timestamp)
+
+        # Push sample
+        if eeg:
+            timestamp = time()
+            if eeg.backend == 'muselsl':
+                marker = [markernames[label]]
+            else:
+                marker = markernames[label]
+            eeg.push_sample(marker=marker, timestamp=timestamp)
+
+
         mywin.flip()
 
         # offset
@@ -61,21 +68,9 @@ def present(duration=120):
         mywin.flip()
         if len(event.getKeys()) > 0 or (time() - start) > record_duration:
             break
+
         event.clearEvents()
+
     # Cleanup
+    if eeg: eeg.stop()
     mywin.close()
-
-
-def main():
-    parser = OptionParser()
-
-    parser.add_option("-d", "--duration",
-                      dest="duration", type='int', default=120,
-                      help="duration of the recording in seconds.")
-
-    (options, args) = parser.parse_args()
-    present(options.duration)
-
-
-if __name__ == '__main__':
-    main()
