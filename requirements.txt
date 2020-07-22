@@ -18,3 +18,5 @@ h5py
 versioneer
 sphinx>=1.8.3
 sphinx-gallery
+sphinx_bootstrap_theme
+sphinx_rtd_theme
