@@ -44,6 +44,16 @@ Examples
 
 
 
+TEST - examples gallery in docs
+~~~~~~~~~~
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Example galleries in index - TEST
+  
+   ../auto_examples/index
+
+
 
 Misc
 ~~~~
