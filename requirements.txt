@@ -16,3 +16,4 @@ git+https://github.com/peplin/pygatt
 muselsl
 h5py
 versioneer
+sphinx>=1.8.3
