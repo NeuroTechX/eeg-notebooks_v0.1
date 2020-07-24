@@ -1,7 +1,7 @@
 .. _examples:
 
-Examples
-========
+All Notebook Examples
+=======================
 
 This section has examples of different functionality available in the module. 
 
