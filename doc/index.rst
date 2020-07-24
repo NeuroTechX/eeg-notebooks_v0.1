@@ -1,2 +1,36 @@
-
 .. include:: ../README.rst
+
+
+.. toctree::
+   :caption: Getting Started
+   :maxdepth: 1
+
+   getting_started/installation
+   getting_started/streaming
+   getting_started/running_experiments
+   getting_started/analysis
+   getting_started/available_notebooks
+
+
+.. toctree::
+   :caption: Experiments
+   :maxdepth: 4
+
+   experiments/vn170
+   experiments/vp300
+   experiments/vssvep
+   experiments/gonogo
+   experiments/cueing
+   auto_examples/index
+
+
+.. toctree::
+   :caption: Misc
+   :maxdepth: 4
+
+   misc/using_an_extra_electrod_with_the_muse
+   misc/muse_info
+   misc/about_the_docs
+
+   
+   
