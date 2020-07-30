@@ -31,7 +31,7 @@ brainflow_devices = [
 
 class EEG:
 
-    def __init__(self, device=None,serial_port=None,serial_num=None):
+    def __init__(self, device=None,serial_port=None,serial_num=None,mac_addr=None):
         """ The initialization function takes the name of the EEG device and determines whether or not
         the device belongs to the Muse or Brainflow families and initializes the appropriate backend.
 
@@ -42,6 +42,7 @@ class EEG:
         self.device_name = device
         self.serial_num = serial_num
         self.serial_port = serial_port
+        self.mac_address = mac_addr
         self.backend = self._get_backend(self.device_name)
         self.initialize_backend()
 
@@ -115,6 +116,11 @@ class EEG:
         if self.device_name == 'ganglion':
             self.brainflow_id = BoardIds.GANGLION_BOARD.value
             self.brainflow_params.serial_port = get_openbci_usb()
+            # set mac address parameter in case
+            if self.mac_address is not None:
+                self.brainflow_params.mac_address = self.mac_address
+            else:
+                print("No MAC address provided, attempting to connect without one")
 
         elif self.device_name == 'ganglion_wifi':
             brainflow_id = BoardIds.GANGLION_WIFI_BOARD.value
