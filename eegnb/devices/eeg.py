@@ -55,7 +55,7 @@ class EEG:
     def _get_backend(self, device_name):
         if (device_name in brainflow_devices):
             return 'brainflow'
-        elif device_name == 'muse':
+        elif device_name in ['muse2016', 'muse2']:
             return 'muselsl'
 
     #####################

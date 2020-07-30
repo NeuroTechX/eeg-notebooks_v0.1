@@ -10,17 +10,14 @@ from eegnb.experiments.visual_ssvep import ssvep
 def intro_prompt():
     # define the names of the available boards
     boards = [
-        'None', 'Muse', 'OpenBCI Ganglion', 'OpenBCI Cyton',
+        'None', 'Muse2016', 'Muse2', 'OpenBCI Ganglion', 'OpenBCI Cyton',
         'OpenBCI Cyton + Daisy', 'G.Tec Unicorn', 'BrainBit', 'Synthetic'
     ]
 
     # also define the board codes for passing to functions
     board_codes = [
-        'none', 'muse', 'ganglion', 'cyton', 'cyton_daisy', 'unicorn', 'brainbit', 'synthetic'
+        'none', 'muse2016', 'muse2', 'ganglion', 'cyton', 'cyton_daisy', 'unicorn', 'brainbit', 'synthetic'
     ]
-
-    # define the openBCI list of devices
-    #open_bci_list = ['cyton', 'cyton_daisy', 'ganglion']
 
     experiments = ['visual-N170', 'visual-P300', 'visual-SSVEP']
 
@@ -34,7 +31,8 @@ def intro_prompt():
           f"[4] {boards[4]} \n"
           f"[5] {boards[5]} \n"
           f"[6] {boards[6]} \n"
-          f"[7] {boards[7]} \n")
+          f"[7] {boards[7]} \n"
+          f"[8] {boards[8]} \n")
 
     board_idx = int(input('Enter Board Selection:'))
     board_selection = board_codes[board_idx]
