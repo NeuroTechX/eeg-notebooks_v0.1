@@ -8,19 +8,20 @@ from eegnb.experiments.visual_ssvep import ssvep
 
 
 def intro_prompt():
+    # define the names of the available boards
     boards = [
-        'None', 'Muse', 'OpenBCI Ganglion', 'OpenBCI Cyton',
+        'None', 'Muse2016', 'Muse2', 'OpenBCI Ganglion', 'OpenBCI Cyton',
         'OpenBCI Cyton + Daisy', 'G.Tec Unicorn', 'BrainBit', 'Synthetic'
     ]
 
+    # also define the board codes for passing to functions
     board_codes = [
-        'none', 'muse', 'ganglion', 'cyton', 'cyton_daisy', 'unicorn', 'brainbit', 'synthetic'
+        'none', 'muse2016', 'muse2', 'ganglion', 'cyton', 'cyton_daisy', 'unicorn', 'brainbit', 'synthetic'
     ]
 
-    open_bci_list = ['cyton', 'cyton_daisy', 'ganglion']
+    experiments = ['visual-N170', 'visual-P300', 'visual-SSVEP']
 
-    experiments = ['visual_n170', 'visual_p300', 'visual_ssvep']
-
+    # have the user input which device they intend to record with
     print("Welcome to NeurotechX EEG Notebooks. \n"
           "Please select enter the integer value corresponding to your EEG device: \n"
           f"[0] {boards[0]} \n"
@@ -30,18 +31,27 @@ def intro_prompt():
           f"[4] {boards[4]} \n"
           f"[5] {boards[5]} \n"
           f"[6] {boards[6]} \n"
-          f"[7] {boards[7]} \n")
+          f"[7] {boards[7]} \n"
+          f"[8] {boards[8]} \n")
 
     board_idx = int(input('Enter Board Selection:'))
     board_selection = board_codes[board_idx]
     print(f"Selected board {boards[board_idx]} \n")
 
     # Handles wifi shield connectivity selection if an OpenBCI board is being used
-    if board_selection in open_bci_list:
+    if board_selection in ['cyton', 'cyton_daisy', 'ganglion']:
+        # if the ganglion is being used, will also need the MAC address
+        if board_selection == 'ganglion':
+            print("Please enter the Ganglions MAC address:\n")
+            mac_address = input("MAC address:")
+
+        # determine whether board is connected via Wifi or BLE
         print("Please select your connection method:\n"
               "[0] usb dongle \n"
               "[1] wifi shield \n")
         connect_idx = input("Enter connection method:")
+
+        # add "_wifi" suffix to the end of the board name for brainflow
         if connect_idx == 1:
             board_selection = board_selection + "_wifi"
 
@@ -59,31 +69,39 @@ def intro_prompt():
     print("Now, enter the duration of the recording (in seconds). \n")
     duration = int(input("Enter duration:"))
 
-    # Subject ID/Name specification
-    print("Finally, enter the name/ID of the subject you are recording data from. \n")
-    subj_id = input("Enter subject name/ID:")
+    # Subject ID specification
+    print("Next, enter the ID# of the subject you are recording data from. \n")
+    subj_id = int(input("Enter subject ID#:"))
 
-    return board_selection, exp_selection, duration, subj_id
+    # Session ID specification
+    print("Next, enter the session number you are recording for. \n")
+    session_nb = int(input("Enter session #:"))
+
+    # generate the save file name
+    save_fn = generate_save_fn(board_selection, exp_selection, subj_id, session_nb)
+
+    # start the EEG device
+    if board_selection == 'ganglion':
+        eeg_device = EEG(device=board_selection, mac_addr=mac_address)
+    else:
+        eeg_device = EEG(device=board_selection)
+
+    return eeg_device, exp_selection, duration, save_fn
+
+
+def main():
+    eeg_device, experiment, record_duration, save_fn = intro_prompt()
+
+    # run experiment
+    if experiment == 'visual-N170':
+        n170.present(duration=record_duration, eeg=eeg_device, save_fn=save_fn)
+    elif experiment == 'visual-P300':
+        p300.present(duration=record_duration, eeg=eeg_device, save_fn=save_fn)
+    elif experiment == 'visual-SSVEP':
+        ssvep.present(duration=record_duration, eeg=eeg_device, save_fn=save_fn)
 
 
 if __name__=="__main__":
-    board_name, experiment, record_duration, subject = intro_prompt()
-
-
-    # Create save file name
-    save_fn = generate_save_fn(board_name, experiment, subject)
-    print(save_fn)
-
-    # Start EEG device
-    eeg_device = EEG(device=board_name)
-
-    # run experiment
-    if experiment == 'visual_n170':
-        n170.present(duration=record_duration, eeg=eeg_device, save_fn=save_fn)
-    elif experiment == 'visual_p300':
-        p300.present(duration=record_duration, eeg=eeg_device, save_fn=save_fn)
-    elif experiment == 'visual_ssvep':
-        print("here")
-        ssvep.present(duration=record_duration, eeg=eeg_device, save_fn=save_fn)
+    main()
 
 
