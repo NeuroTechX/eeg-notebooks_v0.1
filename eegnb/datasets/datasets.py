@@ -9,7 +9,7 @@ import os,sys,glob
 
 
 def fetch_dataset(data_dir=None, experiment=None, site='eegnb_examples', 
-                  subjects='all', sessions='all', load_mne = False):
+                  device='muse2016', subjects='all', sessions='all', load_mne = False):
 
         """
         
@@ -59,11 +59,14 @@ def fetch_dataset(data_dir=None, experiment=None, site='eegnb_examples',
 
 
         download_it = False
-        exp_dir = os.path.join(data_dir, experiment, site)
+        exp_dir = os.path.join(data_dir, experiment, site, device)
         
         if not os.path.isdir(exp_dir): download_it = True
 
         if download_it:
+
+            if not os.path.isdir(data_dir): os.makedirs(data_dir)
+
             cwd = os.getcwd()
             code = gdrive_locs[experiment]
             outfile = '%s/%s' %(data_dir, experiment + '.zip')
@@ -86,15 +89,23 @@ def fetch_dataset(data_dir=None, experiment=None, site='eegnb_examples',
         
         if subjects == 'all': subjects = ['*']
         if sessions == 'all':  sessions = ['*']
-            
+       
+
         fnames = []
         for subject_nb in subjects:
-            for session_nb in sessions:
-                pth = '{}/subject{}/session{}/*.csv'.format(exp_dir,subject_nb, session_nb)
-                fpaths = glob.glob(pth)
-                fnames += fpaths
+            if subject_nb is not '*':
+                # Format to get 4 digit number, e.g. 0004
+                subject_nb = float(subject_nb)
+                subject_nb = '%03.f' %subject_nb
+                for session_nb in sessions:
+                    # Formt to get 3 digit number, e.g. 003
+                    if session_nb is not '*':
+                        session_nb = float(session_nb)
+                        session_nb = '%02.f' %session_nb
 
-                
-            
+                        pth = '{}/subject{}/session{}/*.csv'.format(exp_dir,subject_nb, session_nb)
+                        fpaths = glob.glob(pth)
+                        fnames += fpaths
+
         return fnames
 
