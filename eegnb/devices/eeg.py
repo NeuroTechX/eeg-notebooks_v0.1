@@ -203,7 +203,9 @@ class EEG:
         Parameters:
             fn (str): name of the file to save the sessions data to.
         """
-        self.save_fn = fn
+        if fn:
+            self.save_fn = fn
+
         if self.backend == 'brainflow':     # Start brainflow backend
             self._start_brainflow()
             self.markers = []
