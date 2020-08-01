@@ -109,9 +109,9 @@ for sub in subs:
 
     
     # Load both sessions
-    raw = utils.load_data(cueing_data_path, sfreq=256., 
+    raw = utils.load_data(eegnb_data_path, experiment='visual-cueing', site='kylemathlab_dev',sfreq=256., 
                           subject_nb=sub, session_nb=1)
-    raw.append(    utils.load_data(cueing_data_path, sfreq=256., 
+    raw.append(    utils.load_data(eegnb_data_path, experiment='visual-cueing', site='kylemathlab_dev',sfreq=256., 
                           subject_nb=sub, session_nb=2)           )
 
     # Filter Raw Data

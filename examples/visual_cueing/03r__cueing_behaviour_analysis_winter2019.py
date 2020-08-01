@@ -107,7 +107,7 @@ sesh = 1
 
 #load file
 #path =  './subject' + str(sub) + '/session' + str(sesh) + '/'
-path =  cueing_data_path + '/subject' + str(sub) + '/session' + str(sesh) + '/'
+path =  cueing_data_path + '/subject' + str('%04.f' %sub) + '/session' + str('%03.f' %(sesh+1)) + '/'
 file =  [x for x in os.listdir(path) if x.endswith('.mat')][0]
 output_dict = sio.loadmat(path + file)
 print(path + file)
@@ -146,8 +146,8 @@ for isub, sub in enumerate(subs):
     for sesh in range(n_sesh):
         # get the path and file name and load data
         #path =  './subject' + str(sub) + '/session' + str(sesh+1) + '/'
-        path =  cueing_data_path + '/subject' + str(sub) + '/session' + str(sesh+1) + '/'
-        
+        path =  cueing_data_path + '/subject' + str('%04.f' %sub) + '/session' + str('%03.f' %(sesh+1)) + '/'
+       
         file =  [x for x in os.listdir(path) if x.endswith('.mat')][0]
         output_dict = sio.loadmat(path + file)
 
