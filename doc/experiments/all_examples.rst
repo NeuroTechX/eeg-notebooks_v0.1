@@ -1,15 +1,4 @@
-********************************
-_
-*********************************
 
-All Notebook Examples
-=========================================================
-
-.. toctree::
-   :maxdepth: 3
-   :hidden:
-
-   ../auto_examples/index
-   
+.. include:: ../auto_examples/index.rst
 
 

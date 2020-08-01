@@ -2,22 +2,10 @@
 _
 *********************************
 
-Visual Cueing experiment
+Visual Cueing 
 =========================================================
 
+**Visual Cueing Experiment Notebook Examples**
 
-Notes
-----------------
+.. include:: ../auto_examples/visual_cueing/index.rst  
 
-( to add)
-
-
-Notebooks
-----------------
-
-
-.. toctree::
-   :maxdepth: 3
-
-   ../auto_examples/visual_cueing/index
-   
