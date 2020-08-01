@@ -255,8 +255,8 @@ html_show_sourcelink = False
 # Configurations for sphinx gallery
 
 sphinx_gallery_conf = {'filename_pattern': '(?=.*r__)(?=.*.py)', 
-                       'examples_dirs': ['../examples','../examples/visual_n170', '../examples/visual_p300', '../examples/visual_cueing'],
-                       'gallery_dirs': ['auto_examples','auto_examples/visual_n170', 'auto_examples/visual_p300', 'auto_examples/visual_cueing'],
+                       'examples_dirs': ['../examples','../examples/visual_n170', '../examples/visual_p300','../examples/visual_ssvep', '../examples/visual_cueing', '../examples/visual_gonogo'],
+                       'gallery_dirs': ['auto_examples','auto_examples/visual_n170', 'auto_examples/visual_p300','auto_examples/visual_ssvep', 'auto_examples/visual_cueing', 'auto_examples/visual_gonogo'],
                        'within_subsection_order': FileNameSortKey,
                        'default_thumb_file': 'img/eeg-notebooks_logo.png',
                        'backreferences_dir': 'generated',   # Where to drop linking files between examples & API

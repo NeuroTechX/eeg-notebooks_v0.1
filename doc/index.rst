@@ -19,9 +19,9 @@
    experiments/vn170
    experiments/vp300
    experiments/vssvep
-   experiments/gonogo
    experiments/cueing
-   auto_examples/index
+   experiments/gonogo
+   experiments/all_examples
 
 
 .. toctree::
