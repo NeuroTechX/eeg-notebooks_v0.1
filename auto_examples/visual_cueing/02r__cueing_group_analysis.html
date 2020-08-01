@@ -104,7 +104,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../../getting_started/installation.html#start-a-jupyter-notebook-session">6. Start a jupyter notebook session</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../getting_started/streaming.html">Initiating an EEG Stream</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/streaming.html">Initiating an EEG Stream</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/streaming.html#devices">Devices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/streaming.html#initiating-a-muse-stream-in-windows-using-bluemuse">Initiating a Muse stream in Windows using Bluemuse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/streaming.html#finding-the-usb-port-of-the-openbci-usb-dongle">Finding the USB port of the OpenBCI USB dongle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/streaming.html#finding-the-mac-address-of-the-ganglion">Finding the MAC address of the Ganglion</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../getting_started/running_experiments.html">Running Experiments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../getting_started/analysis.html">Analyzing data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../getting_started/available_notebooks.html">Available Notebooks</a><ul>
@@ -129,172 +135,224 @@
 </ul>
 <p class="caption"><span class="caption-text">Experiments</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../experiments/vn170.html">Visual N170 experiment</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../experiments/vn170.html#notes">Notes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../experiments/vn170.html#notebooks">Notebooks</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../visual_n170/index.html">Visual N170 examples</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../visual_n170/00x__n170_run_experiment.html">N170 run experiment</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_n170/01r__n170_viz.html">N170 Load and Visualize Data</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_n170/02r__n170_decoding.html">N170 Decoding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../experiments/vn170.html">Visual N170</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../visual_n170/00x__n170_run_experiment.html">N170 run experiment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/00x__n170_run_experiment.html#setup">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/00x__n170_run_experiment.html#initiate-eeg-device">Initiate EEG device</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/00x__n170_run_experiment.html#run-experiment">Run experiment</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../visual_n170/01r__n170_viz.html">N170 Load and Visualize Data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/01r__n170_viz.html#setup">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/01r__n170_viz.html#load-data">Load Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/01r__n170_viz.html#visualize-the-power-spectrum">Visualize the power spectrum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/01r__n170_viz.html#filtering">Filtering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/01r__n170_viz.html#epoching">Epoching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/01r__n170_viz.html#epoch-average">Epoch average</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../visual_n170/02r__n170_decoding.html">N170 Decoding</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/02r__n170_decoding.html#setup">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/02r__n170_decoding.html#load-data">Load Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/02r__n170_decoding.html#filteriing">Filteriing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/02r__n170_decoding.html#epoching">Epoching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/02r__n170_decoding.html#run-classification">Run classification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/02r__n170_decoding.html#plot-decoding-results">Plot Decoding Results</a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../experiments/vp300.html">Visual P300</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../visual_p300/00x__p300_run_experiment.html">P300 run experiment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../visual_p300/00x__p300_run_experiment.html#setup">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_p300/00x__p300_run_experiment.html#initiate-eeg-device">Initiate EEG device</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_p300/00x__p300_run_experiment.html#run-experiment">Run experiment</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../experiments/vp300.html">Visual P300 experiment</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../experiments/vp300.html#notes">Notes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../experiments/vp300.html#notebooks">Notebooks</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../visual_p300/index.html">Visual P300 Examples</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../visual_p300/00x__p300_run_experiment.html">P300 run experiment</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_p300/01r__p300_viz.html">P300 Load and Visualize Data</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_p300/02r__p300_decoding.html">P300 Decoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../visual_p300/01r__p300_viz.html">P300 Load and Visualize Data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../visual_p300/01r__p300_viz.html#setup">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_p300/01r__p300_viz.html#visualize-the-power-spectrum">Visualize the power spectrum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_p300/01r__p300_viz.html#filteriing">Filteriing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_p300/01r__p300_viz.html#epoching">Epoching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_p300/01r__p300_viz.html#epoch-average">Epoch average</a></li>
 </ul>
 </li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../experiments/vssvep.html">Visual SSVEP experiment</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../experiments/vssvep.html#notes">Notes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../experiments/vssvep.html#notebooks">Notebooks</a><ul class="simple">
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../experiments/gonogo.html">Go No-Go Experiment</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../experiments/gonogo.html#notes">Notes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../experiments/gonogo.html#notebooks">Notebooks</a></li>
-</ul>
-</li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../experiments/cueing.html">Visual Cueing experiment</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../../experiments/cueing.html#notes">Notes</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../../experiments/cueing.html#notebooks">Notebooks</a><ul class="current">
-<li class="toctree-l3 current"><a class="reference internal" href="index.html">Visual Cueing Experiment</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="01r__cueing_singlesub_analysis.html">Cueing Single Subject Analysis</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">Cueing Group Analysis</a></li>
-<li class="toctree-l4"><a class="reference internal" href="03r__cueing_behaviour_analysis_winter2019.html">Cueing Behavioural Analysis Winter 2019</a></li>
-<li class="toctree-l4"><a class="reference internal" href="04r__cueing_group_analysis_winter2019.html">Cueing Group Analysis Winter 2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../visual_p300/02r__p300_decoding.html">P300 Decoding</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../visual_p300/02r__p300_decoding.html#setup">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_p300/02r__p300_decoding.html#load-data">Load Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_p300/02r__p300_decoding.html#filteriing">Filteriing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_p300/02r__p300_decoding.html#epoching">Epoching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_p300/02r__p300_decoding.html#classfication">Classfication</a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../experiments/vssvep.html">Visual SSVEP</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../visual_ssvep/00x__ssvep_run_experiment.html">SSVEP run experiment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../visual_ssvep/00x__ssvep_run_experiment.html#setup">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_ssvep/00x__ssvep_run_experiment.html#initiate-eeg-device">Initiate EEG device</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_ssvep/00x__ssvep_run_experiment.html#run-experiment">Run experiment</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">All Notebook Examples</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="../index.html#visual-cueing-experiment">Visual Cueing Experiment</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="01r__cueing_singlesub_analysis.html">Cueing Single Subject Analysis</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="01r__cueing_singlesub_analysis.html#download-the-data">Download the data</a></li>
-<li class="toctree-l4"><a class="reference internal" href="01r__cueing_singlesub_analysis.html#prepare-the-data-for-analysis">Prepare the Data for Analysis</a></li>
-<li class="toctree-l4"><a class="reference internal" href="01r__cueing_singlesub_analysis.html#power-spectral-density">Power Spectral Density</a></li>
-<li class="toctree-l4"><a class="reference internal" href="01r__cueing_singlesub_analysis.html#filtering">Filtering</a></li>
-<li class="toctree-l4"><a class="reference internal" href="01r__cueing_singlesub_analysis.html#epoching">Epoching</a></li>
-<li class="toctree-l4"><a class="reference internal" href="01r__cueing_singlesub_analysis.html#spectrogram">Spectrogram</a></li>
-<li class="toctree-l4"><a class="reference internal" href="01r__cueing_singlesub_analysis.html#now-we-compute-and-plot-the-differences">Now we compute and plot the differences</a></li>
-<li class="toctree-l4"><a class="reference internal" href="01r__cueing_singlesub_analysis.html#target-epoching">Target Epoching</a></li>
-<li class="toctree-l4"><a class="reference internal" href="01r__cueing_singlesub_analysis.html#conclusions">Conclusions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../visual_ssvep/01r__ssvep_viz.html">SSVEP Visualization</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../visual_ssvep/01r__ssvep_viz.html#visualize-the-power-spectrum">Visualize the power spectrum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_ssvep/01r__ssvep_viz.html#epoching">Epoching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_ssvep/01r__ssvep_viz.html#stimuli-specific-psd">Stimuli-Specific PSD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_ssvep/01r__ssvep_viz.html#spectrogram">Spectrogram</a></li>
 </ul>
 </li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Cueing Group Analysis</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#download-the-data">Download the data</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#load-data-into-mne-objects">Load data into MNE objects</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#combine-subjects">Combine subjects</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#compute-t-test">Compute t test</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#save-average-powers-ipsi-and-contra">Save average powers ipsi and contra</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#save-spectra">Save spectra</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#conclusions">Conclusions</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="03r__cueing_behaviour_analysis_winter2019.html">Cueing Behavioural Analysis Winter 2019</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="03r__cueing_behaviour_analysis_winter2019.html#analyze-mat-behavioural-data-for-accuracy-and-rt">Analyze .mat behavioural data for Accuracy and RT</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="04r__cueing_group_analysis_winter2019.html">Cueing Group Analysis Winter 2019</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="04r__cueing_group_analysis_winter2019.html#download-the-data">Download the data</a></li>
-<li class="toctree-l4"><a class="reference internal" href="04r__cueing_group_analysis_winter2019.html#load-data-into-mne-objects">Load data into MNE objects</a></li>
-<li class="toctree-l4"><a class="reference internal" href="04r__cueing_group_analysis_winter2019.html#combine-subjects">Combine subjects</a></li>
-<li class="toctree-l4"><a class="reference internal" href="04r__cueing_group_analysis_winter2019.html#compute-t-test">Compute t test</a></li>
-<li class="toctree-l4"><a class="reference internal" href="04r__cueing_group_analysis_winter2019.html#save-average-powers-ipsi-and-contra">Save average powers ipsi and contra</a></li>
-<li class="toctree-l4"><a class="reference internal" href="04r__cueing_group_analysis_winter2019.html#save-spectra">Save spectra</a></li>
-<li class="toctree-l4"><a class="reference internal" href="04r__cueing_group_analysis_winter2019.html#conclusions">Conclusions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../visual_ssvep/02r__ssvep_decoding.html">SSVEP Decoding</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../visual_ssvep/02r__ssvep_decoding.html#setup">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_ssvep/02r__ssvep_decoding.html#load-data">Load Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_ssvep/02r__ssvep_decoding.html#epoching">Epoching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_ssvep/02r__ssvep_decoding.html#decoding">Decoding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_ssvep/02r__ssvep_decoding.html#id1">Decoding</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../index.html#visual-n170-examples">Visual N170 examples</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../visual_n170/00x__n170_run_experiment.html">N170 run experiment</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../visual_n170/00x__n170_run_experiment.html#setup">Setup</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_n170/00x__n170_run_experiment.html#initiate-eeg-device">Initiate EEG device</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_n170/00x__n170_run_experiment.html#run-experiment">Run experiment</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../experiments/cueing.html">Visual Cueing</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="01r__cueing_singlesub_analysis.html">Cueing Single Subject Analysis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="01r__cueing_singlesub_analysis.html#download-the-data">Download the data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01r__cueing_singlesub_analysis.html#prepare-the-data-for-analysis">Prepare the Data for Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01r__cueing_singlesub_analysis.html#power-spectral-density">Power Spectral Density</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01r__cueing_singlesub_analysis.html#filtering">Filtering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01r__cueing_singlesub_analysis.html#epoching">Epoching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01r__cueing_singlesub_analysis.html#spectrogram">Spectrogram</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01r__cueing_singlesub_analysis.html#now-we-compute-and-plot-the-differences">Now we compute and plot the differences</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01r__cueing_singlesub_analysis.html#target-epoching">Target Epoching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01r__cueing_singlesub_analysis.html#conclusions">Conclusions</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../visual_n170/01r__n170_viz.html">N170 Load and Visualize Data</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../visual_n170/01r__n170_viz.html#setup">Setup</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_n170/01r__n170_viz.html#load-data">Load Data</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_n170/01r__n170_viz.html#visualize-the-power-spectrum">Visualize the power spectrum</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_n170/01r__n170_viz.html#filtering">Filtering</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_n170/01r__n170_viz.html#epoching">Epoching</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_n170/01r__n170_viz.html#epoch-average">Epoch average</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Cueing Group Analysis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#download-the-data">Download the data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#load-data-into-mne-objects">Load data into MNE objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#combine-subjects">Combine subjects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#compute-t-test">Compute t test</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#save-average-powers-ipsi-and-contra">Save average powers ipsi and contra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#save-spectra">Save spectra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#conclusions">Conclusions</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../visual_n170/02r__n170_decoding.html">N170 Decoding</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../visual_n170/02r__n170_decoding.html#setup">Setup</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_n170/02r__n170_decoding.html#load-data">Load Data</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_n170/02r__n170_decoding.html#filteriing">Filteriing</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_n170/02r__n170_decoding.html#epoching">Epoching</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_n170/02r__n170_decoding.html#run-classification">Run classification</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_n170/02r__n170_decoding.html#plot-decoding-results">Plot Decoding Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03r__cueing_behaviour_analysis_winter2019.html">Cueing Behavioural Analysis Winter 2019</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="03r__cueing_behaviour_analysis_winter2019.html#analyze-mat-behavioural-data-for-accuracy-and-rt">Analyze .mat behavioural data for Accuracy and RT</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../index.html#visual-p300-examples">Visual P300 Examples</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../visual_p300/00x__p300_run_experiment.html">P300 run experiment</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../visual_p300/00x__p300_run_experiment.html#setup">Setup</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_p300/00x__p300_run_experiment.html#initiate-eeg-device">Initiate EEG device</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_p300/00x__p300_run_experiment.html#run-experiment">Run experiment</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../visual_p300/01r__p300_viz.html">P300 Load and Visualize Data</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../visual_p300/01r__p300_viz.html#setup">Setup</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_p300/01r__p300_viz.html#visualize-the-power-spectrum">Visualize the power spectrum</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_p300/01r__p300_viz.html#filteriing">Filteriing</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_p300/01r__p300_viz.html#epoching">Epoching</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_p300/01r__p300_viz.html#epoch-average">Epoch average</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../visual_p300/02r__p300_decoding.html">P300 Decoding</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../visual_p300/02r__p300_decoding.html#setup">Setup</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_p300/02r__p300_decoding.html#load-data">Load Data</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_p300/02r__p300_decoding.html#filteriing">Filteriing</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_p300/02r__p300_decoding.html#epoching">Epoching</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_p300/02r__p300_decoding.html#classfication">Classfication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04r__cueing_group_analysis_winter2019.html">Cueing Group Analysis Winter 2019</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="04r__cueing_group_analysis_winter2019.html#download-the-data">Download the data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04r__cueing_group_analysis_winter2019.html#load-data-into-mne-objects">Load data into MNE objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04r__cueing_group_analysis_winter2019.html#combine-subjects">Combine subjects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04r__cueing_group_analysis_winter2019.html#compute-t-test">Compute t test</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04r__cueing_group_analysis_winter2019.html#save-average-powers-ipsi-and-contra">Save average powers ipsi and contra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04r__cueing_group_analysis_winter2019.html#save-spectra">Save spectra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04r__cueing_group_analysis_winter2019.html#conclusions">Conclusions</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../index.html#visual-ssvep-examples">Visual SSVEP Examples</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../visual_ssvep/00x__ssvep_run_experiment.html">SSVEP run experiment</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../visual_ssvep/00x__ssvep_run_experiment.html#setup">Setup</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_ssvep/00x__ssvep_run_experiment.html#initiate-eeg-device">Initiate EEG device</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_ssvep/00x__ssvep_run_experiment.html#run-experiment">Run experiment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../experiments/gonogo.html">Visual Go-No-Go</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../experiments/all_examples.html">All Notebook Examples</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="01r__cueing_singlesub_analysis.html">Cueing Single Subject Analysis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="01r__cueing_singlesub_analysis.html#download-the-data">Download the data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01r__cueing_singlesub_analysis.html#prepare-the-data-for-analysis">Prepare the Data for Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01r__cueing_singlesub_analysis.html#power-spectral-density">Power Spectral Density</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01r__cueing_singlesub_analysis.html#filtering">Filtering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01r__cueing_singlesub_analysis.html#epoching">Epoching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01r__cueing_singlesub_analysis.html#spectrogram">Spectrogram</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01r__cueing_singlesub_analysis.html#now-we-compute-and-plot-the-differences">Now we compute and plot the differences</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01r__cueing_singlesub_analysis.html#target-epoching">Target Epoching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01r__cueing_singlesub_analysis.html#conclusions">Conclusions</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../visual_ssvep/01r__ssvep_viz.html">SSVEP Visualization</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../visual_ssvep/01r__ssvep_viz.html#visualize-the-power-spectrum">Visualize the power spectrum</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_ssvep/01r__ssvep_viz.html#epoching">Epoching</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_ssvep/01r__ssvep_viz.html#stimuli-specific-psd">Stimuli-Specific PSD</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_ssvep/01r__ssvep_viz.html#spectrogram">Spectrogram</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Cueing Group Analysis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#download-the-data">Download the data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#load-data-into-mne-objects">Load data into MNE objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#combine-subjects">Combine subjects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#compute-t-test">Compute t test</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#save-average-powers-ipsi-and-contra">Save average powers ipsi and contra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#save-spectra">Save spectra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#conclusions">Conclusions</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../visual_ssvep/02r__ssvep_decoding.html">SSVEP Decoding</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../visual_ssvep/02r__ssvep_decoding.html#setup">Setup</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_ssvep/02r__ssvep_decoding.html#load-data">Load Data</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_ssvep/02r__ssvep_decoding.html#epoching">Epoching</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_ssvep/02r__ssvep_decoding.html#decoding">Decoding</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_ssvep/02r__ssvep_decoding.html#id1">Decoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03r__cueing_behaviour_analysis_winter2019.html">Cueing Behavioural Analysis Winter 2019</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="03r__cueing_behaviour_analysis_winter2019.html#analyze-mat-behavioural-data-for-accuracy-and-rt">Analyze .mat behavioural data for Accuracy and RT</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="04r__cueing_group_analysis_winter2019.html">Cueing Group Analysis Winter 2019</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="04r__cueing_group_analysis_winter2019.html#download-the-data">Download the data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04r__cueing_group_analysis_winter2019.html#load-data-into-mne-objects">Load data into MNE objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04r__cueing_group_analysis_winter2019.html#combine-subjects">Combine subjects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04r__cueing_group_analysis_winter2019.html#compute-t-test">Compute t test</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04r__cueing_group_analysis_winter2019.html#save-average-powers-ipsi-and-contra">Save average powers ipsi and contra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04r__cueing_group_analysis_winter2019.html#save-spectra">Save spectra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04r__cueing_group_analysis_winter2019.html#conclusions">Conclusions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../visual_n170/00x__n170_run_experiment.html">N170 run experiment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/00x__n170_run_experiment.html#setup">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/00x__n170_run_experiment.html#initiate-eeg-device">Initiate EEG device</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/00x__n170_run_experiment.html#run-experiment">Run experiment</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../visual_n170/01r__n170_viz.html">N170 Load and Visualize Data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/01r__n170_viz.html#setup">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/01r__n170_viz.html#load-data">Load Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/01r__n170_viz.html#visualize-the-power-spectrum">Visualize the power spectrum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/01r__n170_viz.html#filtering">Filtering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/01r__n170_viz.html#epoching">Epoching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/01r__n170_viz.html#epoch-average">Epoch average</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../visual_n170/02r__n170_decoding.html">N170 Decoding</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/02r__n170_decoding.html#setup">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/02r__n170_decoding.html#load-data">Load Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/02r__n170_decoding.html#filteriing">Filteriing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/02r__n170_decoding.html#epoching">Epoching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/02r__n170_decoding.html#run-classification">Run classification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/02r__n170_decoding.html#plot-decoding-results">Plot Decoding Results</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../visual_p300/00x__p300_run_experiment.html">P300 run experiment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../visual_p300/00x__p300_run_experiment.html#setup">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_p300/00x__p300_run_experiment.html#initiate-eeg-device">Initiate EEG device</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_p300/00x__p300_run_experiment.html#run-experiment">Run experiment</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../visual_p300/01r__p300_viz.html">P300 Load and Visualize Data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../visual_p300/01r__p300_viz.html#setup">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_p300/01r__p300_viz.html#visualize-the-power-spectrum">Visualize the power spectrum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_p300/01r__p300_viz.html#filteriing">Filteriing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_p300/01r__p300_viz.html#epoching">Epoching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_p300/01r__p300_viz.html#epoch-average">Epoch average</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../visual_p300/02r__p300_decoding.html">P300 Decoding</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../visual_p300/02r__p300_decoding.html#setup">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_p300/02r__p300_decoding.html#load-data">Load Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_p300/02r__p300_decoding.html#filteriing">Filteriing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_p300/02r__p300_decoding.html#epoching">Epoching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_p300/02r__p300_decoding.html#classfication">Classfication</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../visual_ssvep/00x__ssvep_run_experiment.html">SSVEP run experiment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../visual_ssvep/00x__ssvep_run_experiment.html#setup">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_ssvep/00x__ssvep_run_experiment.html#initiate-eeg-device">Initiate EEG device</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_ssvep/00x__ssvep_run_experiment.html#run-experiment">Run experiment</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../visual_ssvep/01r__ssvep_viz.html">SSVEP Visualization</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../visual_ssvep/01r__ssvep_viz.html#visualize-the-power-spectrum">Visualize the power spectrum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_ssvep/01r__ssvep_viz.html#epoching">Epoching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_ssvep/01r__ssvep_viz.html#stimuli-specific-psd">Stimuli-Specific PSD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_ssvep/01r__ssvep_viz.html#spectrogram">Spectrogram</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../visual_ssvep/02r__ssvep_decoding.html">SSVEP Decoding</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../visual_ssvep/02r__ssvep_decoding.html#setup">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_ssvep/02r__ssvep_decoding.html#load-data">Load Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_ssvep/02r__ssvep_decoding.html#epoching">Epoching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_ssvep/02r__ssvep_decoding.html#decoding">Decoding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_ssvep/02r__ssvep_decoding.html#id1">Decoding</a></li>
 </ul>
 </li>
 </ul>
@@ -359,9 +417,7 @@
     
       <li><a href="../../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="../../experiments/cueing.html">Visual Cueing experiment</a> &raquo;</li>
-        
-          <li><a href="index.html">Visual Cueing Experiment</a> &raquo;</li>
+          <li><a href="../../experiments/cueing.html">Visual Cueing</a> &raquo;</li>
         
       <li>Cueing Group Analysis</li>
     
@@ -476,9 +532,9 @@
 
 
     <span class="c1"># Load both sessions</span>
-    <span class="n">raw</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">load_data</span><span class="p">(</span><span class="n">cueing_data_path</span><span class="p">,</span> <span class="n">sfreq</span><span class="o">=</span><span class="mf">256.</span><span class="p">,</span>
+    <span class="n">raw</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">load_data</span><span class="p">(</span><span class="n">eegnb_data_path</span><span class="p">,</span> <span class="n">experiment</span><span class="o">=</span><span class="s1">&#39;visual-cueing&#39;</span><span class="p">,</span> <span class="n">site</span><span class="o">=</span><span class="s1">&#39;kylemathlab_dev&#39;</span><span class="p">,</span><span class="n">sfreq</span><span class="o">=</span><span class="mf">256.</span><span class="p">,</span>
                           <span class="n">subject_nb</span><span class="o">=</span><span class="n">sub</span><span class="p">,</span> <span class="n">session_nb</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-    <span class="n">raw</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>    <span class="n">utils</span><span class="o">.</span><span class="n">load_data</span><span class="p">(</span><span class="n">cueing_data_path</span><span class="p">,</span> <span class="n">sfreq</span><span class="o">=</span><span class="mf">256.</span><span class="p">,</span>
+    <span class="n">raw</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>    <span class="n">utils</span><span class="o">.</span><span class="n">load_data</span><span class="p">(</span><span class="n">eegnb_data_path</span><span class="p">,</span> <span class="n">experiment</span><span class="o">=</span><span class="s1">&#39;visual-cueing&#39;</span><span class="p">,</span> <span class="n">site</span><span class="o">=</span><span class="s1">&#39;kylemathlab_dev&#39;</span><span class="p">,</span><span class="n">sfreq</span><span class="o">=</span><span class="mf">256.</span><span class="p">,</span>
                           <span class="n">subject_nb</span><span class="o">=</span><span class="n">sub</span><span class="p">,</span> <span class="n">session_nb</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>           <span class="p">)</span>
 
     <span class="c1"># Filter Raw Data</span>
@@ -801,15 +857,15 @@
 </ul>
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>101
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject101/session1/subject101_session1_recording_2018-11-20-16.42.02.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject101/session1/subject101_session1_recording_2018-11-20-16.42.02.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0101/session001/subject101_session1_recording_2018-11-20-16.42.02.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0101/session001/subject101_session1_recording_2018-11-20-16.42.02.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61284
     Range : 0 ... 61283 =      0.000 ...   239.387 secs
 Ready.
 raw is
 [&lt;RawArray | 5 x 61284 (239.4 s), ~2.4 MB, data loaded&gt;]
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject101/session2/subject101_session2_recording_2018-11-20-16.53.23.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject101/session2/subject101_session2_recording_2018-11-20-16.53.23.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0101/session002/subject101_session2_recording_2018-11-20-16.53.23.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0101/session002/subject101_session2_recording_2018-11-20-16.53.23.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61284
     Range : 0 ... 61283 =      0.000 ...   239.387 secs
 Ready.
@@ -831,15 +887,15 @@ Trials Remaining: 10.
 Applying baseline correction (mode: mean)
 Applying baseline correction (mode: mean)
 102
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject102/session1/subject102_session1_recording_2018-11-20-17.05.27.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject102/session1/subject102_session1_recording_2018-11-20-17.05.27.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0102/session001/subject102_session1_recording_2018-11-20-17.05.27.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0102/session001/subject102_session1_recording_2018-11-20-17.05.27.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61296
     Range : 0 ... 61295 =      0.000 ...   239.434 secs
 Ready.
 raw is
 [&lt;RawArray | 5 x 61296 (239.4 s), ~2.4 MB, data loaded&gt;]
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject102/session2/subject102_session2_recording_2018-11-20-17.14.10.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject102/session2/subject102_session2_recording_2018-11-20-17.14.10.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0102/session002/subject102_session2_recording_2018-11-20-17.14.10.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0102/session002/subject102_session2_recording_2018-11-20-17.14.10.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61296
     Range : 0 ... 61295 =      0.000 ...   239.434 secs
 Ready.
@@ -861,15 +917,15 @@ Trials Remaining: 40.
 Applying baseline correction (mode: mean)
 Applying baseline correction (mode: mean)
 103
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject103/session1/subject103_session1_recording_2018-11-20-17.26.43.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject103/session1/subject103_session1_recording_2018-11-20-17.26.43.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0103/session001/subject103_session1_recording_2018-11-20-17.26.43.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0103/session001/subject103_session1_recording_2018-11-20-17.26.43.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61296
     Range : 0 ... 61295 =      0.000 ...   239.434 secs
 Ready.
 raw is
 [&lt;RawArray | 5 x 61296 (239.4 s), ~2.4 MB, data loaded&gt;]
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject103/session2/subject103_session2_recording_2018-11-20-17.33.59.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject103/session2/subject103_session2_recording_2018-11-20-17.33.59.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0103/session002/subject103_session2_recording_2018-11-20-17.33.59.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0103/session002/subject103_session2_recording_2018-11-20-17.33.59.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61296
     Range : 0 ... 61295 =      0.000 ...   239.434 secs
 Ready.
@@ -891,19 +947,19 @@ Trials Remaining: 58.
 Applying baseline correction (mode: mean)
 Applying baseline correction (mode: mean)
 104
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject104/session1/subject104_session1_recording_2018-11-21-18.18.35.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject104/session1/subject104_session1_recording_2018-11-21-18.18.35.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0104/session001/subject104_session1_recording_2018-11-21-18.18.35.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0104/session001/subject104_session1_recording_2018-11-21-18.18.35.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61296
     Range : 0 ... 61295 =      0.000 ...   239.434 secs
 Ready.
 raw is
 [&lt;RawArray | 5 x 61296 (239.4 s), ~2.4 MB, data loaded&gt;]
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject104/session2/subject104_session2_recording_2018-11-20-17.49.47.csv&#39;, &#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject104/session2/subject104_session2_recording_2018-11-21-18.27.12.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject104/session2/subject104_session2_recording_2018-11-20-17.49.47.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0104/session002/subject104_session2_recording_2018-11-20-17.49.47.csv&#39;, &#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0104/session002/subject104_session2_recording_2018-11-21-18.27.12.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0104/session002/subject104_session2_recording_2018-11-20-17.49.47.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61284
     Range : 0 ... 61283 =      0.000 ...   239.387 secs
 Ready.
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject104/session2/subject104_session2_recording_2018-11-21-18.27.12.csv
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0104/session002/subject104_session2_recording_2018-11-21-18.27.12.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61284
     Range : 0 ... 61283 =      0.000 ...   239.387 secs
 Ready.
@@ -925,15 +981,15 @@ Trials Remaining: 39.
 Applying baseline correction (mode: mean)
 Applying baseline correction (mode: mean)
 105
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject105/session1/subject105_session1_recording_2018-11-20-18.17.07.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject105/session1/subject105_session1_recording_2018-11-20-18.17.07.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0105/session001/subject105_session1_recording_2018-11-20-18.17.07.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0105/session001/subject105_session1_recording_2018-11-20-18.17.07.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61296
     Range : 0 ... 61295 =      0.000 ...   239.434 secs
 Ready.
 raw is
 [&lt;RawArray | 5 x 61296 (239.4 s), ~2.4 MB, data loaded&gt;]
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject105/session2/subject105_session2_recording_2018-11-20-18.23.37.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject105/session2/subject105_session2_recording_2018-11-20-18.23.37.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0105/session002/subject105_session2_recording_2018-11-20-18.23.37.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0105/session002/subject105_session2_recording_2018-11-20-18.23.37.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61296
     Range : 0 ... 61295 =      0.000 ...   239.434 secs
 Ready.
@@ -955,15 +1011,15 @@ Trials Remaining: 21.
 Applying baseline correction (mode: mean)
 Applying baseline correction (mode: mean)
 106
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject106/session1/subject106_session1_recording_2018-11-20-18.00.27.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject106/session1/subject106_session1_recording_2018-11-20-18.00.27.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0106/session001/subject106_session1_recording_2018-11-20-18.00.27.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0106/session001/subject106_session1_recording_2018-11-20-18.00.27.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61284
     Range : 0 ... 61283 =      0.000 ...   239.387 secs
 Ready.
 raw is
 [&lt;RawArray | 5 x 61284 (239.4 s), ~2.4 MB, data loaded&gt;]
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject106/session2/subject106_session2_recording_2018-11-20-18.07.03.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject106/session2/subject106_session2_recording_2018-11-20-18.07.03.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0106/session002/subject106_session2_recording_2018-11-20-18.07.03.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0106/session002/subject106_session2_recording_2018-11-20-18.07.03.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61284
     Range : 0 ... 61283 =      0.000 ...   239.387 secs
 Ready.
@@ -985,15 +1041,15 @@ Trials Remaining: 2.
 Applying baseline correction (mode: mean)
 Applying baseline correction (mode: mean)
 108
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject108/session1/subject108_session1_recording_2018-11-22-17.07.36.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject108/session1/subject108_session1_recording_2018-11-22-17.07.36.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0108/session001/subject108_session1_recording_2018-11-22-17.07.36.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0108/session001/subject108_session1_recording_2018-11-22-17.07.36.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61296
     Range : 0 ... 61295 =      0.000 ...   239.434 secs
 Ready.
 raw is
 [&lt;RawArray | 5 x 61296 (239.4 s), ~2.4 MB, data loaded&gt;]
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject108/session2/subject108_session2_recording_2018-11-22-17.15.34.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject108/session2/subject108_session2_recording_2018-11-22-17.15.34.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0108/session002/subject108_session2_recording_2018-11-22-17.15.34.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0108/session002/subject108_session2_recording_2018-11-22-17.15.34.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61284
     Range : 0 ... 61283 =      0.000 ...   239.387 secs
 Ready.
@@ -1015,15 +1071,15 @@ Trials Remaining: 0.
 Applying baseline correction (mode: mean)
 Applying baseline correction (mode: mean)
 109
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject109/session1/subject109_session1_recording_2018-11-22-17.27.44.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject109/session1/subject109_session1_recording_2018-11-22-17.27.44.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0109/session001/subject109_session1_recording_2018-11-22-17.27.44.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0109/session001/subject109_session1_recording_2018-11-22-17.27.44.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61284
     Range : 0 ... 61283 =      0.000 ...   239.387 secs
 Ready.
 raw is
 [&lt;RawArray | 5 x 61284 (239.4 s), ~2.4 MB, data loaded&gt;]
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject109/session2/subject109_session2_recording_2018-11-22-17.34.20.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject109/session2/subject109_session2_recording_2018-11-22-17.34.20.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0109/session002/subject109_session2_recording_2018-11-22-17.34.20.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0109/session002/subject109_session2_recording_2018-11-22-17.34.20.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61296
     Range : 0 ... 61295 =      0.000 ...   239.434 secs
 Ready.
@@ -1045,15 +1101,15 @@ Trials Remaining: 5.
 Applying baseline correction (mode: mean)
 Applying baseline correction (mode: mean)
 110
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject110/session1/subject110_session1_recording_2018-11-22-16.46.55.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject110/session1/subject110_session1_recording_2018-11-22-16.46.55.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0110/session001/subject110_session1_recording_2018-11-22-16.46.55.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0110/session001/subject110_session1_recording_2018-11-22-16.46.55.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61296
     Range : 0 ... 61295 =      0.000 ...   239.434 secs
 Ready.
 raw is
 [&lt;RawArray | 5 x 61296 (239.4 s), ~2.4 MB, data loaded&gt;]
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject110/session2/subject110_session2_recording_2018-11-22-16.56.10.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject110/session2/subject110_session2_recording_2018-11-22-16.56.10.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0110/session002/subject110_session2_recording_2018-11-22-16.56.10.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0110/session002/subject110_session2_recording_2018-11-22-16.56.10.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61284
     Range : 0 ... 61283 =      0.000 ...   239.387 secs
 Ready.
@@ -1075,15 +1131,15 @@ Trials Remaining: 28.
 Applying baseline correction (mode: mean)
 Applying baseline correction (mode: mean)
 111
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject111/session1/subject111_session1_recording_2018-11-22-17.43.50.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject111/session1/subject111_session1_recording_2018-11-22-17.43.50.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0111/session001/subject111_session1_recording_2018-11-22-17.43.50.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0111/session001/subject111_session1_recording_2018-11-22-17.43.50.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61296
     Range : 0 ... 61295 =      0.000 ...   239.434 secs
 Ready.
 raw is
 [&lt;RawArray | 5 x 61296 (239.4 s), ~2.4 MB, data loaded&gt;]
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject111/session2/subject111_session2_recording_2018-11-22-17.49.42.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject111/session2/subject111_session2_recording_2018-11-22-17.49.42.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0111/session002/subject111_session2_recording_2018-11-22-17.49.42.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0111/session002/subject111_session2_recording_2018-11-22-17.49.42.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61296
     Range : 0 ... 61295 =      0.000 ...   239.434 secs
 Ready.
@@ -1105,15 +1161,15 @@ Trials Remaining: 32.
 Applying baseline correction (mode: mean)
 Applying baseline correction (mode: mean)
 112
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject112/session1/subject112_session1_recording_2018-11-22-17.59.31.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject112/session1/subject112_session1_recording_2018-11-22-17.59.31.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0112/session001/subject112_session1_recording_2018-11-22-17.59.31.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0112/session001/subject112_session1_recording_2018-11-22-17.59.31.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61296
     Range : 0 ... 61295 =      0.000 ...   239.434 secs
 Ready.
 raw is
 [&lt;RawArray | 5 x 61296 (239.4 s), ~2.4 MB, data loaded&gt;]
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject112/session2/subject112_session2_recording_2018-11-22-18.07.30.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject112/session2/subject112_session2_recording_2018-11-22-18.07.30.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0112/session002/subject112_session2_recording_2018-11-22-18.07.30.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0112/session002/subject112_session2_recording_2018-11-22-18.07.30.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61284
     Range : 0 ... 61283 =      0.000 ...   239.387 secs
 Ready.
@@ -1135,15 +1191,15 @@ Trials Remaining: 0.
 Applying baseline correction (mode: mean)
 Applying baseline correction (mode: mean)
 202
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject202/session1/subject202_session1_recording_2018-11-20-16.39.02.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject202/session1/subject202_session1_recording_2018-11-20-16.39.02.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0202/session001/subject202_session1_recording_2018-11-20-16.39.02.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0202/session001/subject202_session1_recording_2018-11-20-16.39.02.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61296
     Range : 0 ... 61295 =      0.000 ...   239.434 secs
 Ready.
 raw is
 [&lt;RawArray | 5 x 61296 (239.4 s), ~2.4 MB, data loaded&gt;]
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject202/session2/subject202_session2_recording_2018-11-20-16.46.28.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject202/session2/subject202_session2_recording_2018-11-20-16.46.28.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0202/session002/subject202_session2_recording_2018-11-20-16.46.28.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0202/session002/subject202_session2_recording_2018-11-20-16.46.28.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61296
     Range : 0 ... 61295 =      0.000 ...   239.434 secs
 Ready.
@@ -1165,15 +1221,15 @@ Trials Remaining: 61.
 Applying baseline correction (mode: mean)
 Applying baseline correction (mode: mean)
 203
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject203/session1/subject203_session1_recording_2018-11-20-16.59.53.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject203/session1/subject203_session1_recording_2018-11-20-16.59.53.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0203/session001/subject203_session1_recording_2018-11-20-16.59.53.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0203/session001/subject203_session1_recording_2018-11-20-16.59.53.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61296
     Range : 0 ... 61295 =      0.000 ...   239.434 secs
 Ready.
 raw is
 [&lt;RawArray | 5 x 61296 (239.4 s), ~2.4 MB, data loaded&gt;]
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject203/session2/subject203_session2_recording_2018-11-20-17.08.00.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject203/session2/subject203_session2_recording_2018-11-20-17.08.00.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0203/session002/subject203_session2_recording_2018-11-20-17.08.00.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0203/session002/subject203_session2_recording_2018-11-20-17.08.00.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61296
     Range : 0 ... 61295 =      0.000 ...   239.434 secs
 Ready.
@@ -1195,15 +1251,15 @@ Trials Remaining: 4.
 Applying baseline correction (mode: mean)
 Applying baseline correction (mode: mean)
 204
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject204/session1/subject204_session1_recording_2018-11-20-17.22.49.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject204/session1/subject204_session1_recording_2018-11-20-17.22.49.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0204/session001/subject204_session1_recording_2018-11-20-17.22.49.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0204/session001/subject204_session1_recording_2018-11-20-17.22.49.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61308
     Range : 0 ... 61307 =      0.000 ...   239.480 secs
 Ready.
 raw is
 [&lt;RawArray | 5 x 61308 (239.5 s), ~2.4 MB, data loaded&gt;]
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject204/session2/subject204_session2_recording_2018-11-20-17.29.51.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject204/session2/subject204_session2_recording_2018-11-20-17.29.51.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0204/session002/subject204_session2_recording_2018-11-20-17.29.51.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0204/session002/subject204_session2_recording_2018-11-20-17.29.51.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61308
     Range : 0 ... 61307 =      0.000 ...   239.480 secs
 Ready.
@@ -1225,15 +1281,15 @@ Trials Remaining: 49.
 Applying baseline correction (mode: mean)
 Applying baseline correction (mode: mean)
 205
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject205/session1/subject205_session1_recording_2018-11-20-17.41.48.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject205/session1/subject205_session1_recording_2018-11-20-17.41.48.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0205/session001/subject205_session1_recording_2018-11-20-17.41.48.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0205/session001/subject205_session1_recording_2018-11-20-17.41.48.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61296
     Range : 0 ... 61295 =      0.000 ...   239.434 secs
 Ready.
 raw is
 [&lt;RawArray | 5 x 61296 (239.4 s), ~2.4 MB, data loaded&gt;]
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject205/session2/subject205_session2_recording_2018-11-20-17.48.11.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject205/session2/subject205_session2_recording_2018-11-20-17.48.11.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0205/session002/subject205_session2_recording_2018-11-20-17.48.11.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0205/session002/subject205_session2_recording_2018-11-20-17.48.11.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61296
     Range : 0 ... 61295 =      0.000 ...   239.434 secs
 Ready.
@@ -1255,15 +1311,15 @@ Trials Remaining: 87.
 Applying baseline correction (mode: mean)
 Applying baseline correction (mode: mean)
 207
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject207/session1/subject207_session1_recording_2018-11-22-16.33.38.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject207/session1/subject207_session1_recording_2018-11-22-16.33.38.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0207/session001/subject207_session1_recording_2018-11-22-16.33.38.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0207/session001/subject207_session1_recording_2018-11-22-16.33.38.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61284
     Range : 0 ... 61283 =      0.000 ...   239.387 secs
 Ready.
 raw is
 [&lt;RawArray | 5 x 61284 (239.4 s), ~2.4 MB, data loaded&gt;]
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject207/session2/subject207_session2_recording_2018-11-22-16.41.04.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject207/session2/subject207_session2_recording_2018-11-22-16.41.04.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0207/session002/subject207_session2_recording_2018-11-22-16.41.04.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0207/session002/subject207_session2_recording_2018-11-22-16.41.04.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61284
     Range : 0 ... 61283 =      0.000 ...   239.387 secs
 Ready.
@@ -1285,15 +1341,15 @@ Trials Remaining: 70.
 Applying baseline correction (mode: mean)
 Applying baseline correction (mode: mean)
 208
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject208/session1/subject208_session1_recording_2018-11-22-16.54.46.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject208/session1/subject208_session1_recording_2018-11-22-16.54.46.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0208/session001/subject208_session1_recording_2018-11-22-16.54.46.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0208/session001/subject208_session1_recording_2018-11-22-16.54.46.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61296
     Range : 0 ... 61295 =      0.000 ...   239.434 secs
 Ready.
 raw is
 [&lt;RawArray | 5 x 61296 (239.4 s), ~2.4 MB, data loaded&gt;]
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject208/session2/subject208_session2_recording_2018-11-22-17.02.17.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject208/session2/subject208_session2_recording_2018-11-22-17.02.17.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0208/session002/subject208_session2_recording_2018-11-22-17.02.17.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0208/session002/subject208_session2_recording_2018-11-22-17.02.17.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61296
     Range : 0 ... 61295 =      0.000 ...   239.434 secs
 Ready.
@@ -1315,15 +1371,15 @@ Trials Remaining: 70.
 Applying baseline correction (mode: mean)
 Applying baseline correction (mode: mean)
 209
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject209/session1/subject209_session1_recording_2018-11-22-17.21.18.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject209/session1/subject209_session1_recording_2018-11-22-17.21.18.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0209/session001/subject209_session1_recording_2018-11-22-17.21.18.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0209/session001/subject209_session1_recording_2018-11-22-17.21.18.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61296
     Range : 0 ... 61295 =      0.000 ...   239.434 secs
 Ready.
 raw is
 [&lt;RawArray | 5 x 61296 (239.4 s), ~2.4 MB, data loaded&gt;]
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject209/session2/subject209_session2_recording_2018-11-22-17.29.01.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject209/session2/subject209_session2_recording_2018-11-22-17.29.01.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0209/session002/subject209_session2_recording_2018-11-22-17.29.01.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0209/session002/subject209_session2_recording_2018-11-22-17.29.01.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61296
     Range : 0 ... 61295 =      0.000 ...   239.434 secs
 Ready.
@@ -1345,15 +1401,15 @@ Trials Remaining: 5.
 Applying baseline correction (mode: mean)
 Applying baseline correction (mode: mean)
 210
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject210/session1/subject210_session1_recording_2018-11-22-17.42.48.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject210/session1/subject210_session1_recording_2018-11-22-17.42.48.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0210/session001/subject210_session1_recording_2018-11-22-17.42.48.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0210/session001/subject210_session1_recording_2018-11-22-17.42.48.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61284
     Range : 0 ... 61283 =      0.000 ...   239.387 secs
 Ready.
 raw is
 [&lt;RawArray | 5 x 61284 (239.4 s), ~2.4 MB, data loaded&gt;]
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject210/session2/subject210_session2_recording_2018-11-22-17.49.59.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject210/session2/subject210_session2_recording_2018-11-22-17.49.59.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0210/session002/subject210_session2_recording_2018-11-22-17.49.59.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0210/session002/subject210_session2_recording_2018-11-22-17.49.59.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61296
     Range : 0 ... 61295 =      0.000 ...   239.434 secs
 Ready.
@@ -1375,15 +1431,15 @@ Trials Remaining: 67.
 Applying baseline correction (mode: mean)
 Applying baseline correction (mode: mean)
 211
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject211/session1/subject211_session1_recording_2018-11-20-18.01.25.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject211/session1/subject211_session1_recording_2018-11-20-18.01.25.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0211/session001/subject211_session1_recording_2018-11-20-18.01.25.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0211/session001/subject211_session1_recording_2018-11-20-18.01.25.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61296
     Range : 0 ... 61295 =      0.000 ...   239.434 secs
 Ready.
 raw is
 [&lt;RawArray | 5 x 61296 (239.4 s), ~2.4 MB, data loaded&gt;]
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject211/session2/subject211_session2_recording_2018-11-20-18.11.42.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject211/session2/subject211_session2_recording_2018-11-20-18.11.42.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0211/session002/subject211_session2_recording_2018-11-20-18.11.42.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0211/session002/subject211_session2_recording_2018-11-20-18.11.42.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61296
     Range : 0 ... 61295 =      0.000 ...   239.434 secs
 Ready.
@@ -1405,15 +1461,15 @@ Trials Remaining: 9.
 Applying baseline correction (mode: mean)
 Applying baseline correction (mode: mean)
 301
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject301/session1/subject301_session1_recording_2018-11-20-16.52.26.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject301/session1/subject301_session1_recording_2018-11-20-16.52.26.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0301/session001/subject301_session1_recording_2018-11-20-16.52.26.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0301/session001/subject301_session1_recording_2018-11-20-16.52.26.csv
 Creating RawArray with float64 data, n_channels=5, n_times=30564
     Range : 0 ... 30563 =      0.000 ...   119.387 secs
 Ready.
 raw is
 [&lt;RawArray | 5 x 30564 (119.4 s), ~1.2 MB, data loaded&gt;]
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject301/session2/subject301_session2_recording_2018-11-20-16.57.44.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject301/session2/subject301_session2_recording_2018-11-20-16.57.44.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0301/session002/subject301_session2_recording_2018-11-20-16.57.44.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0301/session002/subject301_session2_recording_2018-11-20-16.57.44.csv
 Creating RawArray with float64 data, n_channels=5, n_times=30564
     Range : 0 ... 30563 =      0.000 ...   119.387 secs
 Ready.
@@ -1435,19 +1491,19 @@ Trials Remaining: 26.
 Applying baseline correction (mode: mean)
 Applying baseline correction (mode: mean)
 302
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject302/session1/subject302_session1_recording_2018-11-20-17.10.25.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject302/session1/subject302_session1_recording_2018-11-20-17.10.25.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0302/session001/subject302_session1_recording_2018-11-20-17.10.25.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0302/session001/subject302_session1_recording_2018-11-20-17.10.25.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61296
     Range : 0 ... 61295 =      0.000 ...   239.434 secs
 Ready.
 raw is
 [&lt;RawArray | 5 x 61296 (239.4 s), ~2.4 MB, data loaded&gt;]
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject302/session2/subject302_session2_recording_2018-11-20-17.18.04.csv&#39;, &#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject302/session2/subject302_session2_recording_2018-11-20-17.31.03.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject302/session2/subject302_session2_recording_2018-11-20-17.18.04.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0302/session002/subject302_session2_recording_2018-11-20-17.18.04.csv&#39;, &#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0302/session002/subject302_session2_recording_2018-11-20-17.31.03.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0302/session002/subject302_session2_recording_2018-11-20-17.18.04.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61296
     Range : 0 ... 61295 =      0.000 ...   239.434 secs
 Ready.
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject302/session2/subject302_session2_recording_2018-11-20-17.31.03.csv
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0302/session002/subject302_session2_recording_2018-11-20-17.31.03.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61296
     Range : 0 ... 61295 =      0.000 ...   239.434 secs
 Ready.
@@ -1469,15 +1525,15 @@ Trials Remaining: 11.
 Applying baseline correction (mode: mean)
 Applying baseline correction (mode: mean)
 303
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject303/session1/subject303_session1_recording_2018-11-20-17.49.48.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject303/session1/subject303_session1_recording_2018-11-20-17.49.48.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0303/session001/subject303_session1_recording_2018-11-20-17.49.48.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0303/session001/subject303_session1_recording_2018-11-20-17.49.48.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61296
     Range : 0 ... 61295 =      0.000 ...   239.434 secs
 Ready.
 raw is
 [&lt;RawArray | 5 x 61296 (239.4 s), ~2.4 MB, data loaded&gt;]
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject303/session2/subject303_session2_recording_2018-11-20-17.39.08.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject303/session2/subject303_session2_recording_2018-11-20-17.39.08.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0303/session002/subject303_session2_recording_2018-11-20-17.39.08.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0303/session002/subject303_session2_recording_2018-11-20-17.39.08.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61296
     Range : 0 ... 61295 =      0.000 ...   239.434 secs
 Ready.
@@ -1499,15 +1555,15 @@ Trials Remaining: 8.
 Applying baseline correction (mode: mean)
 Applying baseline correction (mode: mean)
 304
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject304/session1/subject304_session1_recording_2018-11-20-17.59.43.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject304/session1/subject304_session1_recording_2018-11-20-17.59.43.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0304/session001/subject304_session1_recording_2018-11-20-17.59.43.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0304/session001/subject304_session1_recording_2018-11-20-17.59.43.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61284
     Range : 0 ... 61283 =      0.000 ...   239.387 secs
 Ready.
 raw is
 [&lt;RawArray | 5 x 61284 (239.4 s), ~2.4 MB, data loaded&gt;]
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject304/session2/subject304_session2_recording_2018-11-20-18.06.46.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject304/session2/subject304_session2_recording_2018-11-20-18.06.46.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0304/session002/subject304_session2_recording_2018-11-20-18.06.46.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0304/session002/subject304_session2_recording_2018-11-20-18.06.46.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61284
     Range : 0 ... 61283 =      0.000 ...   239.387 secs
 Ready.
@@ -1529,15 +1585,15 @@ Trials Remaining: 24.
 Applying baseline correction (mode: mean)
 Applying baseline correction (mode: mean)
 305
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject305/session1/subject305_session1_recording_2018-11-20-18.22.30.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject305/session1/subject305_session1_recording_2018-11-20-18.22.30.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0305/session001/subject305_session1_recording_2018-11-20-18.22.30.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0305/session001/subject305_session1_recording_2018-11-20-18.22.30.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61296
     Range : 0 ... 61295 =      0.000 ...   239.434 secs
 Ready.
 raw is
 [&lt;RawArray | 5 x 61296 (239.4 s), ~2.4 MB, data loaded&gt;]
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject305/session2/subject305_session2_recording_2018-11-20-18.29.57.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject305/session2/subject305_session2_recording_2018-11-20-18.29.57.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0305/session002/subject305_session2_recording_2018-11-20-18.29.57.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0305/session002/subject305_session2_recording_2018-11-20-18.29.57.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61296
     Range : 0 ... 61295 =      0.000 ...   239.434 secs
 Ready.
@@ -1559,15 +1615,15 @@ Trials Remaining: 9.
 Applying baseline correction (mode: mean)
 Applying baseline correction (mode: mean)
 306
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject306/session1/subject306_session1_recording_2018-11-22-16.40.52.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject306/session1/subject306_session1_recording_2018-11-22-16.40.52.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0306/session001/subject306_session1_recording_2018-11-22-16.40.52.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0306/session001/subject306_session1_recording_2018-11-22-16.40.52.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61308
     Range : 0 ... 61307 =      0.000 ...   239.480 secs
 Ready.
 raw is
 [&lt;RawArray | 5 x 61308 (239.5 s), ~2.4 MB, data loaded&gt;]
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject306/session2/subject306_session2_recording_2018-11-22-16.48.01.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject306/session2/subject306_session2_recording_2018-11-22-16.48.01.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0306/session002/subject306_session2_recording_2018-11-22-16.48.01.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0306/session002/subject306_session2_recording_2018-11-22-16.48.01.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61308
     Range : 0 ... 61307 =      0.000 ...   239.480 secs
 Ready.
@@ -1589,15 +1645,15 @@ Trials Remaining: 1.
 Applying baseline correction (mode: mean)
 Applying baseline correction (mode: mean)
 307
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject307/session1/subject307_session1_recording_2018-11-22-17.02.17.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject307/session1/subject307_session1_recording_2018-11-22-17.02.17.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0307/session001/subject307_session1_recording_2018-11-22-17.02.17.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0307/session001/subject307_session1_recording_2018-11-22-17.02.17.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61308
     Range : 0 ... 61307 =      0.000 ...   239.480 secs
 Ready.
 raw is
 [&lt;RawArray | 5 x 61308 (239.5 s), ~2.4 MB, data loaded&gt;]
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject307/session2/subject307_session2_recording_2018-11-22-17.09.25.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject307/session2/subject307_session2_recording_2018-11-22-17.09.25.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0307/session002/subject307_session2_recording_2018-11-22-17.09.25.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0307/session002/subject307_session2_recording_2018-11-22-17.09.25.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61308
     Range : 0 ... 61307 =      0.000 ...   239.480 secs
 Ready.
@@ -1619,15 +1675,15 @@ Trials Remaining: 49.
 Applying baseline correction (mode: mean)
 Applying baseline correction (mode: mean)
 308
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject308/session1/subject308_session1_recording_2018-11-22-17.21.43.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject308/session1/subject308_session1_recording_2018-11-22-17.21.43.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0308/session001/subject308_session1_recording_2018-11-22-17.21.43.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0308/session001/subject308_session1_recording_2018-11-22-17.21.43.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61296
     Range : 0 ... 61295 =      0.000 ...   239.434 secs
 Ready.
 raw is
 [&lt;RawArray | 5 x 61296 (239.4 s), ~2.4 MB, data loaded&gt;]
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject308/session2/subject308_session2_recording_2018-11-22-17.28.31.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject308/session2/subject308_session2_recording_2018-11-22-17.28.31.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0308/session002/subject308_session2_recording_2018-11-22-17.28.31.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0308/session002/subject308_session2_recording_2018-11-22-17.28.31.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61308
     Range : 0 ... 61307 =      0.000 ...   239.480 secs
 Ready.
@@ -1649,15 +1705,15 @@ Trials Remaining: 71.
 Applying baseline correction (mode: mean)
 Applying baseline correction (mode: mean)
 309
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject309/session1/subject309_session1_recording_2018-11-22-17.41.24.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject309/session1/subject309_session1_recording_2018-11-22-17.41.24.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0309/session001/subject309_session1_recording_2018-11-22-17.41.24.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0309/session001/subject309_session1_recording_2018-11-22-17.41.24.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61308
     Range : 0 ... 61307 =      0.000 ...   239.480 secs
 Ready.
 raw is
 [&lt;RawArray | 5 x 61308 (239.5 s), ~2.4 MB, data loaded&gt;]
-[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject309/session2/subject309_session2_recording_2018-11-22-17.48.17.csv&#39;]
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject309/session2/subject309_session2_recording_2018-11-22-17.48.17.csv
+[&#39;/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0309/session002/subject309_session2_recording_2018-11-22-17.48.17.csv&#39;]
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0309/session002/subject309_session2_recording_2018-11-22-17.48.17.csv
 Creating RawArray with float64 data, n_channels=5, n_times=61308
     Range : 0 ... 61307 =      0.000 ...   239.480 secs
 Ready.
@@ -1779,7 +1835,7 @@ Applying baseline correction (mode: mean)
 </li>
 </ul>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.patches.Rectangle object at 0x7fc92dc09550&gt;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.patches.Rectangle object at 0x7f521312ffd0&gt;
 </pre></div>
 </div>
 </div>
@@ -1842,7 +1898,7 @@ Saved subject averages for each condition to 375CueingEEG.csv file in present di
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Blah</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 1 minutes  42.744 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 1 minutes  25.562 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-visual-cueing-02r-cueing-group-analysis-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/d57fff739827ca575034e03b51d68a54/02r__cueing_group_analysis.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">02r__cueing_group_analysis.py</span></code></a></p>

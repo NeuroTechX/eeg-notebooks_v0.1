@@ -56,7 +56,7 @@ if not os.path.isdir(p300_data_path):
 
 subject = 1
 session = 1
-raw = load_data(p300_data_path, sfreq=256., 
+raw = load_data(eegnb_data_path, experiment='visual-P300', sfreq=256., 
                 subject_nb=subject, session_nb=session)
 
 ###################################################################################################

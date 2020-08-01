@@ -55,7 +55,9 @@ if not os.path.isdir(ssvep_data_path):
 
 subject = 1
 session = 1
-raw = load_data(ssvep_data_path, sfreq=256., 
+raw = load_data(eegnb_data_path,experiment='visual-SSVEP', site='eegnb_examples',
+                device='muse2016',
+                sfreq=256., 
                       subject_nb=subject, session_nb=session,
                       ch_ind=[0, 1, 2, 3, 4], 
                       replace_ch_names={'Right AUX': 'POz'})

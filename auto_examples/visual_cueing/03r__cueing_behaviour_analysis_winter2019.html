@@ -104,7 +104,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../../getting_started/installation.html#start-a-jupyter-notebook-session">6. Start a jupyter notebook session</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../getting_started/streaming.html">Initiating an EEG Stream</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/streaming.html">Initiating an EEG Stream</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/streaming.html#devices">Devices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/streaming.html#initiating-a-muse-stream-in-windows-using-bluemuse">Initiating a Muse stream in Windows using Bluemuse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/streaming.html#finding-the-usb-port-of-the-openbci-usb-dongle">Finding the USB port of the OpenBCI USB dongle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/streaming.html#finding-the-mac-address-of-the-ganglion">Finding the MAC address of the Ganglion</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../getting_started/running_experiments.html">Running Experiments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../getting_started/analysis.html">Analyzing data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../getting_started/available_notebooks.html">Available Notebooks</a><ul>
@@ -129,172 +135,224 @@
 </ul>
 <p class="caption"><span class="caption-text">Experiments</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../experiments/vn170.html">Visual N170 experiment</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../experiments/vn170.html#notes">Notes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../experiments/vn170.html#notebooks">Notebooks</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../visual_n170/index.html">Visual N170 examples</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../visual_n170/00x__n170_run_experiment.html">N170 run experiment</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_n170/01r__n170_viz.html">N170 Load and Visualize Data</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_n170/02r__n170_decoding.html">N170 Decoding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../experiments/vn170.html">Visual N170</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../visual_n170/00x__n170_run_experiment.html">N170 run experiment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/00x__n170_run_experiment.html#setup">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/00x__n170_run_experiment.html#initiate-eeg-device">Initiate EEG device</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/00x__n170_run_experiment.html#run-experiment">Run experiment</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../visual_n170/01r__n170_viz.html">N170 Load and Visualize Data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/01r__n170_viz.html#setup">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/01r__n170_viz.html#load-data">Load Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/01r__n170_viz.html#visualize-the-power-spectrum">Visualize the power spectrum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/01r__n170_viz.html#filtering">Filtering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/01r__n170_viz.html#epoching">Epoching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/01r__n170_viz.html#epoch-average">Epoch average</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../visual_n170/02r__n170_decoding.html">N170 Decoding</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/02r__n170_decoding.html#setup">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/02r__n170_decoding.html#load-data">Load Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/02r__n170_decoding.html#filteriing">Filteriing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/02r__n170_decoding.html#epoching">Epoching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/02r__n170_decoding.html#run-classification">Run classification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/02r__n170_decoding.html#plot-decoding-results">Plot Decoding Results</a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../experiments/vp300.html">Visual P300</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../visual_p300/00x__p300_run_experiment.html">P300 run experiment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../visual_p300/00x__p300_run_experiment.html#setup">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_p300/00x__p300_run_experiment.html#initiate-eeg-device">Initiate EEG device</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_p300/00x__p300_run_experiment.html#run-experiment">Run experiment</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../experiments/vp300.html">Visual P300 experiment</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../experiments/vp300.html#notes">Notes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../experiments/vp300.html#notebooks">Notebooks</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../visual_p300/index.html">Visual P300 Examples</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../visual_p300/00x__p300_run_experiment.html">P300 run experiment</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_p300/01r__p300_viz.html">P300 Load and Visualize Data</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_p300/02r__p300_decoding.html">P300 Decoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../visual_p300/01r__p300_viz.html">P300 Load and Visualize Data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../visual_p300/01r__p300_viz.html#setup">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_p300/01r__p300_viz.html#visualize-the-power-spectrum">Visualize the power spectrum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_p300/01r__p300_viz.html#filteriing">Filteriing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_p300/01r__p300_viz.html#epoching">Epoching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_p300/01r__p300_viz.html#epoch-average">Epoch average</a></li>
 </ul>
 </li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../experiments/vssvep.html">Visual SSVEP experiment</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../experiments/vssvep.html#notes">Notes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../experiments/vssvep.html#notebooks">Notebooks</a><ul class="simple">
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../experiments/gonogo.html">Go No-Go Experiment</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../experiments/gonogo.html#notes">Notes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../experiments/gonogo.html#notebooks">Notebooks</a></li>
-</ul>
-</li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../experiments/cueing.html">Visual Cueing experiment</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../../experiments/cueing.html#notes">Notes</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../../experiments/cueing.html#notebooks">Notebooks</a><ul class="current">
-<li class="toctree-l3 current"><a class="reference internal" href="index.html">Visual Cueing Experiment</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="01r__cueing_singlesub_analysis.html">Cueing Single Subject Analysis</a></li>
-<li class="toctree-l4"><a class="reference internal" href="02r__cueing_group_analysis.html">Cueing Group Analysis</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">Cueing Behavioural Analysis Winter 2019</a></li>
-<li class="toctree-l4"><a class="reference internal" href="04r__cueing_group_analysis_winter2019.html">Cueing Group Analysis Winter 2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../visual_p300/02r__p300_decoding.html">P300 Decoding</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../visual_p300/02r__p300_decoding.html#setup">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_p300/02r__p300_decoding.html#load-data">Load Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_p300/02r__p300_decoding.html#filteriing">Filteriing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_p300/02r__p300_decoding.html#epoching">Epoching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_p300/02r__p300_decoding.html#classfication">Classfication</a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../experiments/vssvep.html">Visual SSVEP</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../visual_ssvep/00x__ssvep_run_experiment.html">SSVEP run experiment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../visual_ssvep/00x__ssvep_run_experiment.html#setup">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_ssvep/00x__ssvep_run_experiment.html#initiate-eeg-device">Initiate EEG device</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_ssvep/00x__ssvep_run_experiment.html#run-experiment">Run experiment</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">All Notebook Examples</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="../index.html#visual-cueing-experiment">Visual Cueing Experiment</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="01r__cueing_singlesub_analysis.html">Cueing Single Subject Analysis</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="01r__cueing_singlesub_analysis.html#download-the-data">Download the data</a></li>
-<li class="toctree-l4"><a class="reference internal" href="01r__cueing_singlesub_analysis.html#prepare-the-data-for-analysis">Prepare the Data for Analysis</a></li>
-<li class="toctree-l4"><a class="reference internal" href="01r__cueing_singlesub_analysis.html#power-spectral-density">Power Spectral Density</a></li>
-<li class="toctree-l4"><a class="reference internal" href="01r__cueing_singlesub_analysis.html#filtering">Filtering</a></li>
-<li class="toctree-l4"><a class="reference internal" href="01r__cueing_singlesub_analysis.html#epoching">Epoching</a></li>
-<li class="toctree-l4"><a class="reference internal" href="01r__cueing_singlesub_analysis.html#spectrogram">Spectrogram</a></li>
-<li class="toctree-l4"><a class="reference internal" href="01r__cueing_singlesub_analysis.html#now-we-compute-and-plot-the-differences">Now we compute and plot the differences</a></li>
-<li class="toctree-l4"><a class="reference internal" href="01r__cueing_singlesub_analysis.html#target-epoching">Target Epoching</a></li>
-<li class="toctree-l4"><a class="reference internal" href="01r__cueing_singlesub_analysis.html#conclusions">Conclusions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../visual_ssvep/01r__ssvep_viz.html">SSVEP Visualization</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../visual_ssvep/01r__ssvep_viz.html#visualize-the-power-spectrum">Visualize the power spectrum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_ssvep/01r__ssvep_viz.html#epoching">Epoching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_ssvep/01r__ssvep_viz.html#stimuli-specific-psd">Stimuli-Specific PSD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_ssvep/01r__ssvep_viz.html#spectrogram">Spectrogram</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="02r__cueing_group_analysis.html">Cueing Group Analysis</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="02r__cueing_group_analysis.html#download-the-data">Download the data</a></li>
-<li class="toctree-l4"><a class="reference internal" href="02r__cueing_group_analysis.html#load-data-into-mne-objects">Load data into MNE objects</a></li>
-<li class="toctree-l4"><a class="reference internal" href="02r__cueing_group_analysis.html#combine-subjects">Combine subjects</a></li>
-<li class="toctree-l4"><a class="reference internal" href="02r__cueing_group_analysis.html#compute-t-test">Compute t test</a></li>
-<li class="toctree-l4"><a class="reference internal" href="02r__cueing_group_analysis.html#save-average-powers-ipsi-and-contra">Save average powers ipsi and contra</a></li>
-<li class="toctree-l4"><a class="reference internal" href="02r__cueing_group_analysis.html#save-spectra">Save spectra</a></li>
-<li class="toctree-l4"><a class="reference internal" href="02r__cueing_group_analysis.html#conclusions">Conclusions</a></li>
-</ul>
-</li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Cueing Behavioural Analysis Winter 2019</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#analyze-mat-behavioural-data-for-accuracy-and-rt">Analyze .mat behavioural data for Accuracy and RT</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="04r__cueing_group_analysis_winter2019.html">Cueing Group Analysis Winter 2019</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="04r__cueing_group_analysis_winter2019.html#download-the-data">Download the data</a></li>
-<li class="toctree-l4"><a class="reference internal" href="04r__cueing_group_analysis_winter2019.html#load-data-into-mne-objects">Load data into MNE objects</a></li>
-<li class="toctree-l4"><a class="reference internal" href="04r__cueing_group_analysis_winter2019.html#combine-subjects">Combine subjects</a></li>
-<li class="toctree-l4"><a class="reference internal" href="04r__cueing_group_analysis_winter2019.html#compute-t-test">Compute t test</a></li>
-<li class="toctree-l4"><a class="reference internal" href="04r__cueing_group_analysis_winter2019.html#save-average-powers-ipsi-and-contra">Save average powers ipsi and contra</a></li>
-<li class="toctree-l4"><a class="reference internal" href="04r__cueing_group_analysis_winter2019.html#save-spectra">Save spectra</a></li>
-<li class="toctree-l4"><a class="reference internal" href="04r__cueing_group_analysis_winter2019.html#conclusions">Conclusions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../visual_ssvep/02r__ssvep_decoding.html">SSVEP Decoding</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../visual_ssvep/02r__ssvep_decoding.html#setup">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_ssvep/02r__ssvep_decoding.html#load-data">Load Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_ssvep/02r__ssvep_decoding.html#epoching">Epoching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_ssvep/02r__ssvep_decoding.html#decoding">Decoding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_ssvep/02r__ssvep_decoding.html#id1">Decoding</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../index.html#visual-n170-examples">Visual N170 examples</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../visual_n170/00x__n170_run_experiment.html">N170 run experiment</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../visual_n170/00x__n170_run_experiment.html#setup">Setup</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_n170/00x__n170_run_experiment.html#initiate-eeg-device">Initiate EEG device</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_n170/00x__n170_run_experiment.html#run-experiment">Run experiment</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../experiments/cueing.html">Visual Cueing</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="01r__cueing_singlesub_analysis.html">Cueing Single Subject Analysis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="01r__cueing_singlesub_analysis.html#download-the-data">Download the data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01r__cueing_singlesub_analysis.html#prepare-the-data-for-analysis">Prepare the Data for Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01r__cueing_singlesub_analysis.html#power-spectral-density">Power Spectral Density</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01r__cueing_singlesub_analysis.html#filtering">Filtering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01r__cueing_singlesub_analysis.html#epoching">Epoching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01r__cueing_singlesub_analysis.html#spectrogram">Spectrogram</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01r__cueing_singlesub_analysis.html#now-we-compute-and-plot-the-differences">Now we compute and plot the differences</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01r__cueing_singlesub_analysis.html#target-epoching">Target Epoching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01r__cueing_singlesub_analysis.html#conclusions">Conclusions</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../visual_n170/01r__n170_viz.html">N170 Load and Visualize Data</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../visual_n170/01r__n170_viz.html#setup">Setup</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_n170/01r__n170_viz.html#load-data">Load Data</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_n170/01r__n170_viz.html#visualize-the-power-spectrum">Visualize the power spectrum</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_n170/01r__n170_viz.html#filtering">Filtering</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_n170/01r__n170_viz.html#epoching">Epoching</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_n170/01r__n170_viz.html#epoch-average">Epoch average</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02r__cueing_group_analysis.html">Cueing Group Analysis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="02r__cueing_group_analysis.html#download-the-data">Download the data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02r__cueing_group_analysis.html#load-data-into-mne-objects">Load data into MNE objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02r__cueing_group_analysis.html#combine-subjects">Combine subjects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02r__cueing_group_analysis.html#compute-t-test">Compute t test</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02r__cueing_group_analysis.html#save-average-powers-ipsi-and-contra">Save average powers ipsi and contra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02r__cueing_group_analysis.html#save-spectra">Save spectra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02r__cueing_group_analysis.html#conclusions">Conclusions</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../visual_n170/02r__n170_decoding.html">N170 Decoding</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../visual_n170/02r__n170_decoding.html#setup">Setup</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_n170/02r__n170_decoding.html#load-data">Load Data</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_n170/02r__n170_decoding.html#filteriing">Filteriing</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_n170/02r__n170_decoding.html#epoching">Epoching</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_n170/02r__n170_decoding.html#run-classification">Run classification</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_n170/02r__n170_decoding.html#plot-decoding-results">Plot Decoding Results</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Cueing Behavioural Analysis Winter 2019</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#analyze-mat-behavioural-data-for-accuracy-and-rt">Analyze .mat behavioural data for Accuracy and RT</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../index.html#visual-p300-examples">Visual P300 Examples</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../visual_p300/00x__p300_run_experiment.html">P300 run experiment</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../visual_p300/00x__p300_run_experiment.html#setup">Setup</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_p300/00x__p300_run_experiment.html#initiate-eeg-device">Initiate EEG device</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_p300/00x__p300_run_experiment.html#run-experiment">Run experiment</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../visual_p300/01r__p300_viz.html">P300 Load and Visualize Data</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../visual_p300/01r__p300_viz.html#setup">Setup</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_p300/01r__p300_viz.html#visualize-the-power-spectrum">Visualize the power spectrum</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_p300/01r__p300_viz.html#filteriing">Filteriing</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_p300/01r__p300_viz.html#epoching">Epoching</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_p300/01r__p300_viz.html#epoch-average">Epoch average</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../visual_p300/02r__p300_decoding.html">P300 Decoding</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../visual_p300/02r__p300_decoding.html#setup">Setup</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_p300/02r__p300_decoding.html#load-data">Load Data</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_p300/02r__p300_decoding.html#filteriing">Filteriing</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_p300/02r__p300_decoding.html#epoching">Epoching</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_p300/02r__p300_decoding.html#classfication">Classfication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04r__cueing_group_analysis_winter2019.html">Cueing Group Analysis Winter 2019</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="04r__cueing_group_analysis_winter2019.html#download-the-data">Download the data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04r__cueing_group_analysis_winter2019.html#load-data-into-mne-objects">Load data into MNE objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04r__cueing_group_analysis_winter2019.html#combine-subjects">Combine subjects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04r__cueing_group_analysis_winter2019.html#compute-t-test">Compute t test</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04r__cueing_group_analysis_winter2019.html#save-average-powers-ipsi-and-contra">Save average powers ipsi and contra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04r__cueing_group_analysis_winter2019.html#save-spectra">Save spectra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04r__cueing_group_analysis_winter2019.html#conclusions">Conclusions</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../index.html#visual-ssvep-examples">Visual SSVEP Examples</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../visual_ssvep/00x__ssvep_run_experiment.html">SSVEP run experiment</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../visual_ssvep/00x__ssvep_run_experiment.html#setup">Setup</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_ssvep/00x__ssvep_run_experiment.html#initiate-eeg-device">Initiate EEG device</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_ssvep/00x__ssvep_run_experiment.html#run-experiment">Run experiment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../experiments/gonogo.html">Visual Go-No-Go</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../experiments/all_examples.html">All Notebook Examples</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="01r__cueing_singlesub_analysis.html">Cueing Single Subject Analysis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="01r__cueing_singlesub_analysis.html#download-the-data">Download the data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01r__cueing_singlesub_analysis.html#prepare-the-data-for-analysis">Prepare the Data for Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01r__cueing_singlesub_analysis.html#power-spectral-density">Power Spectral Density</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01r__cueing_singlesub_analysis.html#filtering">Filtering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01r__cueing_singlesub_analysis.html#epoching">Epoching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01r__cueing_singlesub_analysis.html#spectrogram">Spectrogram</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01r__cueing_singlesub_analysis.html#now-we-compute-and-plot-the-differences">Now we compute and plot the differences</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01r__cueing_singlesub_analysis.html#target-epoching">Target Epoching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01r__cueing_singlesub_analysis.html#conclusions">Conclusions</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../visual_ssvep/01r__ssvep_viz.html">SSVEP Visualization</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../visual_ssvep/01r__ssvep_viz.html#visualize-the-power-spectrum">Visualize the power spectrum</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_ssvep/01r__ssvep_viz.html#epoching">Epoching</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_ssvep/01r__ssvep_viz.html#stimuli-specific-psd">Stimuli-Specific PSD</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_ssvep/01r__ssvep_viz.html#spectrogram">Spectrogram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02r__cueing_group_analysis.html">Cueing Group Analysis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="02r__cueing_group_analysis.html#download-the-data">Download the data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02r__cueing_group_analysis.html#load-data-into-mne-objects">Load data into MNE objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02r__cueing_group_analysis.html#combine-subjects">Combine subjects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02r__cueing_group_analysis.html#compute-t-test">Compute t test</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02r__cueing_group_analysis.html#save-average-powers-ipsi-and-contra">Save average powers ipsi and contra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02r__cueing_group_analysis.html#save-spectra">Save spectra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02r__cueing_group_analysis.html#conclusions">Conclusions</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../visual_ssvep/02r__ssvep_decoding.html">SSVEP Decoding</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../visual_ssvep/02r__ssvep_decoding.html#setup">Setup</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_ssvep/02r__ssvep_decoding.html#load-data">Load Data</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_ssvep/02r__ssvep_decoding.html#epoching">Epoching</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_ssvep/02r__ssvep_decoding.html#decoding">Decoding</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../visual_ssvep/02r__ssvep_decoding.html#id1">Decoding</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Cueing Behavioural Analysis Winter 2019</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#analyze-mat-behavioural-data-for-accuracy-and-rt">Analyze .mat behavioural data for Accuracy and RT</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="04r__cueing_group_analysis_winter2019.html">Cueing Group Analysis Winter 2019</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="04r__cueing_group_analysis_winter2019.html#download-the-data">Download the data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04r__cueing_group_analysis_winter2019.html#load-data-into-mne-objects">Load data into MNE objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04r__cueing_group_analysis_winter2019.html#combine-subjects">Combine subjects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04r__cueing_group_analysis_winter2019.html#compute-t-test">Compute t test</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04r__cueing_group_analysis_winter2019.html#save-average-powers-ipsi-and-contra">Save average powers ipsi and contra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04r__cueing_group_analysis_winter2019.html#save-spectra">Save spectra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04r__cueing_group_analysis_winter2019.html#conclusions">Conclusions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../visual_n170/00x__n170_run_experiment.html">N170 run experiment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/00x__n170_run_experiment.html#setup">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/00x__n170_run_experiment.html#initiate-eeg-device">Initiate EEG device</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/00x__n170_run_experiment.html#run-experiment">Run experiment</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../visual_n170/01r__n170_viz.html">N170 Load and Visualize Data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/01r__n170_viz.html#setup">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/01r__n170_viz.html#load-data">Load Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/01r__n170_viz.html#visualize-the-power-spectrum">Visualize the power spectrum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/01r__n170_viz.html#filtering">Filtering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/01r__n170_viz.html#epoching">Epoching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/01r__n170_viz.html#epoch-average">Epoch average</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../visual_n170/02r__n170_decoding.html">N170 Decoding</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/02r__n170_decoding.html#setup">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/02r__n170_decoding.html#load-data">Load Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/02r__n170_decoding.html#filteriing">Filteriing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/02r__n170_decoding.html#epoching">Epoching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/02r__n170_decoding.html#run-classification">Run classification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_n170/02r__n170_decoding.html#plot-decoding-results">Plot Decoding Results</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../visual_p300/00x__p300_run_experiment.html">P300 run experiment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../visual_p300/00x__p300_run_experiment.html#setup">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_p300/00x__p300_run_experiment.html#initiate-eeg-device">Initiate EEG device</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_p300/00x__p300_run_experiment.html#run-experiment">Run experiment</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../visual_p300/01r__p300_viz.html">P300 Load and Visualize Data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../visual_p300/01r__p300_viz.html#setup">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_p300/01r__p300_viz.html#visualize-the-power-spectrum">Visualize the power spectrum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_p300/01r__p300_viz.html#filteriing">Filteriing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_p300/01r__p300_viz.html#epoching">Epoching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_p300/01r__p300_viz.html#epoch-average">Epoch average</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../visual_p300/02r__p300_decoding.html">P300 Decoding</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../visual_p300/02r__p300_decoding.html#setup">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_p300/02r__p300_decoding.html#load-data">Load Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_p300/02r__p300_decoding.html#filteriing">Filteriing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_p300/02r__p300_decoding.html#epoching">Epoching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_p300/02r__p300_decoding.html#classfication">Classfication</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../visual_ssvep/00x__ssvep_run_experiment.html">SSVEP run experiment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../visual_ssvep/00x__ssvep_run_experiment.html#setup">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_ssvep/00x__ssvep_run_experiment.html#initiate-eeg-device">Initiate EEG device</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_ssvep/00x__ssvep_run_experiment.html#run-experiment">Run experiment</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../visual_ssvep/01r__ssvep_viz.html">SSVEP Visualization</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../visual_ssvep/01r__ssvep_viz.html#visualize-the-power-spectrum">Visualize the power spectrum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_ssvep/01r__ssvep_viz.html#epoching">Epoching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_ssvep/01r__ssvep_viz.html#stimuli-specific-psd">Stimuli-Specific PSD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_ssvep/01r__ssvep_viz.html#spectrogram">Spectrogram</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../visual_ssvep/02r__ssvep_decoding.html">SSVEP Decoding</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../visual_ssvep/02r__ssvep_decoding.html#setup">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_ssvep/02r__ssvep_decoding.html#load-data">Load Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_ssvep/02r__ssvep_decoding.html#epoching">Epoching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_ssvep/02r__ssvep_decoding.html#decoding">Decoding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../visual_ssvep/02r__ssvep_decoding.html#id1">Decoding</a></li>
 </ul>
 </li>
 </ul>
@@ -359,9 +417,7 @@
     
       <li><a href="../../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="../../experiments/cueing.html">Visual Cueing experiment</a> &raquo;</li>
-        
-          <li><a href="index.html">Visual Cueing Experiment</a> &raquo;</li>
+          <li><a href="../../experiments/cueing.html">Visual Cueing</a> &raquo;</li>
         
       <li>Cueing Behavioural Analysis Winter 2019</li>
     
@@ -474,7 +530,7 @@
 
 <span class="c1">#load file</span>
 <span class="c1">#path =  &#39;./subject&#39; + str(sub) + &#39;/session&#39; + str(sesh) + &#39;/&#39;</span>
-<span class="n">path</span> <span class="o">=</span>  <span class="n">cueing_data_path</span> <span class="o">+</span> <span class="s1">&#39;/subject&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">sub</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;/session&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">sesh</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span>
+<span class="n">path</span> <span class="o">=</span>  <span class="n">cueing_data_path</span> <span class="o">+</span> <span class="s1">&#39;/muse2016/subject&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="s1">&#39;%04.f&#39;</span> <span class="o">%</span><span class="n">sub</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;/session&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="s1">&#39;%03.f&#39;</span> <span class="o">%</span><span class="p">(</span><span class="n">sesh</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span>
 <span class="n">file</span> <span class="o">=</span>  <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;.mat&#39;</span><span class="p">)][</span><span class="mi">0</span><span class="p">]</span>
 <span class="n">output_dict</span> <span class="o">=</span> <span class="n">sio</span><span class="o">.</span><span class="n">loadmat</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="n">file</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="n">file</span><span class="p">)</span>
@@ -507,48 +563,46 @@
 </div>
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Subject - 101
-/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/subject101/session1/subject101_session1_behOutput_2018-11-20-16.49.27.mat
-[1. 1. 0. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1. 1.
- 1. 1. 1. 1. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+/home/john/.eegnb/data/visual-cueing/kylemathlab_dev/muse2016/subject0101/session002/subject101_session2_behOutput_2018-11-20-16.58.50.mat
+[1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
  1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
- 1.] [267.486316 368.197394 359.114961 443.325697 400.459867 338.903969
- 335.497442 344.23244  356.226233 413.148977 379.451902 316.690498
- 354.088677 373.602933 309.049937 434.614427 334.242317 347.36567
- 559.56115  322.360502 342.381079 296.946102 363.025883 466.486784
- 405.095436 319.433791 396.683878 383.602173 340.87966  354.004383
- 376.375779 426.027515 354.717818 369.7502   422.330031 419.2258
- 386.381543 359.174393 349.714812 356.469947 313.615834 322.796616
- 441.424417 365.827293 374.314179 399.225807 419.822978 376.170782
- 408.44391  410.311049 367.621084 317.141214 397.751161 356.786541
- 358.868281 510.4043   482.490751 401.646274 389.68048  401.859856
- 343.478114 402.49184  362.675449 414.434056 419.887543 529.755306
- 370.726955 376.761684 392.066039 383.450714 339.717042 411.304441
- 437.624038] [1. 0. 1. 1. 0. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 0. 0. 1. 1. 0. 0. 1. 1. 1.
- 1. 1. 1. 1. 1. 1. 1. 1. 0. 1. 1. 0. 1. 1. 0. 1. 1. 1. 1. 1. 1. 1. 0. 1.
- 1. 1. 0. 1. 1. 1. 1. 1. 1. 1. 1. 1. 0. 1. 0. 1. 1. 1. 1. 1. 0. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1.] [435.031485 423.867152 335.010084 434.945121 297.102568 402.462939
+ 309.984897 352.377032 315.902263 346.695745 409.051914 337.994502
+ 412.490445 253.304399 325.551731 451.072688 362.531119 449.032591
+ 312.999804 293.670213 327.738388 526.629063 459.253055 355.719449
+ 352.932556 345.884407 454.775045 350.070761 313.989374 374.227764
+ 369.010847 345.467709 334.978303 334.730519 363.791318 451.067033
+ 301.155788 419.084514 271.027066 423.420538 342.584127 337.859108
+ 314.203547 339.341316 467.860489 327.351041 419.173015 340.925891
+ 318.901094 351.947652 437.583955 290.667171 319.596349 331.919014
+ 390.521833 412.642289 305.489389 348.551979 273.162904 347.040148
+ 339.326291 386.592227 317.4145   393.78332  426.145324 350.753921
+ 321.549098 313.940851 379.253401 338.095756 309.040606 403.22982
+ 368.109211] [1. 1. 0. 1. 1. 0. 0. 1. 1. 1. 1. 1. 1. 1. 1. 0. 1. 1. 1. 0. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1. 1. 1. 1. 1. 0.
+ 0. 1. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
  1.]
 
-[267.486316 368.197394 359.114961 443.325697 400.459867 338.903969
- 335.497442 344.23244  356.226233 413.148977 379.451902 316.690498
- 354.088677 373.602933 309.049937 434.614427 334.242317 347.36567
- 559.56115  322.360502 342.381079 296.946102 363.025883 466.486784
- 405.095436 319.433791 396.683878 383.602173 340.87966  354.004383
- 376.375779 426.027515 354.717818 369.7502   422.330031 419.2258
- 386.381543 359.174393 349.714812 356.469947 313.615834 322.796616
- 441.424417 365.827293 374.314179 399.225807 419.822978 376.170782
- 408.44391  410.311049 367.621084 317.141214 397.751161 356.786541
- 358.868281 510.4043   482.490751 401.646274 389.68048  401.859856
- 343.478114 402.49184  362.675449 414.434056 419.887543 529.755306
- 370.726955 376.761684 392.066039 383.450714 339.717042 411.304441
- 437.624038]
-[368.197394 400.459867 434.614427 334.242317 322.360502 342.381079
- 354.717818 419.2258   349.714812 419.822978 367.621084 343.478114
- 362.675449 392.066039]
-[368.197394 400.459867 434.614427 334.242317 322.360502 342.381079
- 354.717818 419.2258   349.714812 419.822978 367.621084 343.478114
- 362.675449 392.066039]
-Valid RT = 376.37577899999997 ms
-Invalid RT = 365.14826649988663 ms
+[435.031485 423.867152 335.010084 434.945121 297.102568 402.462939
+ 309.984897 352.377032 315.902263 346.695745 409.051914 337.994502
+ 412.490445 253.304399 325.551731 451.072688 362.531119 449.032591
+ 312.999804 293.670213 327.738388 526.629063 459.253055 355.719449
+ 352.932556 345.884407 454.775045 350.070761 313.989374 374.227764
+ 369.010847 345.467709 334.978303 334.730519 363.791318 451.067033
+ 301.155788 419.084514 271.027066 423.420538 342.584127 337.859108
+ 314.203547 339.341316 467.860489 327.351041 419.173015 340.925891
+ 318.901094 351.947652 437.583955 290.667171 319.596349 331.919014
+ 390.521833 412.642289 305.489389 348.551979 273.162904 347.040148
+ 339.326291 386.592227 317.4145   393.78332  426.145324 350.753921
+ 321.549098 313.940851 379.253401 338.095756 309.040606 403.22982
+ 368.109211]
+[335.010084 402.462939 309.984897 451.072688 293.670213 419.084514
+ 340.925891 318.901094 390.521833 386.592227]
+[335.010084 402.462939 309.984897 451.072688 293.670213 419.084514
+ 340.925891 318.901094 390.521833 386.592227]
+Valid RT = 347.04014799990546 ms
+Invalid RT = 363.75905900013095 ms
 </pre></div>
 </div>
 <p>Loop through subjects</p>
@@ -557,7 +611,7 @@ Invalid RT = 365.14826649988663 ms
     <span class="k">for</span> <span class="n">sesh</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_sesh</span><span class="p">):</span>
         <span class="c1"># get the path and file name and load data</span>
         <span class="c1">#path =  &#39;./subject&#39; + str(sub) + &#39;/session&#39; + str(sesh+1) + &#39;/&#39;</span>
-        <span class="n">path</span> <span class="o">=</span>  <span class="n">cueing_data_path</span> <span class="o">+</span> <span class="s1">&#39;/subject&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">sub</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;/session&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">sesh</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span>
+        <span class="n">path</span> <span class="o">=</span>  <span class="n">cueing_data_path</span> <span class="o">+</span> <span class="s1">&#39;/muse2016/subject&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="s1">&#39;%04.f&#39;</span> <span class="o">%</span><span class="n">sub</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;/session&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="s1">&#39;%03.f&#39;</span> <span class="o">%</span><span class="p">(</span><span class="n">sesh</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span>
 
         <span class="n">file</span> <span class="o">=</span>  <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;.mat&#39;</span><span class="p">)][</span><span class="mi">0</span><span class="p">]</span>
         <span class="n">output_dict</span> <span class="o">=</span> <span class="n">sio</span><span class="o">.</span><span class="n">loadmat</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="n">file</span><span class="p">)</span>
@@ -750,7 +804,7 @@ Proportion Accurate
 27          309  0.957184    1.000000  435.428464  437.121910
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.643 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.456 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-visual-cueing-03r-cueing-behaviour-analysis-winter2019-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/e9b19063c25fc9c3a038b9f1dad5d806/03r__cueing_behaviour_analysis_winter2019.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">03r__cueing_behaviour_analysis_winter2019.py</span></code></a></p>
