@@ -77,6 +77,9 @@ def intro_prompt():
     print("Next, enter the session number you are recording for. \n")
     session_nb = int(input("Enter session #:"))
 
+    # ask if they are ready to begin
+    input("Press [ENTER] when ready to begin...")
+
     # generate the save file name
     save_fn = generate_save_fn(board_selection, exp_selection, subj_id, session_nb)
 

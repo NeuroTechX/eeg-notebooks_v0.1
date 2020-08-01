@@ -18,10 +18,17 @@ sns.set_context('talk')
 sns.set_style('white')
 
 
-def load_csv_as_raw(filename, sfreq, ch_ind, stim_ind,
+def load_csv_as_raw(filename, sfreq, ch_ind, stim_ind, aux_ind=None,
                               replace_ch_names=None, verbose=1):
     """"""
-    n_channel = len(ch_ind)
+    n_eeg = len(ch_ind)
+    if aux_ind is not None:
+        n_aux = len(aux_ind)
+        n_channel = n_eeg + n_aux
+        ch_ind += aux_ind
+    else:
+        n_channel = n_eeg
+
     raw = []
     for fn in filename:
         # Read the file
@@ -30,7 +37,7 @@ def load_csv_as_raw(filename, sfreq, ch_ind, stim_ind,
         # Channel names and types
         ch_names = list(data.columns)[0:n_channel] + ['stim']
         print(ch_names)
-        ch_types = ['eeg'] * n_channel + ['stim']
+        ch_types = ['eeg'] * n_eeg + ['misc'] * n_aux + ['stim']
 
         if replace_ch_names is not None:
             ch_names = [c if c not in replace_ch_names.keys()
@@ -51,7 +58,7 @@ def load_csv_as_raw(filename, sfreq, ch_ind, stim_ind,
     return raws
 
 
-def load_data(subject_id, session_nb, board_name, experiment, replace_ch_names=None, verbose=1):
+def load_data(subject_id, session_nb, board_name, experiment, replace_ch_names=None, verbose=1, site='local'):
     """Load CSV files from the /data directory into a Raw object.
     Args:
         data_dir (str): directory inside /data that contains the
@@ -67,20 +74,44 @@ def load_data(subject_id, session_nb, board_name, experiment, replace_ch_names=N
         (mne.io.array.array.RawArray): loaded EEG
     """
 
-
     if subject_id == 'all':
-        subject_id = '*'
-    if session_nb == 'all':
-        session_nb = '*'
+        subject_str = 'subject*'
+    else:
+        subject_str = 'subject%04.f' % subject_id
 
-    data_path = os.path.join(DATA_DIR, experiment, subject_id, f'{board_name}_TRIAL_{session_nb}.csv')
+    if session_nb == 'all':
+        session_str = 'session*'
+    else:
+        session_str = 'session%03.f' % session_nb
+
+    if site == 'all':
+        site = '*'
+
+    data_path = os.path.join(DATA_DIR, experiment, site, board_name, subject_str, session_str, '*.csv')
     fnames = glob(data_path)
 
     sfreq = SAMPLE_FREQS[board_name]
     ch_ind = CHANNEL_INDICES[board_name]
     stim_ind = STIM_INDICES[board_name]
-
-    return load_csv_as_raw(fnames, sfreq, ch_ind, stim_ind, replace_ch_names, verbose)
+    if board_name == 'muse2016':
+        return load_csv_as_raw(
+            filename=fnames,
+            sfreq=sfreq,
+            ch_ind=ch_ind,
+            stim_ind=stim_ind,
+            aux_ind = [4],
+            replace_ch_names=replace_ch_names,
+            verbose=verbose
+        )
+    else:
+        return load_csv_as_raw(
+            filename=fnames,
+            sfreq=sfreq,
+            ch_ind=ch_ind,
+            stim_ind=stim_ind,
+            replace_ch_names=replace_ch_names,
+            verbose=verbose
+        )
 
 
 
