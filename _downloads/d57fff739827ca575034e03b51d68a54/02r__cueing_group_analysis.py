@@ -2,39 +2,29 @@
 Cueing Group Analysis
 ===============================
 
-This notebook is slightly different than the PC notebooks due to differences in the Mac operating system.
-
-First setup the computer by following the instructions in the mac_instructions_cueing.docx file, then return to this file.
-
-The cueing task can ellicit a number of reliable changes. A central cue indicates the location of an upcoming target onset. Here the task can be changed to be perfectly predictive, or have some level of cue validity. Task is to indicate the orientation of a spatial grating on the target, up for vertical, right for horizontal.
-
-ERP - Validly cued targets ellict larger ERP's than invalidly cued targets
-
-Response ERPs - Validly cued targets are more quickly identified and better identified
-
-Oscillations - Alpha power lateralizes after a spatial cue onset preceeding the upcoming onset of a target. Alpha power becomes smaller contraleral to the target side, and larger ipsilateral with the target.
-
-
 """
 
 ###################################################################################################
+# Setup
+# ---------------------
 
-# Imports
-from mne import Epochs, find_events, concatenate_raws
-from mne.time_frequency import tfr_morlet
-import numpy as np
-import os
-#from utils import utils
+# Standard pythonic importa
+import  os,sys,glob,numpy as np,pandas as pd
 from collections import OrderedDict
 import warnings
 warnings.filterwarnings('ignore')
 from matplotlib import pyplot as plt
 import matplotlib.patches as patches
 
+# MNE functions
+from mne import Epochs, find_events, concatenate_raws
+from mne.time_frequency import tfr_morlet
+
+# EEG-Notebooks functions
 from eegnb.datasets import datasets
 from eegnb.analysis import utils
 
-
+# sphinx_gallery_thumbnail_number = 1
 
 ###################################################################################################
 # Download the data
@@ -46,8 +36,6 @@ cueing_data_path = os.path.join(eegnb_data_path, 'visual-cueing', 'kylemathlab_d
 # If dataset hasn't been downloaded yet, download it
 if not os.path.isdir(cueing_data_path):
       datasets.fetch_dataset(data_dir=eegnb_data_path, experiment='visual-cueing', site='kylemathlab_dev')
-
-
 
 ###################################################################################################
 # Load data into MNE objects
@@ -379,9 +367,4 @@ df.to_csv('375CueingContraSpec.csv')
 print('Saved Spectra to 375Cueing*Spec.csv file in present directory')
 
 
-###################################################################################################
-# Conclusions
-# ----------------------------
-
-# Blah
 

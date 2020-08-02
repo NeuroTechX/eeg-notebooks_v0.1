@@ -2,25 +2,20 @@
 Cueing Behavioural Analysis Winter 2019
 =======================================
 
-The cueing task can ellicit a number of reliable changes. A central cue indicates the location of an upcoming target onset. Here the task can be changed to be perfectly predictive, or have some level of cue validity. Task is to indicate the orientation of a spatial grating on the target, up for vertical, right for horizontal.
-
-ERP - Validly cued targets ellict larger ERP's than invalidly cued targets
-
-Response ERPs - Validly cued targets are more quickly identified and better identified
-
-Oscillations - Alpha power lateralizes after a spatial cue onset preceeding the upcoming onset of a target. Alpha power becomes smaller contraleral to the target side, and larger ipsilateral with the target.
-
 """
 
+
 ###################################################################################################
+# Setup
+# ---------------------
+#
 
-# Imports
-import scipy.io as sio 
-import os
-import numpy as np 
+# Standard Pythonic imports
+import os,sys,glob,numpy as np,pandas as pd
 import matplotlib.pyplot as plt 
-import pandas as pd
+import scipy.io as sio 
 
+# EEG-Notebooks imports
 from eegnb.datasets import datasets
 
 # sphinx_gallery_thumbnail_number = 1
