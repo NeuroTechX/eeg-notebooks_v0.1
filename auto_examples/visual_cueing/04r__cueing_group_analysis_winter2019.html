@@ -94,14 +94,13 @@
             
               <p class="caption"><span class="caption-text">Getting Started</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../getting_started/installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../getting_started/installation.html#windows-setup-instructions">Windows setup instructions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../getting_started/installation.html#install-miniconda">1. Install miniconda</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../getting_started/installation.html#download-git-for-windows">2. Download git for windows</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../getting_started/installation.html#get-eeg-notebooks">3. Get eeg-notebooks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../getting_started/installation.html#install-python-dependencies">4. Install python dependencies</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../getting_started/installation.html#optional-install-bluemuse">5. (Optional ) Install BlueMuse</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../getting_started/installation.html#start-a-jupyter-notebook-session">6. Start a jupyter notebook session</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/installation.html#installing-the-python-library">Installing the Python library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting_started/installation.html#muse-requirements">MUSE Requirements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../getting_started/installation.html#muse-recordings-on-windows-bluemuse">MUSE recordings on windows: BlueMuse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../getting_started/installation.html#muse-recordings-on-mac-linux-bled112-dongle">MUSE recordings on Mac+Linux: BLED112 Dongle</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../getting_started/streaming.html">Initiating an EEG Stream</a><ul>
@@ -1678,7 +1677,7 @@ Applying baseline correction (mode: mean)
 </div>
 <img alt="../../_images/sphx_glr_04r__cueing_group_analysis_winter2019_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_04r__cueing_group_analysis_winter2019_001.png" />
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.LineCollection object at 0x7f4e03e1a810&gt;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.LineCollection object at 0x7f21bbe53050&gt;
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Plot Spectra Diff error bars</span>
@@ -1692,7 +1691,7 @@ Applying baseline correction (mode: mean)
 </div>
 <img alt="../../_images/sphx_glr_04r__cueing_group_analysis_winter2019_002.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_04r__cueing_group_analysis_winter2019_002.png" />
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.LineCollection object at 0x7f4e03a1e6d0&gt;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.LineCollection object at 0x7f21b83f7350&gt;
 </pre></div>
 </div>
 <p>Grand Average Ipsi</p>
@@ -1738,7 +1737,7 @@ Applying baseline correction (mode: mean)
 </li>
 </ul>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.patches.Rectangle object at 0x7f4e03a00a50&gt;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.patches.Rectangle object at 0x7f21b8752e50&gt;
 </pre></div>
 </div>
 <p>Grand Average Ipsi-Contra Difference</p>
@@ -1760,7 +1759,7 @@ Applying baseline correction (mode: mean)
 </div>
 <img alt="../../_images/sphx_glr_04r__cueing_group_analysis_winter2019_005.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_04r__cueing_group_analysis_winter2019_005.png" />
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.patches.Rectangle object at 0x7f4e05080d90&gt;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.patches.Rectangle object at 0x7f21da8fd3d0&gt;
 </pre></div>
 </div>
 </div>
@@ -1889,7 +1888,7 @@ Saved subject averages for each condition to 375CueingEEG.csv file in present di
 Saved Spectra to 375CueingContraSpec.csv file in present directory
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 1 minutes  52.010 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 1 minutes  47.571 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-visual-cueing-04r-cueing-group-analysis-winter2019-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/18e4b69d6ddc9302425e645c1fec16c3/04r__cueing_group_analysis_winter2019.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">04r__cueing_group_analysis_winter2019.py</span></code></a></p>
