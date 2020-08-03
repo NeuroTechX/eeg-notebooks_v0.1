@@ -1,5 +1,6 @@
 from glob import glob
 import os
+import copy
 from collections import OrderedDict
 
 from mne import create_info, concatenate_raws
@@ -21,6 +22,7 @@ sns.set_style('white')
 def load_csv_as_raw(filename, sfreq, ch_ind, stim_ind, aux_ind=None,
                               replace_ch_names=None, verbose=1):
     """"""
+    ch_ind = copy.deepcopy(ch_ind)
     n_eeg = len(ch_ind)
     if aux_ind is not None:
         n_aux = len(aux_ind)
@@ -58,7 +60,7 @@ def load_csv_as_raw(filename, sfreq, ch_ind, stim_ind, aux_ind=None,
     return raws
 
 
-def load_data(subject_id, session_nb, board_name, experiment, replace_ch_names=None, verbose=1, site='local'):
+def load_data(subject_id, session_nb, device_name, experiment, replace_ch_names=None, verbose=1, site='local'):
     """Load CSV files from the /data directory into a Raw object.
     Args:
         data_dir (str): directory inside /data that contains the
@@ -87,13 +89,13 @@ def load_data(subject_id, session_nb, board_name, experiment, replace_ch_names=N
     if site == 'all':
         site = '*'
 
-    data_path = os.path.join(DATA_DIR, experiment, site, board_name, subject_str, session_str, '*.csv')
+    data_path = os.path.join(DATA_DIR, experiment, site, device_name, subject_str, session_str, '*.csv')
     fnames = glob(data_path)
 
-    sfreq = SAMPLE_FREQS[board_name]
-    ch_ind = CHANNEL_INDICES[board_name]
-    stim_ind = STIM_INDICES[board_name]
-    if board_name == 'muse2016':
+    sfreq = SAMPLE_FREQS[device_name]
+    ch_ind = CHANNEL_INDICES[device_name]
+    stim_ind = STIM_INDICES[device_name]
+    if device_name == 'muse2016':
         return load_csv_as_raw(
             filename=fnames,
             sfreq=sfreq,
