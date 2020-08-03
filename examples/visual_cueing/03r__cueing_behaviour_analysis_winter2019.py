@@ -2,25 +2,20 @@
 Cueing Behavioural Analysis Winter 2019
 =======================================
 
-The cueing task can ellicit a number of reliable changes. A central cue indicates the location of an upcoming target onset. Here the task can be changed to be perfectly predictive, or have some level of cue validity. Task is to indicate the orientation of a spatial grating on the target, up for vertical, right for horizontal.
-
-ERP - Validly cued targets ellict larger ERP's than invalidly cued targets
-
-Response ERPs - Validly cued targets are more quickly identified and better identified
-
-Oscillations - Alpha power lateralizes after a spatial cue onset preceeding the upcoming onset of a target. Alpha power becomes smaller contraleral to the target side, and larger ipsilateral with the target.
-
 """
 
+
 ###################################################################################################
+# Setup
+# ---------------------
+#
 
-# Imports
-import scipy.io as sio 
-import os
-import numpy as np 
+# Standard Pythonic imports
+import os,sys,glob,numpy as np,pandas as pd
 import matplotlib.pyplot as plt 
-import pandas as pd
+import scipy.io as sio 
 
+# EEG-Notebooks imports
 from eegnb.datasets import datasets
 
 # sphinx_gallery_thumbnail_number = 1
@@ -107,7 +102,7 @@ sesh = 1
 
 #load file
 #path =  './subject' + str(sub) + '/session' + str(sesh) + '/'
-path =  cueing_data_path + '/subject' + str('%04.f' %sub) + '/session' + str('%03.f' %(sesh+1)) + '/'
+path =  cueing_data_path + '/muse2016/subject' + str('%04.f' %sub) + '/session' + str('%03.f' %(sesh+1)) + '/'
 file =  [x for x in os.listdir(path) if x.endswith('.mat')][0]
 output_dict = sio.loadmat(path + file)
 print(path + file)
@@ -146,7 +141,7 @@ for isub, sub in enumerate(subs):
     for sesh in range(n_sesh):
         # get the path and file name and load data
         #path =  './subject' + str(sub) + '/session' + str(sesh+1) + '/'
-        path =  cueing_data_path + '/subject' + str('%04.f' %sub) + '/session' + str('%03.f' %(sesh+1)) + '/'
+        path =  cueing_data_path + '/muse2016/subject' + str('%04.f' %sub) + '/session' + str('%03.f' %(sesh+1)) + '/'
        
         file =  [x for x in os.listdir(path) if x.endswith('.mat')][0]
         output_dict = sio.loadmat(path + file)
