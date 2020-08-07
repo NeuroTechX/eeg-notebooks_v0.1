@@ -61,8 +61,6 @@ def fetch_dataset(data_dir=None, experiment=None, site='eegnb_examples',
         URL = "https://docs.google.com/uc?export=download"
 
         session = requests.Session()
-        code = gdrive_locs[experiment]
-        print(code)
         response = session.get(URL, params = { 'id' : gdrive_locs[experiment] }, stream = True)
 
         # get the confirmation token to download large files
@@ -77,7 +75,6 @@ def fetch_dataset(data_dir=None, experiment=None, site='eegnb_examples',
 
         # save content to a zip-file
         destination = os.path.join(data_dir, 'downloaded_data.zip')
-        print(destination)
         CHUNK_SIZE = 32768
         with open(destination, "wb") as f:
             for chunk in response.iter_content(CHUNK_SIZE):
