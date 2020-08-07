@@ -22,13 +22,13 @@ The supported devices and the parameters (both optional and required) needed for
 
 | Device               | EEG.device         | EEG.serial_port | EEG.serial_num | EEG.mac_addr |
 |----------------------|--------------------|-----------------|----------------|--------------|
-| Muse                 | 'muse2016'         | | | |
-| Muse 2               | 'muse2'            | | | |
-| Cyton                | 'cyton'            | *(optional; see below)* | | |
-| Cyton + Daisy        | 'cyton_daisy       | *(optional; see below)* | | |
-| Cyton + Daisy - WiFi | 'cyton_daisy_wifi' |  | | |
-| Ganglion             | 'ganglion'         | *(optional; see below)* | | |
-| Ganglion - WiFi      | 'ganglion_wifi'    | | | |
+| Muse                 | 'muse2016'         | n/a | n/a | n/a |
+| Muse 2               | 'muse2'            | n/a | n/a | n/a |
+| Cyton                | 'cyton'            | *(optional; see below)* | n/a | n/a |
+| Cyton + Daisy        | 'cyton_daisy       | *(optional; see below)* | n/a | n/a |
+| Cyton + Daisy - WiFi | 'cyton_daisy_wifi' | n/a | n/a | n/a |
+| Ganglion             | 'ganglion'         | *(optional; see below)* | n/a | *see below* |
+| Ganglion - WiFi      | 'ganglion_wifi'    | n/a | n/a | n/a |
 
 
 ## Initiating a Muse stream in Windows using Bluemuse
