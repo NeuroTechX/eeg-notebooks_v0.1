@@ -123,3 +123,77 @@ Finally, start a jupyter notebook session from your Anaconda Promt in the eeg-no
 A browser should automatically open. If it doesn't, visit `localhost:8888`.
 
 This should bring up the `eeg-notebooks` folder structure. You will find the list of available experiments in the `notebooks` folder.
+
+# Linux setup instructions
+
+## Using Miniconda
+
+### 1. Download and install Miniconda
+
+Go to the downloads section of the miniconda website [HERE](https://docs.conda.io/en/latest/miniconda.html#linux-installers) 
+and download the appropriate installed for your Linux system.
+
+Verify the hashes by running the command (you might need to change the path to the file)
+```terminal
+$ sha256sum ~/Downloads/Miniconda3-latest-Linux-x86_64.sh
+```
+
+In the same terminal, run the command
+```terminal
+$ bash ~/Downloads/Miniconda3-latest-Linux-x86_64.sh
+```
+
+Follow the prompts and select the defaults.
+
+### 2. Create environment
+
+Close and reopen the terminal for conda to take effect. Create a new conda environment for EEG-notebooks with the command
+```terminal
+$ conda create -n "eeg-notebooks" python=3
+```
+
+### 3. Install git
+
+Install git for linux
+```terminal
+$ sudo apt install git
+```
+
+### 4. Get EEG notebooks
+
+Navigate to your desired directory in a terminal and clone the repo
+```terminal 
+$ git clone https://github.com/eeg-notebooks
+```
+
+### 5. Install python dependencies
+
+Navigate to the installed repo and activate your conda environment using
+```terminal
+$ cd ~/path/to/eeg-notebooks
+$ conda activate eeg-notebooks
+```
+
+Then install the python dependencies
+```terminal
+$ pip install -r requirements.txt
+```
+
+### 6. Test installation
+
+Start a jupyter notebooks session and you will be presented with the eeg-notebooks file structure. You can test the 
+installation by opening a new jupyter notebook and running a cell containing the following
+```python
+from eegnb.devices.eeg import EEG
+from eegnb.experiments.visual_n170 import n170
+
+# create eeg_device using the synthetic brainflow device
+eeg_device = EEG(device='synthetic')
+
+# run stimulus presentation for 20 seconds
+n170.present(duration=20, eeg=eeg_device)
+```
+
+## Using a VirutalEnv
+
+## Global installation
