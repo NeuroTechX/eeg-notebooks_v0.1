@@ -1,3 +1,6 @@
+*(Note: eeg-notebooks is now at version 0.2, with some major changes to the API and code base. The version 0.1 code is still available if you need it, in [this repo](https://github.com/NeuroTechX/eeg-notebooks_v0.1)*
+
+
 ===================================================================
 EEG-Notebooks - Democratizing the cognitive neuroscience experiment
 ===================================================================
