@@ -1,5 +1,5 @@
 
-*( Note: eeg-notebooks is now at version 0.2, with some major changes to the API and code base. The current up-to-date code base can be found [here](https://github.com/neurotechx/eeg-notebooks). The current repo is the the original repo, which has been frozen at version 0.1 and renamed. Why do this, rather than putting the legacy code on a separate branch? Because for version 0.2 we have stripped out a lot of old files (e.g. example data, which is now in a separate location), to get the repo down to a more manageable size (now ~30MB, as opposed to the present repo's 700+MB ).*
+*( Note: eeg-notebooks is now at version 0.2, with some major changes to the API and code base. The current up-to-date code base can be found [here](https://github.com/neurotechx/eeg-notebooks). The current repo is the the original repo, which has been frozen at version 0.1 and renamed. Why do this, rather than putting the legacy code on a separate branch? Because for version 0.2 we have stripped out a lot of old files (e.g. example data, which is now in a separate location), to get the repo down to a more manageable size (now ~30MB, as opposed to the present repo's 700+MB. So, please go check out the shiny new and improved library, and do get in touch (ideally in the form of an issue in the new repo) if you have any issues or questions! ).*
 
 
 
